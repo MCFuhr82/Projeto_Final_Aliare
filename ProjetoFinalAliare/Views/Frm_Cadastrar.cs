@@ -8,20 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ProjetoFinalAliare
+namespace ProjetoFinalAliare.Views
 {
-    public partial class Frm_Aluno : Form
+    public partial class Frm_Cadastrar : Form
     {
-        
-        public Frm_Aluno()
+        public Frm_Cadastrar()
         {
             InitializeComponent();
-         
-        }
-
-        private void Btn_Voltar_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }

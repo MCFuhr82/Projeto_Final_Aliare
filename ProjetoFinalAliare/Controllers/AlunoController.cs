@@ -19,12 +19,12 @@ namespace ProjetoFinalAliare.Controllers
             try
             {
                 //codigo para inserir
-                //var formAluno = new Frm_Aluno();
-                //var cmd = new NpgsqlCommand();
+                var formAluno = new Frm_Aluno();
+                var cmd = new NpgsqlCommand();
 
-                //cmd.Connection = conn;
-                //cmd.CommandType = System.Data.CommandType.Text;
-                //cmd.CommandText = "INSERT INTO tb_aluno (nome_aluno, cpf, endereco, complemento, celular, email) VALUES (@nome, @cpf, @endereco, @complemento, @celular, @email)";
+                cmd.Connection = conn;
+                cmd.CommandType = System.Data.CommandType.Text;
+                cmd.CommandText = "INSERT INTO tb_aluno (nome_aluno, cpf, endereco, complemento, celular, email) VALUES (@nome, @cpf, @endereco, @complemento, @celular, @email)";
                 //string nome = Frm_Aluno.
                 //NpgsqlParameter param = new NpgsqlParameter();
                 //param.ParameterName
