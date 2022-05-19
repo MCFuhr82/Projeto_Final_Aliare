@@ -91,6 +91,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Views\Frm_Aluno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Frm_Aluno.Designer.cs">
+      <DependentUpon>Frm_Aluno.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Frm_Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,6 +120,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Views\Frm_Aluno.resx">
+      <DependentUpon>Frm_Aluno.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Frm_Login.resx">
       <DependentUpon>Frm_Login.cs</DependentUpon>
     </EmbeddedResource>

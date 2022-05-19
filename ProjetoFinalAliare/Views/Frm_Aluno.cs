@@ -10,17 +10,16 @@ using System.Windows.Forms;
 
 namespace ProjetoFinalAliare
 {
-    public partial class Frm_Menu : Form
+    public partial class Frm_Aluno : Form
     {
-        public Frm_Menu()
+        public Frm_Aluno()
         {
             InitializeComponent();
         }
 
-        private void Btn_Aluno_Click(object sender, EventArgs e)
+        private void Btn_Voltar_Click(object sender, EventArgs e)
         {
-            var frm_aluno = new Frm_Aluno();
-            frm_aluno.Show();
+            this.Close();
         }
     }
 }

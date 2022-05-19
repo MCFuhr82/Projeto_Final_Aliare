@@ -39,3 +39,4 @@ C:\Users\marce\OneDrive\Marcelo\AliareEstagio\ProjetoFinalAliare\ProjetoFinalAli
 C:\Users\marce\OneDrive\Marcelo\AliareEstagio\ProjetoFinalAliare\ProjetoFinalAliare\ProjetoFinalAliare\bin\Debug\System.ValueTuple.xml
 C:\Users\marce\OneDrive\Marcelo\AliareEstagio\ProjetoFinalAliare\ProjetoFinalAliare\ProjetoFinalAliare\obj\Debug\ProjetoFinalAliare.csproj.CopyComplete
 C:\Users\marce\OneDrive\Marcelo\AliareEstagio\ProjetoFinalAliare\ProjetoFinalAliare\ProjetoFinalAliare\obj\Debug\ProjetoFinalAliare.Frm_Menu.resources
+C:\Users\marce\OneDrive\Marcelo\AliareEstagio\ProjetoFinalAliare\ProjetoFinalAliare\ProjetoFinalAliare\obj\Debug\ProjetoFinalAliare.Frm_Aluno.resources

@@ -47,6 +47,7 @@
             this.Btn_Aluno.TabIndex = 0;
             this.Btn_Aluno.Text = "Alunos";
             this.Btn_Aluno.UseVisualStyleBackColor = false;
+            this.Btn_Aluno.Click += new System.EventHandler(this.Btn_Aluno_Click);
             // 
             // Btn_Curso
             // 
