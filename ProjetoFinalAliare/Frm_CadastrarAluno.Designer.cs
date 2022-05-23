@@ -1,7 +1,7 @@
 ﻿
 namespace ProjetoFinalAliare
 {
-    partial class Frm_Cadastrar
+    partial class Frm_CadastrarAluno
     {
         /// <summary>
         /// Required designer variable.
@@ -35,7 +35,7 @@ namespace ProjetoFinalAliare
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Cadastrar));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_CadastrarAluno));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Btn_Cadastrar = new System.Windows.Forms.Button();
             this.Btn_Voltar = new System.Windows.Forms.Button();
@@ -60,6 +60,7 @@ namespace ProjetoFinalAliare
             this.Lbl_Numero = new System.Windows.Forms.Label();
             this.Txb_Numero = new System.Windows.Forms.TextBox();
             this.Cbox_Estados = new System.Windows.Forms.ComboBox();
+            this.Btn_Consultar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -311,11 +312,24 @@ namespace ProjetoFinalAliare
             this.Cbox_Estados.Size = new System.Drawing.Size(71, 21);
             this.Cbox_Estados.TabIndex = 10;
             // 
+            // Btn_Consultar
+            // 
+            this.Btn_Consultar.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.Btn_Consultar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Consultar.Location = new System.Drawing.Point(706, 87);
+            this.Btn_Consultar.Name = "Btn_Consultar";
+            this.Btn_Consultar.Size = new System.Drawing.Size(114, 34);
+            this.Btn_Consultar.TabIndex = 30;
+            this.Btn_Consultar.Text = "Consultar";
+            this.Btn_Consultar.UseVisualStyleBackColor = false;
+            this.Btn_Consultar.Click += new System.EventHandler(this.Btn_Consultar_Click);
+            // 
             // Frm_Cadastrar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(832, 449);
+            this.Controls.Add(this.Btn_Consultar);
             this.Controls.Add(this.Cbox_Estados);
             this.Controls.Add(this.Txb_Numero);
             this.Controls.Add(this.Lbl_Numero);
@@ -375,5 +389,6 @@ namespace ProjetoFinalAliare
         private System.Windows.Forms.Label Lbl_Numero;
         private System.Windows.Forms.TextBox Txb_Numero;
         private System.Windows.Forms.ComboBox Cbox_Estados;
+        private System.Windows.Forms.Button Btn_Consultar;
     }
 }

@@ -112,17 +112,17 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Aluno.cs" />
     <Compile Include="Models\Curso.cs" />
-    <Compile Include="Frm_Aluno.cs">
+    <Compile Include="Frm_ConsultarAluno.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frm_Aluno.Designer.cs">
-      <DependentUpon>Frm_Aluno.cs</DependentUpon>
+    <Compile Include="Frm_ConsultarAluno.Designer.cs">
+      <DependentUpon>Frm_ConsultarAluno.cs</DependentUpon>
     </Compile>
-    <Compile Include="Frm_Cadastrar.cs">
+    <Compile Include="Frm_CadastrarAluno.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frm_Cadastrar.Designer.cs">
-      <DependentUpon>Frm_Cadastrar.cs</DependentUpon>
+    <Compile Include="Frm_CadastrarAluno.Designer.cs">
+      <DependentUpon>Frm_CadastrarAluno.cs</DependentUpon>
     </Compile>
     <Compile Include="Frm_Login.cs">
       <SubType>Form</SubType>
@@ -150,11 +150,11 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Frm_Aluno.resx">
-      <DependentUpon>Frm_Aluno.cs</DependentUpon>
+    <EmbeddedResource Include="Frm_ConsultarAluno.resx">
+      <DependentUpon>Frm_ConsultarAluno.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Frm_Cadastrar.resx">
-      <DependentUpon>Frm_Cadastrar.cs</DependentUpon>
+    <EmbeddedResource Include="Frm_CadastrarAluno.resx">
+      <DependentUpon>Frm_CadastrarAluno.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_Login.resx">
       <DependentUpon>Frm_Login.cs</DependentUpon>

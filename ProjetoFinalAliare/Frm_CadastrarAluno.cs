@@ -4,9 +4,9 @@ using ProjetoFinalAliare.Models;
 
 namespace ProjetoFinalAliare
 {
-    public partial class Frm_Cadastrar : Form
+    public partial class Frm_CadastrarAluno : Form
     {
-        public Frm_Cadastrar()
+        public Frm_CadastrarAluno()
         {
             InitializeComponent();
         }
@@ -55,6 +55,12 @@ namespace ProjetoFinalAliare
             {
                 e.Handled = true;
             }
+        }
+
+        private void Btn_Consultar_Click(object sender, EventArgs e)
+        {
+            var form = new Frm_ConsultarAluno();
+            form.ShowDialog();
         }
     }
 }

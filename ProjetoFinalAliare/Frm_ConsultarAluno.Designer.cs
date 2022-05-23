@@ -1,6 +1,6 @@
 ﻿namespace ProjetoFinalAliare
 {
-    partial class Frm_Aluno
+    partial class Frm_ConsultarAluno
     {
         /// <summary>
         /// Required designer variable.
@@ -28,9 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Aluno));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_ConsultarAluno));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.Btn_Cadastrar = new System.Windows.Forms.Button();
             this.Btn_Consulta = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Btn_Editar = new System.Windows.Forms.Button();
@@ -50,22 +49,11 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
-            // Btn_Cadastrar
-            // 
-            this.Btn_Cadastrar.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.Btn_Cadastrar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_Cadastrar.Location = new System.Drawing.Point(123, 20);
-            this.Btn_Cadastrar.Name = "Btn_Cadastrar";
-            this.Btn_Cadastrar.Size = new System.Drawing.Size(139, 50);
-            this.Btn_Cadastrar.TabIndex = 2;
-            this.Btn_Cadastrar.Text = "Cadastrar";
-            this.Btn_Cadastrar.UseVisualStyleBackColor = false;
-            // 
             // Btn_Consulta
             // 
             this.Btn_Consulta.BackColor = System.Drawing.SystemColors.ControlLight;
             this.Btn_Consulta.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_Consulta.Location = new System.Drawing.Point(418, 20);
+            this.Btn_Consulta.Location = new System.Drawing.Point(12, 28);
             this.Btn_Consulta.Name = "Btn_Consulta";
             this.Btn_Consulta.Size = new System.Drawing.Size(139, 50);
             this.Btn_Consulta.TabIndex = 5;
@@ -75,9 +63,9 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 84);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 119);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(688, 353);
+            this.dataGridView1.Size = new System.Drawing.Size(688, 318);
             this.dataGridView1.TabIndex = 6;
             // 
             // Btn_Editar
@@ -114,7 +102,7 @@
             this.Btn_Voltar.UseVisualStyleBackColor = false;
             this.Btn_Voltar.Click += new System.EventHandler(this.Btn_Voltar_Click);
             // 
-            // Frm_Aluno
+            // Frm_ConsultarAluno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -124,9 +112,8 @@
             this.Controls.Add(this.Btn_Editar);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.Btn_Consulta);
-            this.Controls.Add(this.Btn_Cadastrar);
             this.Controls.Add(this.pictureBox1);
-            this.Name = "Frm_Aluno";
+            this.Name = "Frm_ConsultarAluno";
             this.Text = "Frm_Aluno";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -136,7 +123,6 @@
 
         #endregion
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button Btn_Cadastrar;
         private System.Windows.Forms.Button Btn_Consulta;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button Btn_Editar;

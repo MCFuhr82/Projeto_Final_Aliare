@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace ProjetoFinalAliare
 {
-    public partial class Frm_Aluno : Form
+    public partial class Frm_ConsultarAluno : Form
     {
         
-        public Frm_Aluno()
+        public Frm_ConsultarAluno()
         {
             InitializeComponent();
          
