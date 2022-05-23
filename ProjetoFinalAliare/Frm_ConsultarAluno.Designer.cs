@@ -133,6 +133,7 @@
             // 
             this.Txb_Matricula.Location = new System.Drawing.Point(72, 97);
             this.Txb_Matricula.Name = "Txb_Matricula";
+            this.Txb_Matricula.ReadOnly = true;
             this.Txb_Matricula.Size = new System.Drawing.Size(79, 20);
             this.Txb_Matricula.TabIndex = 12;
             // 
