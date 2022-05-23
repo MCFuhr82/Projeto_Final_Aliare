@@ -57,9 +57,9 @@ namespace ProjetoFinalAliare
             this.Lbl_Cidade = new System.Windows.Forms.Label();
             this.Txb_Cidade = new System.Windows.Forms.TextBox();
             this.Lbl_Estado = new System.Windows.Forms.Label();
-            this.Txb_Estado = new System.Windows.Forms.TextBox();
             this.Lbl_Numero = new System.Windows.Forms.Label();
             this.Txb_Numero = new System.Windows.Forms.TextBox();
+            this.Cbox_Estados = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -243,25 +243,18 @@ namespace ProjetoFinalAliare
             // 
             this.Txb_Cidade.Location = new System.Drawing.Point(95, 341);
             this.Txb_Cidade.Name = "Txb_Cidade";
-            this.Txb_Cidade.Size = new System.Drawing.Size(295, 20);
+            this.Txb_Cidade.Size = new System.Drawing.Size(390, 20);
             this.Txb_Cidade.TabIndex = 9;
             // 
             // Lbl_Estado
             // 
             this.Lbl_Estado.AutoSize = true;
             this.Lbl_Estado.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_Estado.Location = new System.Drawing.Point(396, 340);
+            this.Lbl_Estado.Location = new System.Drawing.Point(528, 341);
             this.Lbl_Estado.Name = "Lbl_Estado";
             this.Lbl_Estado.Size = new System.Drawing.Size(54, 19);
             this.Lbl_Estado.TabIndex = 27;
             this.Lbl_Estado.Text = "Estado:";
-            // 
-            // Txb_Estado
-            // 
-            this.Txb_Estado.Location = new System.Drawing.Point(456, 341);
-            this.Txb_Estado.Name = "Txb_Estado";
-            this.Txb_Estado.Size = new System.Drawing.Size(203, 20);
-            this.Txb_Estado.TabIndex = 10;
             // 
             // Lbl_Numero
             // 
@@ -281,14 +274,51 @@ namespace ProjetoFinalAliare
             this.Txb_Numero.TabIndex = 7;
             this.Txb_Numero.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Txb_Numero_KeyPress);
             // 
+            // Cbox_Estados
+            // 
+            this.Cbox_Estados.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Cbox_Estados.FormattingEnabled = true;
+            this.Cbox_Estados.Items.AddRange(new object[] {
+            "AC",
+            "AL",
+            "AP",
+            "AM",
+            "BA",
+            "CE",
+            "DF",
+            "ES",
+            "GO",
+            "MA",
+            "MT",
+            "MS",
+            "MG",
+            "PA",
+            "PB",
+            "PR",
+            "PE",
+            "PI",
+            "RJ",
+            "RN",
+            "RS",
+            "RO",
+            "RR",
+            "SC",
+            "SP",
+            "SE",
+            "TO"});
+            this.Cbox_Estados.Location = new System.Drawing.Point(588, 340);
+            this.Cbox_Estados.Name = "Cbox_Estados";
+            this.Cbox_Estados.Size = new System.Drawing.Size(71, 21);
+            this.Cbox_Estados.TabIndex = 10;
+            // 
             // Frm_Cadastrar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(832, 449);
+            this.Controls.Add(this.Cbox_Estados);
             this.Controls.Add(this.Txb_Numero);
             this.Controls.Add(this.Lbl_Numero);
-            this.Controls.Add(this.Txb_Estado);
             this.Controls.Add(this.Lbl_Estado);
             this.Controls.Add(this.Txb_Cidade);
             this.Controls.Add(this.Lbl_Cidade);
@@ -342,8 +372,8 @@ namespace ProjetoFinalAliare
         private System.Windows.Forms.Label Lbl_Cidade;
         private System.Windows.Forms.TextBox Txb_Cidade;
         private System.Windows.Forms.Label Lbl_Estado;
-        private System.Windows.Forms.TextBox Txb_Estado;
         private System.Windows.Forms.Label Lbl_Numero;
         private System.Windows.Forms.TextBox Txb_Numero;
+        private System.Windows.Forms.ComboBox Cbox_Estados;
     }
 }

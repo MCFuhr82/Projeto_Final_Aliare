@@ -29,7 +29,7 @@ namespace ProjetoFinalAliare
                 var endereco = Txb_Endereco.Text;
                 var numero = int.Parse(Txb_Numero.Text);
                 var cidade = Txb_Cidade.Text;
-                var estado = Txb_Estado.Text;
+                var estado = Cbox_Estados.Text;
                 var cpf = Mtxb_CPF.Text;
                 var telefone = Mtxb_Telefone.Text;
                 var complemento = Txb_Complemento.Text;
