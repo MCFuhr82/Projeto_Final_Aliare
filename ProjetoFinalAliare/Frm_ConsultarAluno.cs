@@ -17,7 +17,7 @@ namespace ProjetoFinalAliare
         public Frm_ConsultarAluno()
         {
             InitializeComponent();
-         
+            
         }
 
         private void Btn_Voltar_Click(object sender, EventArgs e)
@@ -57,10 +57,10 @@ namespace ProjetoFinalAliare
 
                 //Confirmando exclusão para o usuário
                 MessageBox.Show("Registro apagado com sucesso", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                
             }
         }
 
-       
         public List<Aluno> ConsultarListaAluno()
         {
             try
@@ -106,10 +106,6 @@ namespace ProjetoFinalAliare
             var form = new Frm_EditarAluno(Txb_Matricula.Text);
             form.ShowDialog();
         }
-
-        public string ReturnIdAluno()
-        {
-            return Txb_Matricula.Text;
-        }
+     
     }
 }

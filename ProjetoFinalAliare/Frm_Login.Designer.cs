@@ -88,7 +88,7 @@
             // Img_Login
             // 
             this.Img_Login.Image = ((System.Drawing.Image)(resources.GetObject("Img_Login.Image")));
-            this.Img_Login.Location = new System.Drawing.Point(12, 103);
+            this.Img_Login.Location = new System.Drawing.Point(37, 103);
             this.Img_Login.Name = "Img_Login";
             this.Img_Login.Size = new System.Drawing.Size(161, 154);
             this.Img_Login.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;

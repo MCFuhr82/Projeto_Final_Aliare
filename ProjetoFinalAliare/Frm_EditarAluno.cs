@@ -17,7 +17,6 @@ namespace ProjetoFinalAliare
         public Frm_EditarAluno()
         {
             InitializeComponent();
-            
         }
 
         public Frm_EditarAluno(String matricula)
