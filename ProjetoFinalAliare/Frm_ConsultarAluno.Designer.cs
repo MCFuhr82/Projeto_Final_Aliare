@@ -39,6 +39,7 @@
             this.Lbl_Nome = new System.Windows.Forms.Label();
             this.Txb_Matricula = new System.Windows.Forms.TextBox();
             this.Txb_Nome = new System.Windows.Forms.TextBox();
+            this.Btn_Cadastrar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -86,6 +87,7 @@
             this.Btn_Editar.TabIndex = 7;
             this.Btn_Editar.Text = "Editar";
             this.Btn_Editar.UseVisualStyleBackColor = false;
+            this.Btn_Editar.Click += new System.EventHandler(this.Btn_Editar_Click);
             // 
             // Btn_Deletar
             // 
@@ -144,11 +146,24 @@
             this.Txb_Nome.Size = new System.Drawing.Size(334, 20);
             this.Txb_Nome.TabIndex = 13;
             // 
+            // Btn_Cadastrar
+            // 
+            this.Btn_Cadastrar.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.Btn_Cadastrar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Cadastrar.Location = new System.Drawing.Point(706, 203);
+            this.Btn_Cadastrar.Name = "Btn_Cadastrar";
+            this.Btn_Cadastrar.Size = new System.Drawing.Size(114, 34);
+            this.Btn_Cadastrar.TabIndex = 14;
+            this.Btn_Cadastrar.Text = "Cadastrar";
+            this.Btn_Cadastrar.UseVisualStyleBackColor = false;
+            this.Btn_Cadastrar.Click += new System.EventHandler(this.Btn_Cadastrar_Click);
+            // 
             // Frm_ConsultarAluno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(832, 449);
+            this.Controls.Add(this.Btn_Cadastrar);
             this.Controls.Add(this.Txb_Nome);
             this.Controls.Add(this.Txb_Matricula);
             this.Controls.Add(this.Lbl_Nome);
@@ -179,5 +194,6 @@
         private System.Windows.Forms.Label Lbl_Nome;
         private System.Windows.Forms.TextBox Txb_Matricula;
         private System.Windows.Forms.TextBox Txb_Nome;
+        private System.Windows.Forms.Button Btn_Cadastrar;
     }
 }

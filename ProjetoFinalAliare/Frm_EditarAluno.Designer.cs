@@ -1,14 +1,12 @@
 ﻿
 namespace ProjetoFinalAliare
 {
-    partial class Frm_CadastrarAluno
+    partial class Frm_EditarAluno
     {
         /// <summary>
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
-
-
 
         /// <summary>
         /// Clean up any resources being used.
@@ -23,11 +21,7 @@ namespace ProjetoFinalAliare
             base.Dispose(disposing);
         }
 
-
-
         #region Windows Form Designer generated code
-
-
 
         /// <summary>
         /// Required method for Designer support - do not modify
@@ -35,10 +29,9 @@ namespace ProjetoFinalAliare
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_CadastrarAluno));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_EditarAluno));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.Btn_Cadastrar = new System.Windows.Forms.Button();
-            this.Btn_Voltar = new System.Windows.Forms.Button();
+            this.Btn_Salvar = new System.Windows.Forms.Button();
             this.Lbl_Cadastro = new System.Windows.Forms.Label();
             this.Lbl_Nome = new System.Windows.Forms.Label();
             this.Txb_Nome = new System.Windows.Forms.TextBox();
@@ -60,6 +53,8 @@ namespace ProjetoFinalAliare
             this.Lbl_Numero = new System.Windows.Forms.Label();
             this.Txb_Numero = new System.Windows.Forms.TextBox();
             this.Cbox_Estados = new System.Windows.Forms.ComboBox();
+            this.Lbl_Matricula = new System.Windows.Forms.Label();
+            this.Txb_Matricula = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -73,29 +68,17 @@ namespace ProjetoFinalAliare
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
-            // Btn_Cadastrar
+            // Btn_Salvar
             // 
-            this.Btn_Cadastrar.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.Btn_Cadastrar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_Cadastrar.Location = new System.Drawing.Point(706, 363);
-            this.Btn_Cadastrar.Name = "Btn_Cadastrar";
-            this.Btn_Cadastrar.Size = new System.Drawing.Size(114, 34);
-            this.Btn_Cadastrar.TabIndex = 11;
-            this.Btn_Cadastrar.Text = "Cadastrar";
-            this.Btn_Cadastrar.UseVisualStyleBackColor = false;
-            this.Btn_Cadastrar.Click += new System.EventHandler(this.Btn_Cadastrar_Click);
-            // 
-            // Btn_Voltar
-            // 
-            this.Btn_Voltar.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.Btn_Voltar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_Voltar.Location = new System.Drawing.Point(708, 403);
-            this.Btn_Voltar.Name = "Btn_Voltar";
-            this.Btn_Voltar.Size = new System.Drawing.Size(112, 34);
-            this.Btn_Voltar.TabIndex = 12;
-            this.Btn_Voltar.Text = "Voltar";
-            this.Btn_Voltar.UseVisualStyleBackColor = false;
-            this.Btn_Voltar.Click += new System.EventHandler(this.Btn_Voltar_Click);
+            this.Btn_Salvar.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.Btn_Salvar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Salvar.Location = new System.Drawing.Point(708, 403);
+            this.Btn_Salvar.Name = "Btn_Salvar";
+            this.Btn_Salvar.Size = new System.Drawing.Size(114, 34);
+            this.Btn_Salvar.TabIndex = 11;
+            this.Btn_Salvar.Text = "Salvar";
+            this.Btn_Salvar.UseVisualStyleBackColor = false;
+            this.Btn_Salvar.Click += new System.EventHandler(this.Btn_Salvar_Click);
             // 
             // Lbl_Cadastro
             // 
@@ -103,15 +86,15 @@ namespace ProjetoFinalAliare
             this.Lbl_Cadastro.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_Cadastro.Location = new System.Drawing.Point(318, 28);
             this.Lbl_Cadastro.Name = "Lbl_Cadastro";
-            this.Lbl_Cadastro.Size = new System.Drawing.Size(111, 31);
+            this.Lbl_Cadastro.Size = new System.Drawing.Size(179, 31);
             this.Lbl_Cadastro.TabIndex = 10;
-            this.Lbl_Cadastro.Text = "Cadastro";
+            this.Lbl_Cadastro.Text = "Editar cadastro";
             // 
             // Lbl_Nome
             // 
             this.Lbl_Nome.AutoSize = true;
             this.Lbl_Nome.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_Nome.Location = new System.Drawing.Point(33, 87);
+            this.Lbl_Nome.Location = new System.Drawing.Point(164, 87);
             this.Lbl_Nome.Name = "Lbl_Nome";
             this.Lbl_Nome.Size = new System.Drawing.Size(50, 19);
             this.Lbl_Nome.TabIndex = 11;
@@ -119,9 +102,9 @@ namespace ProjetoFinalAliare
             // 
             // Txb_Nome
             // 
-            this.Txb_Nome.Location = new System.Drawing.Point(89, 86);
+            this.Txb_Nome.Location = new System.Drawing.Point(220, 86);
             this.Txb_Nome.Name = "Txb_Nome";
-            this.Txb_Nome.Size = new System.Drawing.Size(570, 20);
+            this.Txb_Nome.Size = new System.Drawing.Size(439, 20);
             this.Txb_Nome.TabIndex = 1;
             // 
             // Lbl_CPF
@@ -139,6 +122,7 @@ namespace ProjetoFinalAliare
             this.Mtxb_CPF.Location = new System.Drawing.Point(89, 184);
             this.Mtxb_CPF.Mask = "000,000,000-00";
             this.Mtxb_CPF.Name = "Mtxb_CPF";
+            this.Mtxb_CPF.ReadOnly = true;
             this.Mtxb_CPF.Size = new System.Drawing.Size(91, 20);
             this.Mtxb_CPF.TabIndex = 3;
             // 
@@ -272,7 +256,6 @@ namespace ProjetoFinalAliare
             this.Txb_Numero.Name = "Txb_Numero";
             this.Txb_Numero.Size = new System.Drawing.Size(100, 20);
             this.Txb_Numero.TabIndex = 7;
-            this.Txb_Numero.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Txb_Numero_KeyPress);
             // 
             // Cbox_Estados
             // 
@@ -311,11 +294,31 @@ namespace ProjetoFinalAliare
             this.Cbox_Estados.Size = new System.Drawing.Size(71, 21);
             this.Cbox_Estados.TabIndex = 10;
             // 
-            // Frm_CadastrarAluno
+            // Lbl_Matricula
+            // 
+            this.Lbl_Matricula.AutoSize = true;
+            this.Lbl_Matricula.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_Matricula.Location = new System.Drawing.Point(33, 87);
+            this.Lbl_Matricula.Name = "Lbl_Matricula";
+            this.Lbl_Matricula.Size = new System.Drawing.Size(69, 19);
+            this.Lbl_Matricula.TabIndex = 30;
+            this.Lbl_Matricula.Text = "Matricula:";
+            // 
+            // Txb_Matricula
+            // 
+            this.Txb_Matricula.Location = new System.Drawing.Point(109, 85);
+            this.Txb_Matricula.Name = "Txb_Matricula";
+            this.Txb_Matricula.ReadOnly = true;
+            this.Txb_Matricula.Size = new System.Drawing.Size(49, 20);
+            this.Txb_Matricula.TabIndex = 31;
+            // 
+            // Frm_EditarAluno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(832, 449);
+            this.Controls.Add(this.Txb_Matricula);
+            this.Controls.Add(this.Lbl_Matricula);
             this.Controls.Add(this.Cbox_Estados);
             this.Controls.Add(this.Txb_Numero);
             this.Controls.Add(this.Lbl_Numero);
@@ -337,11 +340,10 @@ namespace ProjetoFinalAliare
             this.Controls.Add(this.Txb_Nome);
             this.Controls.Add(this.Lbl_Nome);
             this.Controls.Add(this.Lbl_Cadastro);
-            this.Controls.Add(this.Btn_Voltar);
-            this.Controls.Add(this.Btn_Cadastrar);
+            this.Controls.Add(this.Btn_Salvar);
             this.Controls.Add(this.pictureBox1);
-            this.Name = "Frm_CadastrarAluno";
-            this.Text = "Cadastrar";
+            this.Name = "Frm_EditarAluno";
+            this.Text = "Editar";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -352,8 +354,7 @@ namespace ProjetoFinalAliare
 
         #endregion
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button Btn_Cadastrar;
-        private System.Windows.Forms.Button Btn_Voltar;
+        private System.Windows.Forms.Button Btn_Salvar;
         private System.Windows.Forms.Label Lbl_Cadastro;
         private System.Windows.Forms.Label Lbl_Nome;
         private System.Windows.Forms.TextBox Txb_Nome;
@@ -375,5 +376,7 @@ namespace ProjetoFinalAliare
         private System.Windows.Forms.Label Lbl_Numero;
         private System.Windows.Forms.TextBox Txb_Numero;
         private System.Windows.Forms.ComboBox Cbox_Estados;
+        private System.Windows.Forms.Label Lbl_Matricula;
+        private System.Windows.Forms.TextBox Txb_Matricula;
     }
 }

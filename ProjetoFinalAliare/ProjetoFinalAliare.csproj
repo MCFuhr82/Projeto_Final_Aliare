@@ -105,6 +105,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Context.cs" />
+    <Compile Include="Frm_EditarAluno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_EditarAluno.Designer.cs">
+      <DependentUpon>Frm_EditarAluno.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\202205201828409_BD_Inicio.cs" />
     <Compile Include="Migrations\202205201828409_BD_Inicio.designer.cs">
       <DependentUpon>202205201828409_BD_Inicio.cs</DependentUpon>
@@ -138,6 +144,9 @@
     <Compile Include="Frm_Menu.Designer.cs">
       <DependentUpon>Frm_Menu.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Frm_EditarAluno.resx">
+      <DependentUpon>Frm_EditarAluno.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202205201828409_BD_Inicio.resx">
       <DependentUpon>202205201828409_BD_Inicio.cs</DependentUpon>
     </EmbeddedResource>

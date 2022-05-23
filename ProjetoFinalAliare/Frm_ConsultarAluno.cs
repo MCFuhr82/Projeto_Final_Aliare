@@ -27,17 +27,7 @@ namespace ProjetoFinalAliare
 
         private void Btn_Consulta_Click(object sender, EventArgs e)
         {
-            try
-            {
-                using (var context = new Context())
-                {
-                    dataGridView1.DataSource = context.Aluno.ToList();
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            dataGridView1.DataSource = ConsultarListaAluno();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -63,13 +53,33 @@ namespace ProjetoFinalAliare
             {
                 //Rotina de exclusão
                 DeletarAluno(matricula);
+                dataGridView1.DataSource = ConsultarListaAluno();
 
                 //Confirmando exclusão para o usuário
                 MessageBox.Show("Registro apagado com sucesso", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
-        public void DeletarAluno(int matricula)
+       
+        public List<Aluno> ConsultarListaAluno()
+        {
+            try
+            {
+                using (var context = new Context())
+                {
+                    var listaAlunos = context.Aluno.ToList();
+                    return listaAlunos;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+            return null;
+        }
+        
+        private void DeletarAluno(int matricula)
         {
             using (var context = new Context())
             {
@@ -83,6 +93,23 @@ namespace ProjetoFinalAliare
                     }
                 }
             }
+        }
+
+        private void Btn_Cadastrar_Click(object sender, EventArgs e)
+        {
+            var form = new Frm_CadastrarAluno();
+            form.ShowDialog();
+        }
+
+        private void Btn_Editar_Click(object sender, EventArgs e)
+        {
+            var form = new Frm_EditarAluno(Txb_Matricula.Text);
+            form.ShowDialog();
+        }
+
+        public string ReturnIdAluno()
+        {
+            return Txb_Matricula.Text;
         }
     }
 }
