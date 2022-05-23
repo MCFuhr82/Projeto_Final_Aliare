@@ -96,6 +96,7 @@
             this.Btn_Deletar.TabIndex = 8;
             this.Btn_Deletar.Text = "Deletar";
             this.Btn_Deletar.UseVisualStyleBackColor = false;
+            this.Btn_Deletar.Click += new System.EventHandler(this.Btn_Deletar_Click);
             // 
             // Btn_Voltar
             // 

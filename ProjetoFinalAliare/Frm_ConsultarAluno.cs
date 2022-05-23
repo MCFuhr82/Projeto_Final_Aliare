@@ -54,5 +54,35 @@ namespace ProjetoFinalAliare
                 MessageBox.Show("Ocorreu um erro " + ex.Message + " - " + ex.Source);
             }
         }
+
+        private void Btn_Deletar_Click(object sender, EventArgs e)
+        {
+            var matricula = int.Parse(Txb_Matricula.Text);
+            //Criar um MessageBox com os botões Sim e Não e deixar o botão 2(Não) selecionado por padrão e comparar o botão apertado
+            if (DialogResult.Yes == MessageBox.Show("Tem certeza que deseja apagar o registro?", "Confirmação", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2))
+            {
+                //Rotina de exclusão
+                DeletarAluno(matricula);
+
+                //Confirmando exclusão para o usuário
+                MessageBox.Show("Registro apagado com sucesso", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        public void DeletarAluno(int matricula)
+        {
+            using (var context = new Context())
+            {
+                var alunos = context.Aluno.ToList();
+                foreach (var aluno in alunos)
+                {
+                    if (aluno.Matricula == matricula)
+                    {
+                        context.Aluno.Remove(aluno);
+                        context.SaveChanges();
+                    }
+                }
+            }
+        }
     }
 }
