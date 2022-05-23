@@ -13,6 +13,7 @@ namespace ProjetoFinalAliare
         private void Btn_Cadastrar_Click(object sender, EventArgs e)
         {
             InserirAluno();
+            LimparTextBoxes();
         }
         private void Btn_Voltar_Click(object sender, EventArgs e)
         {
@@ -61,6 +62,20 @@ namespace ProjetoFinalAliare
         {
             var form = new Frm_ConsultarAluno();
             form.ShowDialog();
+        }
+
+        private void LimparTextBoxes()
+        {
+            Txb_Nome.Text = null;
+            Txb_Email.Text = null;
+            Mtxb_CEP.Text = null;
+            Txb_Endereco.Text = null;
+            Txb_Numero.Text = null;
+            Txb_Cidade.Text = null;
+            Cbox_Estados.Text = null;
+            Mtxb_CPF.Text = null;
+            Mtxb_Telefone.Text = null;
+            Txb_Complemento.Text = null;
         }
     }
 }
