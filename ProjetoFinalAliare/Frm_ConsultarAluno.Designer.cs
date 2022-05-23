@@ -35,6 +35,10 @@
             this.Btn_Editar = new System.Windows.Forms.Button();
             this.Btn_Deletar = new System.Windows.Forms.Button();
             this.Btn_Voltar = new System.Windows.Forms.Button();
+            this.Lbl_Matricula = new System.Windows.Forms.Label();
+            this.Lbl_Nome = new System.Windows.Forms.Label();
+            this.Txb_Matricula = new System.Windows.Forms.TextBox();
+            this.Txb_Nome = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -59,20 +63,23 @@
             this.Btn_Consulta.TabIndex = 5;
             this.Btn_Consulta.Text = "Consulta";
             this.Btn_Consulta.UseVisualStyleBackColor = false;
+            this.Btn_Consulta.Click += new System.EventHandler(this.Btn_Consulta_Click);
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 119);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 123);
+            this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(688, 318);
+            this.dataGridView1.Size = new System.Drawing.Size(688, 314);
             this.dataGridView1.TabIndex = 6;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // Btn_Editar
             // 
             this.Btn_Editar.BackColor = System.Drawing.SystemColors.ControlLight;
             this.Btn_Editar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_Editar.Location = new System.Drawing.Point(706, 119);
+            this.Btn_Editar.Location = new System.Drawing.Point(706, 123);
             this.Btn_Editar.Name = "Btn_Editar";
             this.Btn_Editar.Size = new System.Drawing.Size(114, 34);
             this.Btn_Editar.TabIndex = 7;
@@ -83,9 +90,9 @@
             // 
             this.Btn_Deletar.BackColor = System.Drawing.SystemColors.ControlLight;
             this.Btn_Deletar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_Deletar.Location = new System.Drawing.Point(708, 159);
+            this.Btn_Deletar.Location = new System.Drawing.Point(706, 163);
             this.Btn_Deletar.Name = "Btn_Deletar";
-            this.Btn_Deletar.Size = new System.Drawing.Size(112, 34);
+            this.Btn_Deletar.Size = new System.Drawing.Size(114, 34);
             this.Btn_Deletar.TabIndex = 8;
             this.Btn_Deletar.Text = "Deletar";
             this.Btn_Deletar.UseVisualStyleBackColor = false;
@@ -102,11 +109,47 @@
             this.Btn_Voltar.UseVisualStyleBackColor = false;
             this.Btn_Voltar.Click += new System.EventHandler(this.Btn_Voltar_Click);
             // 
+            // Lbl_Matricula
+            // 
+            this.Lbl_Matricula.AutoSize = true;
+            this.Lbl_Matricula.Location = new System.Drawing.Point(13, 100);
+            this.Lbl_Matricula.Name = "Lbl_Matricula";
+            this.Lbl_Matricula.Size = new System.Drawing.Size(53, 13);
+            this.Lbl_Matricula.TabIndex = 10;
+            this.Lbl_Matricula.Text = "Matricula:";
+            // 
+            // Lbl_Nome
+            // 
+            this.Lbl_Nome.AutoSize = true;
+            this.Lbl_Nome.Location = new System.Drawing.Point(157, 100);
+            this.Lbl_Nome.Name = "Lbl_Nome";
+            this.Lbl_Nome.Size = new System.Drawing.Size(38, 13);
+            this.Lbl_Nome.TabIndex = 11;
+            this.Lbl_Nome.Text = "Nome:";
+            // 
+            // Txb_Matricula
+            // 
+            this.Txb_Matricula.Location = new System.Drawing.Point(72, 97);
+            this.Txb_Matricula.Name = "Txb_Matricula";
+            this.Txb_Matricula.Size = new System.Drawing.Size(79, 20);
+            this.Txb_Matricula.TabIndex = 12;
+            // 
+            // Txb_Nome
+            // 
+            this.Txb_Nome.Location = new System.Drawing.Point(201, 97);
+            this.Txb_Nome.Name = "Txb_Nome";
+            this.Txb_Nome.Size = new System.Drawing.Size(334, 20);
+            this.Txb_Nome.TabIndex = 13;
+            // 
             // Frm_ConsultarAluno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(832, 449);
+            this.Controls.Add(this.Txb_Nome);
+            this.Controls.Add(this.Txb_Matricula);
+            this.Controls.Add(this.Lbl_Nome);
+            this.Controls.Add(this.Lbl_Matricula);
             this.Controls.Add(this.Btn_Voltar);
             this.Controls.Add(this.Btn_Deletar);
             this.Controls.Add(this.Btn_Editar);
@@ -118,6 +161,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -128,5 +172,9 @@
         private System.Windows.Forms.Button Btn_Editar;
         private System.Windows.Forms.Button Btn_Deletar;
         private System.Windows.Forms.Button Btn_Voltar;
+        private System.Windows.Forms.Label Lbl_Matricula;
+        private System.Windows.Forms.Label Lbl_Nome;
+        private System.Windows.Forms.TextBox Txb_Matricula;
+        private System.Windows.Forms.TextBox Txb_Nome;
     }
 }
