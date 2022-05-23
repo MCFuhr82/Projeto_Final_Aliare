@@ -20,7 +20,7 @@ namespace ProjetoFinalAliare
         private void Btn_Aluno_Click(object sender, EventArgs e)
         {
             var frm_aluno = new Frm_Cadastrar();
-            frm_aluno.Show();
+            frm_aluno.ShowDialog();
         }
     }
 }

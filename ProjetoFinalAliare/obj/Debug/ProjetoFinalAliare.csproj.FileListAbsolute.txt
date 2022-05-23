@@ -89,3 +89,11 @@ C:\ws-marcelo\ProjetoFinalAliare\Projeto_Final_Aliare\ProjetoFinalAliare\bin\Deb
 C:\ws-marcelo\ProjetoFinalAliare\Projeto_Final_Aliare\ProjetoFinalAliare\obj\Debug\ProjetoFinalAliare.Frm_Cadastrar.resources
 C:\ws-marcelo\ProjetoFinalAliare\Projeto_Final_Aliare\ProjetoFinalAliare\obj\Debug\ProjetoFinalAliare.csproj.AssemblyReference.cache
 C:\ws-marcelo\ProjetoFinalAliare\Projeto_Final_Aliare\ProjetoFinalAliare\obj\Debug\ProjetoFinalAliare.Migrations.BD_Inicio.resources
+C:\Users\marce\OneDrive\Marcelo\AliareEstagio\ProjetoFinalAliare\ProjetoFinalAliare\ProjetoFinalAliare\bin\Debug\EntityFramework.dll
+C:\Users\marce\OneDrive\Marcelo\AliareEstagio\ProjetoFinalAliare\ProjetoFinalAliare\ProjetoFinalAliare\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\marce\OneDrive\Marcelo\AliareEstagio\ProjetoFinalAliare\ProjetoFinalAliare\ProjetoFinalAliare\bin\Debug\EntityFramework6.Npgsql.dll
+C:\Users\marce\OneDrive\Marcelo\AliareEstagio\ProjetoFinalAliare\ProjetoFinalAliare\ProjetoFinalAliare\bin\Debug\EntityFramework.xml
+C:\Users\marce\OneDrive\Marcelo\AliareEstagio\ProjetoFinalAliare\ProjetoFinalAliare\ProjetoFinalAliare\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\marce\OneDrive\Marcelo\AliareEstagio\ProjetoFinalAliare\ProjetoFinalAliare\ProjetoFinalAliare\bin\Debug\EntityFramework6.Npgsql.xml
+C:\Users\marce\OneDrive\Marcelo\AliareEstagio\ProjetoFinalAliare\ProjetoFinalAliare\ProjetoFinalAliare\obj\Debug\ProjetoFinalAliare.Migrations.BD_Inicio.resources
+C:\Users\marce\OneDrive\Marcelo\AliareEstagio\ProjetoFinalAliare\ProjetoFinalAliare\ProjetoFinalAliare\obj\Debug\ProjetoFinalAliare.Frm_Cadastrar.resources
