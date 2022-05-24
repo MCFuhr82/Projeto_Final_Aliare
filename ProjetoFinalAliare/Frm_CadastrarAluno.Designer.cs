@@ -214,7 +214,7 @@ namespace ProjetoFinalAliare
             this.Mtxb_CEP.Name = "Mtxb_CEP";
             this.Mtxb_CEP.Size = new System.Drawing.Size(100, 20);
             this.Mtxb_CEP.TabIndex = 5;
-            //this.Mtxb_CEP.Leave += new System.EventHandler(this.Mtxb_CEP_Leave);
+            this.Mtxb_CEP.Leave += new System.EventHandler(this.Mtxb_CEP_Leave);
             // 
             // Lbl_Complemento
             // 

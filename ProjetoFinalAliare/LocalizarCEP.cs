@@ -9,17 +9,19 @@ namespace ProjetoFinalAliare
 {
     public static class LocalizarCEP
     {
-        public static string estado;
+        //public static string estado;
         public static string cidade;
         public static string rua;
         public static bool LocalizaCEP(string txtcep)
         {
-            if (!string.IsNullOrWhiteSpace(txtcep))
+            string cep = txtcep.Replace("-", "");
+            
+            if (!string.IsNullOrWhiteSpace(cep))
             {
-                Address endereco = SearchZip.GetAddress(txtcep);
+                var endereco = SearchZip.GetAddress(cep);
                 if (endereco.Zip != null)
                 {
-                    estado = endereco.State;
+                    //estado = endereco.State;
                     cidade = endereco.City;
                     rua = endereco.Street;
                     return true;
