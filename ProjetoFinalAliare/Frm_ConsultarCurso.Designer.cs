@@ -1,6 +1,6 @@
 ﻿namespace ProjetoFinalAliare
 {
-    partial class Frm_ConsultarAluno
+    partial class Frm_ConsultarCurso
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_ConsultarAluno));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_ConsultarCurso));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Btn_Consulta = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -37,8 +37,8 @@
             this.Btn_Voltar = new System.Windows.Forms.Button();
             this.Lbl_Matricula = new System.Windows.Forms.Label();
             this.Lbl_Nome = new System.Windows.Forms.Label();
-            this.Txb_Matricula = new System.Windows.Forms.TextBox();
-            this.Txb_Nome = new System.Windows.Forms.TextBox();
+            this.Txb_IdCurso = new System.Windows.Forms.TextBox();
+            this.Txb_NomeCurso = new System.Windows.Forms.TextBox();
             this.Btn_Cadastrar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -68,12 +68,11 @@
             // 
             // dataGridView1
             // 
-            this.dataGridView1.AllowUserToOrderColumns = true;
-            this.dataGridView1.AllowUserToResizeRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(12, 123);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(688, 314);
             this.dataGridView1.TabIndex = 6;
@@ -120,9 +119,9 @@
             this.Lbl_Matricula.AutoSize = true;
             this.Lbl_Matricula.Location = new System.Drawing.Point(13, 100);
             this.Lbl_Matricula.Name = "Lbl_Matricula";
-            this.Lbl_Matricula.Size = new System.Drawing.Size(53, 13);
+            this.Lbl_Matricula.Size = new System.Drawing.Size(46, 13);
             this.Lbl_Matricula.TabIndex = 10;
-            this.Lbl_Matricula.Text = "Matricula:";
+            this.Lbl_Matricula.Text = "IdCurso:";
             // 
             // Lbl_Nome
             // 
@@ -133,20 +132,20 @@
             this.Lbl_Nome.TabIndex = 11;
             this.Lbl_Nome.Text = "Nome:";
             // 
-            // Txb_Matricula
+            // Txb_IdCurso
             // 
-            this.Txb_Matricula.Location = new System.Drawing.Point(72, 97);
-            this.Txb_Matricula.Name = "Txb_Matricula";
-            this.Txb_Matricula.ReadOnly = true;
-            this.Txb_Matricula.Size = new System.Drawing.Size(79, 20);
-            this.Txb_Matricula.TabIndex = 12;
+            this.Txb_IdCurso.Location = new System.Drawing.Point(72, 97);
+            this.Txb_IdCurso.Name = "Txb_IdCurso";
+            this.Txb_IdCurso.ReadOnly = true;
+            this.Txb_IdCurso.Size = new System.Drawing.Size(79, 20);
+            this.Txb_IdCurso.TabIndex = 12;
             // 
-            // Txb_Nome
+            // Txb_NomeCurso
             // 
-            this.Txb_Nome.Location = new System.Drawing.Point(201, 97);
-            this.Txb_Nome.Name = "Txb_Nome";
-            this.Txb_Nome.Size = new System.Drawing.Size(334, 20);
-            this.Txb_Nome.TabIndex = 13;
+            this.Txb_NomeCurso.Location = new System.Drawing.Point(201, 97);
+            this.Txb_NomeCurso.Name = "Txb_NomeCurso";
+            this.Txb_NomeCurso.Size = new System.Drawing.Size(334, 20);
+            this.Txb_NomeCurso.TabIndex = 13;
             // 
             // Btn_Cadastrar
             // 
@@ -160,14 +159,14 @@
             this.Btn_Cadastrar.UseVisualStyleBackColor = false;
             this.Btn_Cadastrar.Click += new System.EventHandler(this.Btn_Cadastrar_Click);
             // 
-            // Frm_ConsultarAluno
+            // Frm_ConsultarCurso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(832, 449);
             this.Controls.Add(this.Btn_Cadastrar);
-            this.Controls.Add(this.Txb_Nome);
-            this.Controls.Add(this.Txb_Matricula);
+            this.Controls.Add(this.Txb_NomeCurso);
+            this.Controls.Add(this.Txb_IdCurso);
             this.Controls.Add(this.Lbl_Nome);
             this.Controls.Add(this.Lbl_Matricula);
             this.Controls.Add(this.Btn_Voltar);
@@ -176,8 +175,8 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.Btn_Consulta);
             this.Controls.Add(this.pictureBox1);
-            this.Name = "Frm_ConsultarAluno";
-            this.Text = "Frm_Aluno";
+            this.Name = "Frm_ConsultarCurso";
+            this.Text = "Frm_Curso";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
@@ -194,8 +193,8 @@
         private System.Windows.Forms.Button Btn_Voltar;
         private System.Windows.Forms.Label Lbl_Matricula;
         private System.Windows.Forms.Label Lbl_Nome;
-        private System.Windows.Forms.TextBox Txb_Matricula;
-        private System.Windows.Forms.TextBox Txb_Nome;
+        private System.Windows.Forms.TextBox Txb_IdCurso;
+        private System.Windows.Forms.TextBox Txb_NomeCurso;
         private System.Windows.Forms.Button Btn_Cadastrar;
     }
 }

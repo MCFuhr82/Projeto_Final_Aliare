@@ -59,6 +59,7 @@
             this.Btn_Curso.TabIndex = 1;
             this.Btn_Curso.Text = "Curso";
             this.Btn_Curso.UseVisualStyleBackColor = false;
+            this.Btn_Curso.Click += new System.EventHandler(this.Btn_Curso_Click);
             // 
             // button3
             // 

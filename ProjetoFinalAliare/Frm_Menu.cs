@@ -22,5 +22,11 @@ namespace ProjetoFinalAliare
             var form = new Frm_ConsultarAluno();
             form.ShowDialog();
         }
+
+        private void Btn_Curso_Click(object sender, EventArgs e)
+        {
+            var form = new Frm_ConsultarCurso();
+            form.ShowDialog();
+        }
     }
 }

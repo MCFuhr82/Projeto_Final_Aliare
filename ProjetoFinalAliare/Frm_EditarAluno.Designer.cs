@@ -84,11 +84,11 @@ namespace ProjetoFinalAliare
             // 
             this.Lbl_Cadastro.AutoSize = true;
             this.Lbl_Cadastro.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_Cadastro.Location = new System.Drawing.Point(318, 28);
+            this.Lbl_Cadastro.Location = new System.Drawing.Point(247, 24);
             this.Lbl_Cadastro.Name = "Lbl_Cadastro";
-            this.Lbl_Cadastro.Size = new System.Drawing.Size(179, 31);
+            this.Lbl_Cadastro.Size = new System.Drawing.Size(289, 31);
             this.Lbl_Cadastro.TabIndex = 10;
-            this.Lbl_Cadastro.Text = "Editar cadastro";
+            this.Lbl_Cadastro.Text = "Editar cadastro do Aluno";
             // 
             // Lbl_Nome
             // 

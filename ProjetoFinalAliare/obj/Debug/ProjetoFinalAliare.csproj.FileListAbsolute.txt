@@ -99,3 +99,6 @@ C:\ws-marcelo\ProjetoFinalAliare\Projeto_Final_Aliare\ProjetoFinalAliare\obj\Deb
 C:\ws-marcelo\ProjetoFinalAliare\Projeto_Final_Aliare\ProjetoFinalAliare\obj\Debug\ProjetoFinalAliare.Frm_CadastrarAluno.resources
 C:\ws-marcelo\ProjetoFinalAliare\Projeto_Final_Aliare\ProjetoFinalAliare\obj\Debug\ProjetoFinalAliare.Frm_EditarAluno.resources
 C:\Users\marce\OneDrive\Marcelo\AliareEstagio\ProjetoFinalAliare\ProjetoFinalAliare\ProjetoFinalAliare\obj\Debug\ProjetoFinalAliare.Frm_EditarAluno.resources
+C:\Users\marce\OneDrive\Marcelo\AliareEstagio\ProjetoFinalAliare\ProjetoFinalAliare\ProjetoFinalAliare\obj\Debug\ProjetoFinalAliare.Frm_CadastrarCurso.resources
+C:\Users\marce\OneDrive\Marcelo\AliareEstagio\ProjetoFinalAliare\ProjetoFinalAliare\ProjetoFinalAliare\obj\Debug\ProjetoFinalAliare.Frm_ConsultarCurso.resources
+C:\Users\marce\OneDrive\Marcelo\AliareEstagio\ProjetoFinalAliare\ProjetoFinalAliare\ProjetoFinalAliare\obj\Debug\ProjetoFinalAliare.Frm_EditarCurso.resources

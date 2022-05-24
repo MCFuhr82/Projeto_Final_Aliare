@@ -10,14 +10,22 @@ namespace ProjetoFinalAliare
         {
             InitializeComponent();
         }
+
         private void Btn_Cadastrar_Click(object sender, EventArgs e)
         {
             InserirAluno();
             LimparTextBoxes();
         }
+
         private void Btn_Voltar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void Btn_Consultar_Click(object sender, EventArgs e)
+        {
+            var form = new Frm_ConsultarAluno();
+            form.ShowDialog();
         }
 
         public void InserirAluno()
@@ -56,12 +64,6 @@ namespace ProjetoFinalAliare
             {
                 e.Handled = true;
             }
-        }
-
-        private void Btn_Consultar_Click(object sender, EventArgs e)
-        {
-            var form = new Frm_ConsultarAluno();
-            form.ShowDialog();
         }
 
         private void LimparTextBoxes()

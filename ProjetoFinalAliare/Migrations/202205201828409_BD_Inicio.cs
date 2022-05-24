@@ -31,6 +31,7 @@
                     {
                         Id = c.Int(nullable: false, identity: true),
                         Nome = c.String(nullable: false),
+                        CargaHoraria = c.Int(nullable: false),
                         Matricula_Matricula = c.Int(),
                     })
                 .PrimaryKey(t => t.Id)

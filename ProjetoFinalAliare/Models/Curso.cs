@@ -15,18 +15,26 @@ namespace ProjetoFinalAliare.Models
         public int Id { get; set; }
         [Required]
         public string Nome { get; set; }
+        [Required]
+        public int CargaHoraria { get; private set; }
         public Aluno Matricula { get; private set; }
 
         public Curso() { }
 
-        public Curso(string nome)
+        public Curso(string nome, int cargaHoraria)
         {
             Nome = nome;
+            CargaHoraria = cargaHoraria;
         }
 
         public void SetNome(string nome)
         {
             Nome = nome;
+        }
+
+        public void SetCargaHoraria(int cargaHoraria)
+        {
+            CargaHoraria = cargaHoraria;
         }
 
     }

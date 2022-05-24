@@ -105,11 +105,29 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Context.cs" />
+    <Compile Include="Frm_CadastrarCurso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_CadastrarCurso.Designer.cs">
+      <DependentUpon>Frm_CadastrarCurso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_ConsultarCurso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_ConsultarCurso.Designer.cs">
+      <DependentUpon>Frm_ConsultarCurso.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frm_EditarAluno.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Frm_EditarAluno.Designer.cs">
       <DependentUpon>Frm_EditarAluno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_EditarCurso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_EditarCurso.Designer.cs">
+      <DependentUpon>Frm_EditarCurso.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\202205201828409_BD_Inicio.cs" />
     <Compile Include="Migrations\202205201828409_BD_Inicio.designer.cs">
@@ -144,8 +162,17 @@
     <Compile Include="Frm_Menu.Designer.cs">
       <DependentUpon>Frm_Menu.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Frm_CadastrarCurso.resx">
+      <DependentUpon>Frm_CadastrarCurso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_ConsultarCurso.resx">
+      <DependentUpon>Frm_ConsultarCurso.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Frm_EditarAluno.resx">
       <DependentUpon>Frm_EditarAluno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_EditarCurso.resx">
+      <DependentUpon>Frm_EditarCurso.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202205201828409_BD_Inicio.resx">
       <DependentUpon>202205201828409_BD_Inicio.cs</DependentUpon>
