@@ -60,6 +60,7 @@ namespace ProjetoFinalAliare
             this.Lbl_Numero = new System.Windows.Forms.Label();
             this.Txb_Numero = new System.Windows.Forms.TextBox();
             this.Cbox_Estados = new System.Windows.Forms.ComboBox();
+            this.Lbl_CpfInválido = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -136,6 +137,7 @@ namespace ProjetoFinalAliare
             // 
             // Mtxb_CPF
             // 
+            this.Mtxb_CPF.BackColor = System.Drawing.SystemColors.Window;
             this.Mtxb_CPF.Location = new System.Drawing.Point(89, 184);
             this.Mtxb_CPF.Mask = "000,000,000-00";
             this.Mtxb_CPF.Name = "Mtxb_CPF";
@@ -311,11 +313,21 @@ namespace ProjetoFinalAliare
             this.Cbox_Estados.Size = new System.Drawing.Size(71, 21);
             this.Cbox_Estados.TabIndex = 10;
             // 
+            // Lbl_CpfInválido
+            // 
+            this.Lbl_CpfInválido.AutoSize = true;
+            this.Lbl_CpfInválido.ForeColor = System.Drawing.Color.Red;
+            this.Lbl_CpfInválido.Location = new System.Drawing.Point(92, 207);
+            this.Lbl_CpfInválido.Name = "Lbl_CpfInválido";
+            this.Lbl_CpfInválido.Size = new System.Drawing.Size(0, 13);
+            this.Lbl_CpfInválido.TabIndex = 30;
+            // 
             // Frm_CadastrarAluno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(832, 449);
+            this.Controls.Add(this.Lbl_CpfInválido);
             this.Controls.Add(this.Cbox_Estados);
             this.Controls.Add(this.Txb_Numero);
             this.Controls.Add(this.Lbl_Numero);
@@ -375,5 +387,6 @@ namespace ProjetoFinalAliare
         private System.Windows.Forms.Label Lbl_Numero;
         private System.Windows.Forms.TextBox Txb_Numero;
         private System.Windows.Forms.ComboBox Cbox_Estados;
+        private System.Windows.Forms.Label Lbl_CpfInválido;
     }
 }

@@ -6,6 +6,7 @@ namespace ProjetoFinalAliare
 {
     public partial class Frm_CadastrarAluno : Form
     {
+        
         public Frm_CadastrarAluno()
         {
             InitializeComponent();
@@ -14,7 +15,6 @@ namespace ProjetoFinalAliare
         private void Btn_Cadastrar_Click(object sender, EventArgs e)
         {
             InserirAluno();
-            LimparTextBoxes();
         }
 
         private void Btn_Voltar_Click(object sender, EventArgs e)
@@ -39,16 +39,26 @@ namespace ProjetoFinalAliare
                 var numero = int.Parse(Txb_Numero.Text);
                 var cidade = Txb_Cidade.Text;
                 var estado = Cbox_Estados.Text;
-                var cpf = Mtxb_CPF.Text;
                 var telefone = Mtxb_Telefone.Text;
                 var complemento = Txb_Complemento.Text;
+                var cpf = Mtxb_CPF.Text;
 
-                using (var context = new Context()) 
+                var cpfValido = ValidacaoCPF.ValidaCPF(cpf);
+
+                if (cpfValido == true)
                 {
-                    var aluno = new Aluno(nome, cpf, endereco, numero, cidade, estado, cep, complemento, telefone, email);
-                    context.Aluno.Add(aluno);
-                    context.SaveChanges();
-                    MessageBox.Show("Dados inseridos com sucesso!");
+                    using (var context = new Context())
+                    {
+                        var aluno = new Aluno(nome, cpf, endereco, numero, cidade, estado, cep, complemento, telefone, email);
+                        context.Aluno.Add(aluno);
+                        context.SaveChanges();
+                        MessageBox.Show("Dados inseridos com sucesso!");
+                        LimparTextBoxes();
+                        Lbl_CpfInválido.Text = null;
+                    }
+                } else
+                {
+                    Lbl_CpfInválido.Text = "CPF Inválido";
                 }
             }
             catch (Exception ex)
