@@ -31,14 +31,32 @@ namespace ProjetoFinalAliare
 
         private void Btn_Consulta_Click(object sender, EventArgs e)
         {
+            LimparTextBoxes();
             dataGridView1.DataSource = ConsultarListaCurso();
             dataGridView1.Columns["Matricula"].Visible = false;
+            
         }
 
         private void Btn_Editar_Click(object sender, EventArgs e)
         {
             var form = new Frm_EditarCurso(Txb_IdCurso.Text);
             form.ShowDialog();
+        }
+       
+        private void Btn_Deletar_Click(object sender, EventArgs e)
+        {
+            var idCurso = int.Parse(Txb_IdCurso.Text);
+            //Criar um MessageBox com os botões Sim e Não e deixar o botão 2(Não) selecionado por padrão e comparar o botão apertado
+            if (DialogResult.Yes == MessageBox.Show("Tem certeza que deseja apagar o registro?", "Confirmação", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2))
+            {
+                //Rotina de exclusão
+                DeletarCurso(idCurso);
+                dataGridView1.DataSource = ConsultarListaCurso();
+
+                //Confirmando exclusão para o usuário
+                MessageBox.Show("Registro apagado com sucesso", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -74,22 +92,6 @@ namespace ProjetoFinalAliare
             return null;
         }
 
-        private void Btn_Deletar_Click(object sender, EventArgs e)
-        {
-            var idCurso = int.Parse(Txb_IdCurso.Text);
-            //Criar um MessageBox com os botões Sim e Não e deixar o botão 2(Não) selecionado por padrão e comparar o botão apertado
-            if (DialogResult.Yes == MessageBox.Show("Tem certeza que deseja apagar o registro?", "Confirmação", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2))
-            {
-                //Rotina de exclusão
-                DeletarCurso(idCurso);
-                dataGridView1.DataSource = ConsultarListaCurso();
-
-                //Confirmando exclusão para o usuário
-                MessageBox.Show("Registro apagado com sucesso", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-            }
-        }
-
         private void DeletarCurso(int idCurso)
         {
             using (var context = new Context())
@@ -104,6 +106,12 @@ namespace ProjetoFinalAliare
                     }
                 }
             }
+        }
+
+        private void LimparTextBoxes()
+        {
+            Txb_IdCurso.Text = null;
+            Txb_NomeCurso.Text = null;
         }
     }
 }
