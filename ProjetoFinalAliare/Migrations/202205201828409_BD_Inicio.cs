@@ -22,8 +22,11 @@
                         Complemento = c.String(),
                         Cidade = c.String(nullable: false),
                         Estado = c.String(nullable: false),
+                        IdCurso_Id = c.Int(),
                     })
-                .PrimaryKey(t => t.Matricula);
+                .PrimaryKey(t => t.Matricula)
+                .ForeignKey("public.Curso", t => t.IdCurso_Id)
+                .Index(t => t.IdCurso_Id);
             
             CreateTable(
                 "public.Curso",
@@ -32,18 +35,15 @@
                         Id = c.Int(nullable: false, identity: true),
                         Nome = c.String(nullable: false),
                         CargaHoraria = c.Int(nullable: false),
-                        Matricula_Matricula = c.Int(),
                     })
-                .PrimaryKey(t => t.Id)
-                .ForeignKey("public.Aluno", t => t.Matricula_Matricula)
-                .Index(t => t.Matricula_Matricula);
+                .PrimaryKey(t => t.Id);
             
         }
         
         public override void Down()
         {
-            DropForeignKey("public.Curso", "Matricula_Matricula", "public.Aluno");
-            DropIndex("public.Curso", new[] { "Matricula_Matricula" });
+            DropForeignKey("public.Aluno", "IdCurso_Id", "public.Curso");
+            DropIndex("public.Aluno", new[] { "IdCurso_Id" });
             DropTable("public.Curso");
             DropTable("public.Aluno");
         }

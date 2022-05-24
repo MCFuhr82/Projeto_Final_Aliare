@@ -32,6 +32,7 @@ namespace ProjetoFinalAliare.Models
         public string Cidade { get; private set; }
         [Required]
         public string Estado { get; private set; }
+        public Curso IdCurso { get; set; }
 
         public Aluno() { }
 

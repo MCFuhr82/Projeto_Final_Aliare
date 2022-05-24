@@ -33,7 +33,6 @@ namespace ProjetoFinalAliare
         {
             LimparTextBoxes();
             dataGridView1.DataSource = ConsultarListaCurso();
-            dataGridView1.Columns["Matricula"].Visible = false;
             
         }
 
