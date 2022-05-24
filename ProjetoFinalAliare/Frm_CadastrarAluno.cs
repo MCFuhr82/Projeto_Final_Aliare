@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 using ProjetoFinalAliare.Models;
+using Correios.Net;
 
 namespace ProjetoFinalAliare
 {
@@ -56,10 +57,7 @@ namespace ProjetoFinalAliare
                         LimparTextBoxes();
                         Lbl_CpfInválido.Text = null;
                     }
-                } else
-                {
-                    Lbl_CpfInválido.Text = "CPF Inválido";
-                }
+                } 
             }
             catch (Exception ex)
             {
@@ -88,6 +86,21 @@ namespace ProjetoFinalAliare
             Mtxb_CPF.Text = null;
             Mtxb_Telefone.Text = null;
             Txb_Complemento.Text = null;
+        }
+
+        //private void Mtxb_CEP_Leave(object sender, EventArgs e)
+        //{
+        //    LocalizarCEP.LocalizaCEP(Mtxb_CEP.Text);
+        //}
+
+        private void Mtxb_CPF_Leave(object sender, EventArgs e)
+        {
+            var cpf = Mtxb_CPF.Text;
+            var cpfValido = ValidacaoCPF.ValidaCPF(cpf);
+            if (cpfValido == false)
+                Lbl_CpfInválido.Text = "CPF Inválido";
+            else
+                Lbl_CpfInválido.Text = "";
         }
     }
 }

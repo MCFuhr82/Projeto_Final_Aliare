@@ -143,6 +143,7 @@ namespace ProjetoFinalAliare
             this.Mtxb_CPF.Name = "Mtxb_CPF";
             this.Mtxb_CPF.Size = new System.Drawing.Size(91, 20);
             this.Mtxb_CPF.TabIndex = 3;
+            this.Mtxb_CPF.Leave += new System.EventHandler(this.Mtxb_CPF_Leave);
             // 
             // Lbl_Telefone
             // 
@@ -213,6 +214,7 @@ namespace ProjetoFinalAliare
             this.Mtxb_CEP.Name = "Mtxb_CEP";
             this.Mtxb_CEP.Size = new System.Drawing.Size(100, 20);
             this.Mtxb_CEP.TabIndex = 5;
+            //this.Mtxb_CEP.Leave += new System.EventHandler(this.Mtxb_CEP_Leave);
             // 
             // Lbl_Complemento
             // 
