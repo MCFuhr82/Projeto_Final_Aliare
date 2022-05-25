@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProjetoFinalAliare.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,21 +17,31 @@ namespace ProjetoFinalAliare
         {
             InitializeComponent();
         }
-
+        
         public Frm_Matricular(String matricula, String nome)
         {
             InitializeComponent();
             Txb_Matricula.Text = matricula;
             Txb_Nome.Text = nome;
+            PopularComboBox();
         }
 
-        private void Cbox_SelecionaCurso_SelectedIndexChanged(object sender, EventArgs e)
+        private void PopularComboBox()
         {
-            using (var context = new Context())
+
+            //toDo
+            var cursos = CursoController.lerCursos();
+
+            foreach (var curso in cursos)
             {
-                var curso = context.Curso;
-                
+                Cbox_SelecionaCurso.Items.Add(curso.Nome);
             }
+            
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //Update Aluno
         }
     }
 }

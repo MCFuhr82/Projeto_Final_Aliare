@@ -61,15 +61,16 @@ namespace ProjetoFinalAliare
             this.button1.TabIndex = 16;
             this.button1.Text = "Matricular";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Cbox_SelecionaCurso
             // 
+            this.Cbox_SelecionaCurso.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Cbox_SelecionaCurso.FormattingEnabled = true;
             this.Cbox_SelecionaCurso.Location = new System.Drawing.Point(204, 176);
             this.Cbox_SelecionaCurso.Name = "Cbox_SelecionaCurso";
             this.Cbox_SelecionaCurso.Size = new System.Drawing.Size(398, 21);
             this.Cbox_SelecionaCurso.TabIndex = 17;
-            this.Cbox_SelecionaCurso.SelectedIndexChanged += new System.EventHandler(this.Cbox_SelecionaCurso_SelectedIndexChanged);
             // 
             // Txb_Matricula
             // 

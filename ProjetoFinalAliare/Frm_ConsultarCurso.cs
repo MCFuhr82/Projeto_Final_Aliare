@@ -32,7 +32,7 @@ namespace ProjetoFinalAliare
         private void Btn_Consulta_Click(object sender, EventArgs e)
         {
             LimparTextBoxes();
-            dataGridView1.DataSource = ConsultarListaCurso();
+            dataGridView1.DataSource = CursoController.lerCursos();
             
         }
 
@@ -50,7 +50,7 @@ namespace ProjetoFinalAliare
             {
                 //Rotina de exclusão
                 DeletarCurso(idCurso);
-                dataGridView1.DataSource = ConsultarListaCurso();
+                dataGridView1.DataSource = CursoController.lerCursos();
 
                 //Confirmando exclusão para o usuário
                 MessageBox.Show("Registro apagado com sucesso", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);

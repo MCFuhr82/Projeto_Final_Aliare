@@ -197,6 +197,7 @@
     <Compile Include="Frm_Menu.Designer.cs">
       <DependentUpon>Frm_Menu.cs</DependentUpon>
     </Compile>
+    <Compile Include="CursoController.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
     <Compile Include="ValidacaoCPF.cs" />
     <EmbeddedResource Include="Frm_CadastrarCurso.resx">
