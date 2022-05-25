@@ -167,3 +167,4 @@ C:\ws-marcelo\ProjetoFinalAliare\Projeto_Final_Aliare\ProjetoFinalAliare\obj\Deb
 C:\ws-marcelo\ProjetoFinalAliare\Projeto_Final_Aliare\ProjetoFinalAliare\obj\Debug\RdlCompile.compiled
 C:\ws-marcelo\ProjetoFinalAliare\Projeto_Final_Aliare\ProjetoFinalAliare\bin\Debug\Correios.Net.dll
 C:\ws-marcelo\ProjetoFinalAliare\Projeto_Final_Aliare\ProjetoFinalAliare\bin\Debug\Correios.Net.pdb
+C:\ws-marcelo\ProjetoFinalAliare\Projeto_Final_Aliare\ProjetoFinalAliare\obj\Debug\ProjetoFinalAliare.Frm_Matricular.resources

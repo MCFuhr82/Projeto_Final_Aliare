@@ -106,6 +106,11 @@ namespace ProjetoFinalAliare
             var form = new Frm_EditarAluno(Txb_Matricula.Text);
             form.ShowDialog();
         }
-     
+
+        private void Frm_Matricular_Click(object sender, EventArgs e)
+        {
+            var form = new Frm_Matricular(Txb_Matricula.Text, Txb_Nome.Text);
+            form.ShowDialog();
+        }
     }
 }

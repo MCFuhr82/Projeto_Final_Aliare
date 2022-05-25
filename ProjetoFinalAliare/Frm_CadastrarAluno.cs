@@ -36,11 +36,9 @@ namespace ProjetoFinalAliare
                 var nome = Txb_Nome.Text;
                 var email = Txb_Email.Text;
                 var cep = Mtxb_CEP.Text;
-                var endereco = LocalizarCEP.rua;
-                Txb_Endereco.Text = endereco;
+                var endereco = Txb_Endereco.Text;
                 var numero = int.Parse(Txb_Numero.Text);
-                var cidade = LocalizarCEP.cidade;
-                Txb_Cidade.Text = cidade;
+                var cidade = Txb_Cidade.Text;
                 var estado = Cbox_Estados.Text;
                 var telefone = Mtxb_Telefone.Text;
                 var complemento = Txb_Complemento.Text;
@@ -95,6 +93,12 @@ namespace ProjetoFinalAliare
             var cepInvalido = LocalizarCEP.LocalizaCEP(Mtxb_CEP.Text);
             if (cepInvalido == false)
                 MessageBox.Show("Informe um CEP válido!");
+            var endereco = LocalizarCEP.rua;
+            Txb_Endereco.Text = endereco;
+            var cidade = LocalizarCEP.cidade;
+            Txb_Cidade.Text = cidade;
+            var uf = LocalizarCEP.estado;
+            Cbox_Estados.Text = uf;
         }
 
         private void Mtxb_CPF_Leave(object sender, EventArgs e)

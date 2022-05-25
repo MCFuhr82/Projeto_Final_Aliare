@@ -12,29 +12,36 @@ namespace ProjetoFinalAliare
         //public static string estado;
         public static string cidade;
         public static string rua;
+        public static string estado;
         public static bool LocalizaCEP(string txtcep)
         {
             string cep = txtcep.Replace("-", "");
             
             if (!string.IsNullOrWhiteSpace(cep))
             {
-                var endereco = SearchZip.GetAddress(cep);
-                if (endereco.Zip != null)
+                using (var ws = new WSCorreios.AtendeClienteClient())
                 {
-                    //estado = endereco.State;
-                    cidade = endereco.City;
-                    rua = endereco.Street;
-                    return true;
-                }
-                else
-                {
-                    return false;
+                    try
+                    {
+                        var endereco = ws.consultaCEP(cep.Trim());
+
+                        cidade = endereco.cidade;
+                        rua = endereco.end;
+                        estado = endereco.uf;
+
+                        return true;
+                    }
+                    catch (Exception ex)
+                    {
+                        return false;
+                    }
                 }
             }
             else
             {
                 return false;
             }
+            
         }
     }
 }
