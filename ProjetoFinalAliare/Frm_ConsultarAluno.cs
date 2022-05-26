@@ -27,74 +27,25 @@ namespace ProjetoFinalAliare
 
         private void Btn_Consulta_Click(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = ConsultarListaAluno();
-        }
+            dataGridView1.DataSource = AlunoController.ReadAlunos();
+            dataGridView1.Columns["IdCurso"].Visible = false;
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            try
-            {
-                var alunos = new List<Aluno>();
-                var selectedAluno = dataGridView1.SelectedRows[0].DataBoundItem as Aluno;
-                Txb_Matricula.Text = selectedAluno.Matricula.ToString();
-                Txb_Nome.Text = selectedAluno.Nome.ToString();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Ocorreu um erro " + ex.Message + " - " + ex.Source);
-            }
         }
-
         private void Btn_Deletar_Click(object sender, EventArgs e)
         {
             var matricula = int.Parse(Txb_Matricula.Text);
+
             //Criar um MessageBox com os botões Sim e Não e deixar o botão 2(Não) selecionado por padrão e comparar o botão apertado
             if (DialogResult.Yes == MessageBox.Show("Tem certeza que deseja apagar o registro?", "Confirmação", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2))
             {
                 //Rotina de exclusão
-                DeletarAluno(matricula);
-                dataGridView1.DataSource = ConsultarListaAluno();
+                AlunoController.DeleteAluno(matricula);
+                dataGridView1.DataSource = AlunoController.ReadAlunos();
 
                 //Confirmando exclusão para o usuário
                 MessageBox.Show("Registro apagado com sucesso", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                
             }
         }
-
-        public List<Aluno> ConsultarListaAluno()
-        {
-            try
-            {
-                using (var context = new Context())
-                {
-                    var listaAlunos = context.Aluno.ToList();
-                    return listaAlunos;
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-
-            return null;
-        }
-        
-        private void DeletarAluno(int matricula)
-        {
-            using (var context = new Context())
-            {
-                var alunos = context.Aluno.ToList();
-                foreach (var aluno in alunos)
-                {
-                    if (aluno.Matricula == matricula)
-                    {
-                        context.Aluno.Remove(aluno);
-                        context.SaveChanges();
-                    }
-                }
-            }
-        }
-
         private void Btn_Cadastrar_Click(object sender, EventArgs e)
         {
             var form = new Frm_CadastrarAluno();
@@ -112,5 +63,58 @@ namespace ProjetoFinalAliare
             var form = new Frm_Matricular(Txb_Matricula.Text, Txb_Nome.Text);
             form.ShowDialog();
         }
+
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                var alunos = new List<Aluno>();
+                var selectedAluno = dataGridView1.SelectedRows[0].DataBoundItem as Aluno;
+                Txb_Matricula.Text = selectedAluno.Matricula.ToString();
+                Txb_Nome.Text = selectedAluno.Nome.ToString();
+                dataGridView1.Columns["IdCurso"].Visible = false;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ocorreu um erro " + ex.Message + " - " + ex.Source);
+            }
+        }
+
+        //Selecionar Alunos
+        //public List<Aluno> ConsultarListaAluno()
+        //{
+        //    try
+        //    {
+        //        using (var context = new Context())
+        //        {
+        //            var listaAlunos = context.Aluno.ToList();
+        //            return listaAlunos;
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        MessageBox.Show(ex.Message);
+        //    }
+        //    return null;
+        //}
+        
+        //Deletar Alunos
+        //private void DeletarAluno(int matricula)
+        //{
+        //    using (var context = new Context())
+        //    {
+        //        var alunos = context.Aluno.ToList();
+        //        foreach (var aluno in alunos)
+        //        {
+        //            if (aluno.Matricula == matricula)
+        //            {
+        //                context.Aluno.Remove(aluno);
+        //                context.SaveChanges();
+        //            }
+        //        }
+        //    }
+        //}
+
     }
 }

@@ -32,6 +32,7 @@ namespace ProjetoFinalAliare
             this.Close();
         }
 
+        //Update Aluno
         private void UpdateAluno(int matricula)
         {
             try
@@ -70,6 +71,19 @@ namespace ProjetoFinalAliare
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void Mtxb_CEP_Leave(object sender, EventArgs e)
+        {
+            var cepInvalido = LocalizarCEP.LocalizaCEP(Mtxb_CEP.Text);
+            if (cepInvalido == false)
+                MessageBox.Show("Informe um CEP válido!");
+            var endereco = LocalizarCEP.rua;
+            Txb_Endereco.Text = endereco;
+            var cidade = LocalizarCEP.cidade;
+            Txb_Cidade.Text = cidade;
+            var uf = LocalizarCEP.estado;
+            Cbox_Estados.Text = uf;
         }
 
         private void PopulateTextBoxes(int matricula)

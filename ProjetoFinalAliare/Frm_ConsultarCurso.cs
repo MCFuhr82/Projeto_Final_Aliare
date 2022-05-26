@@ -49,7 +49,7 @@ namespace ProjetoFinalAliare
             if (DialogResult.Yes == MessageBox.Show("Tem certeza que deseja apagar o registro?", "Confirmação", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2))
             {
                 //Rotina de exclusão
-                DeletarCurso(idCurso);
+                CursoController.DeleteCurso(idCurso);
                 dataGridView1.DataSource = CursoController.lerCursos();
 
                 //Confirmando exclusão para o usuário
@@ -72,41 +72,7 @@ namespace ProjetoFinalAliare
                 MessageBox.Show("Ocorreu um erro " + ex.Message + " - " + ex.Source);
             }
         }
-
-        public List<Curso> ConsultarListaCurso()
-        {
-            try
-            {
-                using (var context = new Context())
-                {
-                    var listaCursos = context.Curso.ToList();
-                    return listaCursos;
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-
-            return null;
-        }
-
-        private void DeletarCurso(int idCurso)
-        {
-            using (var context = new Context())
-            {
-                var cursos = context.Curso.ToList();
-                foreach (var curso in cursos)
-                {
-                    if (curso.Id == idCurso)
-                    {
-                        context.Curso.Remove(curso);
-                        context.SaveChanges();
-                    }
-                }
-            }
-        }
-
+                       
         private void LimparTextBoxes()
         {
             Txb_IdCurso.Text = null;

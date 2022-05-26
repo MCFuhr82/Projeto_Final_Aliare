@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -28,20 +29,33 @@ namespace ProjetoFinalAliare
 
         private void PopularComboBox()
         {
-
-            //toDo
             var cursos = CursoController.lerCursos();
 
             foreach (var curso in cursos)
             {
                 Cbox_SelecionaCurso.Items.Add(curso.Nome);
             }
-            
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //Update Aluno
+            UpdateAluno(int.Parse(Txb_Matricula.Text));
+        }
+
+        private void UpdateAluno(int matricula)
+        {
+            using (var context = new Context())
+            {
+                var nomeCurso = Cbox_SelecionaCurso.Text;
+
+                var aluno = context.Aluno.Where(x => x.Matricula == matricula).FirstOrDefault();
+                var curso = context.Curso.Where(x => x.Nome == nomeCurso).FirstOrDefault();
+
+                aluno.IdCurso = curso;
+                context.Entry(aluno).State = EntityState.Modified;
+                context.SaveChanges();
+                MessageBox.Show("Dados inseridos com sucesso!");
+            }
         }
     }
 }

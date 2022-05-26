@@ -31,7 +31,7 @@ namespace ProjetoFinalAliare
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Matricular));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.Btn_Matricular = new System.Windows.Forms.Button();
             this.Cbox_SelecionaCurso = new System.Windows.Forms.ComboBox();
             this.Txb_Matricula = new System.Windows.Forms.TextBox();
             this.Lbl_Matricula = new System.Windows.Forms.Label();
@@ -51,17 +51,17 @@ namespace ProjetoFinalAliare
             this.pictureBox1.TabIndex = 16;
             this.pictureBox1.TabStop = false;
             // 
-            // button1
+            // Btn_Matricular
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.button1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(674, 404);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(114, 34);
-            this.button1.TabIndex = 16;
-            this.button1.Text = "Matricular";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.Btn_Matricular.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.Btn_Matricular.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Matricular.Location = new System.Drawing.Point(674, 404);
+            this.Btn_Matricular.Name = "Btn_Matricular";
+            this.Btn_Matricular.Size = new System.Drawing.Size(114, 34);
+            this.Btn_Matricular.TabIndex = 16;
+            this.Btn_Matricular.Text = "Matricular";
+            this.Btn_Matricular.UseVisualStyleBackColor = false;
+            this.Btn_Matricular.Click += new System.EventHandler(this.button1_Click);
             // 
             // Cbox_SelecionaCurso
             // 
@@ -125,7 +125,7 @@ namespace ProjetoFinalAliare
             this.Controls.Add(this.Cbox_SelecionaCurso);
             this.Controls.Add(this.Txb_Matricula);
             this.Controls.Add(this.Lbl_Nome);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.Btn_Matricular);
             this.Controls.Add(this.Lbl_Matricula);
             this.Controls.Add(this.pictureBox1);
             this.Name = "Frm_Matricular";
@@ -139,7 +139,7 @@ namespace ProjetoFinalAliare
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button Btn_Matricular;
         private System.Windows.Forms.ComboBox Cbox_SelecionaCurso;
         private System.Windows.Forms.TextBox Txb_Matricula;
         private System.Windows.Forms.Label Lbl_Matricula;

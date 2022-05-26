@@ -94,5 +94,6 @@ namespace ProjetoFinalAliare.Models
         {
             Estado = estado;
         }
+
     }
 }

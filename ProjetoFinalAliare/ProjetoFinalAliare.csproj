@@ -127,6 +127,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AlunoController.cs" />
     <Compile Include="Connected Services\WSCorreios\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -167,6 +168,10 @@
     <Compile Include="Migrations\202205201828409_BD_Inicio.cs" />
     <Compile Include="Migrations\202205201828409_BD_Inicio.designer.cs">
       <DependentUpon>202205201828409_BD_Inicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202205252213002_BD_Inicio1.cs" />
+    <Compile Include="Migrations\202205252213002_BD_Inicio1.designer.cs">
+      <DependentUpon>202205252213002_BD_Inicio1.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Aluno.cs" />
@@ -217,6 +222,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202205201828409_BD_Inicio.resx">
       <DependentUpon>202205201828409_BD_Inicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202205252213002_BD_Inicio1.resx">
+      <DependentUpon>202205252213002_BD_Inicio1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
