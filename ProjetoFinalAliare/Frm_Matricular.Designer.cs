@@ -61,7 +61,7 @@ namespace ProjetoFinalAliare
             this.Btn_Matricular.TabIndex = 16;
             this.Btn_Matricular.Text = "Matricular";
             this.Btn_Matricular.UseVisualStyleBackColor = false;
-            this.Btn_Matricular.Click += new System.EventHandler(this.button1_Click);
+            this.Btn_Matricular.Click += new System.EventHandler(this.Btn_Matricular_Click);
             // 
             // Cbox_SelecionaCurso
             // 

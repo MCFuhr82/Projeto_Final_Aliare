@@ -17,6 +17,9 @@ namespace ProjetoFinalAliare
         public Frm_ConsultarAluno()
         {
             InitializeComponent();
+            Btn_Editar.Enabled = false;
+            Btn_Deletar.Enabled = false;
+            Btn_Matricular.Enabled = false;
             
         }
 
@@ -29,21 +32,31 @@ namespace ProjetoFinalAliare
         {
             dataGridView1.DataSource = AlunoController.ReadAlunos();
             dataGridView1.Columns["IdCurso"].Visible = false;
+            Btn_Editar.Enabled = true;
+            Btn_Deletar.Enabled = true;
+            Btn_Matricular.Enabled = true;
 
         }
         private void Btn_Deletar_Click(object sender, EventArgs e)
         {
-            var matricula = int.Parse(Txb_Matricula.Text);
-
-            //Criar um MessageBox com os botões Sim e Não e deixar o botão 2(Não) selecionado por padrão e comparar o botão apertado
-            if (DialogResult.Yes == MessageBox.Show("Tem certeza que deseja apagar o registro?", "Confirmação", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2))
+            if (Txb_Matricula.Text == "")
             {
-                //Rotina de exclusão
-                AlunoController.DeleteAluno(matricula);
-                dataGridView1.DataSource = AlunoController.ReadAlunos();
+                MensagemDeSelecao();
+            } 
+            else
+            {
+                var matricula = int.Parse(Txb_Matricula.Text);
 
-                //Confirmando exclusão para o usuário
-                MessageBox.Show("Registro apagado com sucesso", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //Criar um MessageBox com os botões Sim e Não e deixar o botão 2(Não) selecionado por padrão e comparar o botão apertado
+                if (DialogResult.Yes == MessageBox.Show("Tem certeza que deseja apagar o registro?", "Confirmação", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2))
+                {
+                    //Rotina de exclusão
+                    AlunoController.DeleteAluno(matricula);
+                    dataGridView1.DataSource = AlunoController.ReadAlunos();
+
+                    //Confirmando exclusão para o usuário
+                    MessageBox.Show("Registro apagado com sucesso", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
         }
         private void Btn_Cadastrar_Click(object sender, EventArgs e)
@@ -54,14 +67,28 @@ namespace ProjetoFinalAliare
 
         private void Btn_Editar_Click(object sender, EventArgs e)
         {
-            var form = new Frm_EditarAluno(Txb_Matricula.Text);
-            form.ShowDialog();
+            if (Txb_Matricula.Text == "")
+            {
+                MensagemDeSelecao();
+            }
+            else
+            {
+                var form = new Frm_EditarAluno(Txb_Matricula.Text);
+                form.ShowDialog();
+            }
         }
 
         private void Frm_Matricular_Click(object sender, EventArgs e)
         {
-            var form = new Frm_Matricular(Txb_Matricula.Text, Txb_Nome.Text);
-            form.ShowDialog();
+            if (Txb_Matricula.Text == "")
+            {
+                MensagemDeSelecao();
+            }
+            else
+            {
+                var form = new Frm_Matricular(Txb_Matricula.Text, Txb_Nome.Text);
+                form.ShowDialog();
+            }
         }
 
 
@@ -81,6 +108,11 @@ namespace ProjetoFinalAliare
             }
         }
 
+        private void MensagemDeSelecao()
+        {
+            MessageBox.Show("Por favor, selecione um aluno.", "Selecionar aluno", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        }
+        
         //Selecionar Alunos
         //public List<Aluno> ConsultarListaAluno()
         //{

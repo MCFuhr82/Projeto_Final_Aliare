@@ -40,7 +40,7 @@
             this.Txb_Matricula = new System.Windows.Forms.TextBox();
             this.Txb_Nome = new System.Windows.Forms.TextBox();
             this.Btn_Cadastrar = new System.Windows.Forms.Button();
-            this.Frm_Matricular = new System.Windows.Forms.Button();
+            this.Btn_Matricular = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -161,24 +161,24 @@
             this.Btn_Cadastrar.UseVisualStyleBackColor = false;
             this.Btn_Cadastrar.Click += new System.EventHandler(this.Btn_Cadastrar_Click);
             // 
-            // Frm_Matricular
+            // Btn_Matricular
             // 
-            this.Frm_Matricular.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.Frm_Matricular.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Frm_Matricular.Location = new System.Drawing.Point(706, 243);
-            this.Frm_Matricular.Name = "Frm_Matricular";
-            this.Frm_Matricular.Size = new System.Drawing.Size(114, 34);
-            this.Frm_Matricular.TabIndex = 15;
-            this.Frm_Matricular.Text = "Matricular";
-            this.Frm_Matricular.UseVisualStyleBackColor = false;
-            this.Frm_Matricular.Click += new System.EventHandler(this.Frm_Matricular_Click);
+            this.Btn_Matricular.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.Btn_Matricular.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Matricular.Location = new System.Drawing.Point(706, 243);
+            this.Btn_Matricular.Name = "Btn_Matricular";
+            this.Btn_Matricular.Size = new System.Drawing.Size(114, 34);
+            this.Btn_Matricular.TabIndex = 15;
+            this.Btn_Matricular.Text = "Matricular";
+            this.Btn_Matricular.UseVisualStyleBackColor = false;
+            this.Btn_Matricular.Click += new System.EventHandler(this.Frm_Matricular_Click);
             // 
             // Frm_ConsultarAluno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(832, 449);
-            this.Controls.Add(this.Frm_Matricular);
+            this.Controls.Add(this.Btn_Matricular);
             this.Controls.Add(this.Btn_Cadastrar);
             this.Controls.Add(this.Txb_Nome);
             this.Controls.Add(this.Txb_Matricula);
@@ -211,6 +211,6 @@
         private System.Windows.Forms.TextBox Txb_Matricula;
         private System.Windows.Forms.TextBox Txb_Nome;
         private System.Windows.Forms.Button Btn_Cadastrar;
-        private System.Windows.Forms.Button Frm_Matricular;
+        private System.Windows.Forms.Button Btn_Matricular;
     }
 }
