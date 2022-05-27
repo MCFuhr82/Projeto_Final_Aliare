@@ -20,23 +20,19 @@ namespace ProjetoFinalAliare
 
         private void Btn_Cadastrar_Click(object sender, EventArgs e)
         {
-            InserirCurso();
+            CriarCurso();
         }
 
-        public void InserirCurso()
+        public void CriarCurso()
         {
             try
             {
                 var nome = Txb_Nome.Text;
                 var cargaHoraria = int.Parse(Txb_CargaHoraria.Text);
                 
-                using (var context = new Context())
-                {
-                    var curso = new Curso(nome, cargaHoraria);
-                    context.Curso.Add(curso);
-                    context.SaveChanges();
-                    MessageBox.Show("Dados inseridos com sucesso!");
-                }
+                var curso = new Curso(nome, cargaHoraria);
+                CursoController.InserirCurso(curso);
+                MessageBox.Show("Dados inseridos com sucesso!");
             }
             catch (Exception ex)
             {

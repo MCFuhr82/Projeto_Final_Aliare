@@ -51,7 +51,7 @@ namespace ProjetoFinalAliare
                 if (DialogResult.Yes == MessageBox.Show("Tem certeza que deseja apagar o registro?", "Confirmação", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2))
                 {
                     //Rotina de exclusão
-                    AlunoController.DeleteAluno(matricula);
+                    AlunoController.DeletarAluno(matricula);
                     dataGridView1.DataSource = AlunoController.ReadAlunos();
 
                     //Confirmando exclusão para o usuário
@@ -90,7 +90,6 @@ namespace ProjetoFinalAliare
                 form.ShowDialog();
             }
         }
-
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {

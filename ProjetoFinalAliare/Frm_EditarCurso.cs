@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProjetoFinalAliare.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -27,33 +28,29 @@ namespace ProjetoFinalAliare
 
         private void Btn_Salvar_Click(object sender, EventArgs e)
         {
-            UpdateCurso(int.Parse(Txb_IdCurso.Text));
+            var curso = UpdateCurso(int.Parse(Txb_IdCurso.Text));
+            CursoController.UpdateCurso(curso);       
+            MessageBox.Show("Dados inseridos com sucesso!");
             this.Close();
         }
 
-        private void UpdateCurso(int idCurso)
+        private Curso UpdateCurso(int idCurso)
         {
             try
             {
-
-                using (var context = new Context())
-                {
-                    var curso = context.Curso.Where(x => x.Id == idCurso).FirstOrDefault();
-
-                    var nome = Txb_Nome.Text;
-                    var cargaHoraria = int.Parse(Txb_CargaHoraria.Text);
+                var nome = Txb_Nome.Text;
+                var cargaHoraria = int.Parse(Txb_CargaHoraria.Text);
                     
-                    curso.SetNome(nome);
-                    curso.SetCargaHoraria(cargaHoraria);
-                    
-                    context.Entry(curso).State = EntityState.Modified;
-                    context.SaveChanges();
-                    MessageBox.Show("Dados inseridos com sucesso!");
-                }
+                var curso = CursoController.SelectAlunoPorId(idCurso);
+                curso.SetNome(nome);
+                curso.SetCargaHoraria(cargaHoraria);
+
+                return curso;
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+                return null;
             }
         }
 
@@ -69,6 +66,11 @@ namespace ProjetoFinalAliare
                 Txb_Nome.Text = nome;
                 Txb_CargaHoraria.Text = cargaHoraria.ToString();
             }
+        }
+
+        private void Btn_voltar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

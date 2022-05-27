@@ -29,7 +29,7 @@ namespace ProjetoFinalAliare
 
         private void PopularComboBox()
         {
-            var cursos = CursoController.lerCursos();
+            var cursos = CursoController.SelecionarCursos();
 
             foreach (var curso in cursos)
             {
@@ -53,17 +53,13 @@ namespace ProjetoFinalAliare
                               
                 var curso = context.Curso.Where(x => x.Nome == nomeCurso).FirstOrDefault();
 
-                if (aluno.IdCurso.Id < 0)
-                {
-                    aluno.IdCurso = curso;
-                    context.Entry(aluno).State = EntityState.Modified;
-                    context.SaveChanges();
-                    MessageBox.Show("Dados inseridos com sucesso!");
-                } 
-                else
-                {
-                    MessageBox.Show("Aluno já possui uma matrícula ativa", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
+                               
+                aluno.IdCurso = curso;
+                context.Entry(aluno).State = EntityState.Modified;
+                context.SaveChanges();
+                MessageBox.Show("Dados inseridos com sucesso!");
+                 
+                
             }
         }
     }

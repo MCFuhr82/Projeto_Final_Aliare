@@ -118,6 +118,7 @@
             this.Controls.Add(this.Txb_Login);
             this.Controls.Add(this.Lbl_Password);
             this.Controls.Add(this.Lbl_Login);
+            this.MaximizeBox = false;
             this.Name = "Frm_Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tela de Login";

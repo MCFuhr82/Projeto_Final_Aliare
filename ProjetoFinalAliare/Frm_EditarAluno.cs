@@ -23,53 +23,54 @@ namespace ProjetoFinalAliare
         {
             InitializeComponent();
             Txb_Matricula.Text = matricula;
-            PopulateTextBoxes(int.Parse(matricula));
+            PopularTextBoxes(int.Parse(matricula));
         }
 
         private void Btn_Salvar_Click(object sender, EventArgs e)
         {
-            UpdateAluno(int.Parse(Txb_Matricula.Text));
+            var aluno = ModificarAluno(int.Parse(Txb_Matricula.Text));
+            AlunoController.UpdateAluno(aluno);
+            MessageBox.Show("Dados inseridos com sucesso!");
+            this.Close();
+        }
+        private void Btn_Voltar_Click(object sender, EventArgs e)
+        {
             this.Close();
         }
 
-        //Update Aluno
-        private void UpdateAluno(int matricula)
+        //Modificar dados do aluno
+        private Aluno ModificarAluno(int matricula)
         {
             try
             {
+                var aluno = AlunoController.SelectAlunoPorId(matricula);
                 
-                using (var context = new Context())
-                {
-                    var aluno = context.Aluno.Where(x => x.Matricula == matricula).FirstOrDefault();
+                var nome = Txb_Nome.Text;
+                var email = Txb_Email.Text;
+                var cep = Mtxb_CEP.Text;
+                var endereco = Txb_Endereco.Text;
+                var numero = int.Parse(Txb_Numero.Text);
+                var cidade = Txb_Cidade.Text;
+                var estado = Cbox_Estados.Text;
+                var telefone = Mtxb_Telefone.Text;
+                var complemento = Txb_Complemento.Text;
 
-                    var nome = Txb_Nome.Text;
-                    var email = Txb_Email.Text;
-                    var cep = Mtxb_CEP.Text;
-                    var endereco = Txb_Endereco.Text;
-                    var numero = int.Parse(Txb_Numero.Text);
-                    var cidade = Txb_Cidade.Text;
-                    var estado = Cbox_Estados.Text;
-                    var telefone = Mtxb_Telefone.Text;
-                    var complemento = Txb_Complemento.Text;
+                aluno.SetNome(nome);
+                aluno.SetEmail(email);
+                aluno.SetCep(cep);
+                aluno.SetEndereco(endereco);
+                aluno.SetNumero(numero);
+                aluno.SetCidade(cidade);
+                aluno.SetEstado(estado);
+                aluno.SetCelular(telefone);
+                aluno.SetComplemento(complemento);
 
-                    aluno.SetNome(nome);
-                    aluno.SetEmail(email);
-                    aluno.SetCep(cep);
-                    aluno.SetEndereco(endereco);
-                    aluno.SetNumero(numero);
-                    aluno.SetCidade(cidade);
-                    aluno.SetEstado(estado);
-                    aluno.SetCelular(telefone);
-                    aluno.SetComplemento(complemento);
-
-                    context.Entry(aluno).State = EntityState.Modified;
-                    context.SaveChanges();
-                    MessageBox.Show("Dados inseridos com sucesso!");
-                }
+                return aluno;
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+                return null;
             }
         }
 
@@ -86,7 +87,7 @@ namespace ProjetoFinalAliare
             Cbox_Estados.Text = uf;
         }
 
-        private void PopulateTextBoxes(int matricula)
+        private void PopularTextBoxes(int matricula)
         {
             using (var context = new Context())
             {
@@ -116,4 +117,5 @@ namespace ProjetoFinalAliare
             }
         }
     }
+
 }

@@ -55,6 +55,7 @@ namespace ProjetoFinalAliare
             this.Cbox_Estados = new System.Windows.Forms.ComboBox();
             this.Lbl_Matricula = new System.Windows.Forms.Label();
             this.Txb_Matricula = new System.Windows.Forms.TextBox();
+            this.Btn_Voltar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -72,7 +73,7 @@ namespace ProjetoFinalAliare
             // 
             this.Btn_Salvar.BackColor = System.Drawing.SystemColors.ControlLight;
             this.Btn_Salvar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_Salvar.Location = new System.Drawing.Point(708, 403);
+            this.Btn_Salvar.Location = new System.Drawing.Point(708, 363);
             this.Btn_Salvar.Name = "Btn_Salvar";
             this.Btn_Salvar.Size = new System.Drawing.Size(114, 34);
             this.Btn_Salvar.TabIndex = 11;
@@ -313,11 +314,24 @@ namespace ProjetoFinalAliare
             this.Txb_Matricula.Size = new System.Drawing.Size(49, 20);
             this.Txb_Matricula.TabIndex = 31;
             // 
+            // Btn_Voltar
+            // 
+            this.Btn_Voltar.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.Btn_Voltar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Voltar.Location = new System.Drawing.Point(708, 403);
+            this.Btn_Voltar.Name = "Btn_Voltar";
+            this.Btn_Voltar.Size = new System.Drawing.Size(114, 34);
+            this.Btn_Voltar.TabIndex = 32;
+            this.Btn_Voltar.Text = "Voltar";
+            this.Btn_Voltar.UseVisualStyleBackColor = false;
+            this.Btn_Voltar.Click += new System.EventHandler(this.Btn_Voltar_Click);
+            // 
             // Frm_EditarAluno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(832, 449);
+            this.Controls.Add(this.Btn_Voltar);
             this.Controls.Add(this.Txb_Matricula);
             this.Controls.Add(this.Lbl_Matricula);
             this.Controls.Add(this.Cbox_Estados);
@@ -379,5 +393,6 @@ namespace ProjetoFinalAliare
         private System.Windows.Forms.ComboBox Cbox_Estados;
         private System.Windows.Forms.Label Lbl_Matricula;
         private System.Windows.Forms.TextBox Txb_Matricula;
+        private System.Windows.Forms.Button Btn_Voltar;
     }
 }

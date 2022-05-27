@@ -103,6 +103,7 @@
             this.Controls.Add(this.Btn_Curso);
             this.Controls.Add(this.Btn_Aluno);
             this.Name = "Frm_Menu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Aliare";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

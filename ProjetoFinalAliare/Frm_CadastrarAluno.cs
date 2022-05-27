@@ -15,7 +15,7 @@ namespace ProjetoFinalAliare
 
         private void Btn_Cadastrar_Click(object sender, EventArgs e)
         {
-            InserirAluno();
+            CriarAluno();
         }
 
         private void Btn_Voltar_Click(object sender, EventArgs e)
@@ -29,7 +29,7 @@ namespace ProjetoFinalAliare
             form.ShowDialog();
         }
 
-        public void InserirAluno()
+        private void CriarAluno()
         {
             try
             {
@@ -46,18 +46,22 @@ namespace ProjetoFinalAliare
 
                 var cpfValido = ValidacaoCPF.ValidaCPF(cpf);
 
-                if (cpfValido == true)
+                if (!Mtxb_CEP.MaskCompleted || !Mtxb_Telefone.MaskCompleted)
                 {
-                    using (var context = new Context())
+                    MessageBox.Show("Verificar telefone ou CEP");
+                } 
+                else
+                {
+                    if (cpfValido == true)
                     {
                         var aluno = new Aluno(nome, cpf, endereco, numero, cidade, estado, cep, complemento, telefone, email);
-                        context.Aluno.Add(aluno);
-                        context.SaveChanges();
+
+                        AlunoController.InserirAluno(aluno);
                         MessageBox.Show("Dados inseridos com sucesso!");
                         LimparTextBoxes();
                         Lbl_CpfInválido.Text = null;
-                    }
-                } 
+                    } 
+                }
             }
             catch (Exception ex)
             {

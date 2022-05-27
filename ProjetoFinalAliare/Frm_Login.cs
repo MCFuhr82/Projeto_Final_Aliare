@@ -17,7 +17,7 @@ namespace ProjetoFinalAliare
         {
             if (Txb_Login.Text == "Admin" && Txb_Password.Text == "1234")
             {
-                MessageBox.Show("Bem vindo ao sistema!");
+                MessageBox.Show("Bem vindo ao sistema!", "Aliare", MessageBoxButtons.OK);
                 this.Close();
                 var nt = new Thread(novoFormulario);
                 nt.SetApartmentState(ApartmentState.STA);
@@ -26,7 +26,7 @@ namespace ProjetoFinalAliare
             }
             else
             {
-                MessageBox.Show("Login ou senha inválidos!");
+                MessageBox.Show("Login ou senha inválidos!", "Aliare", MessageBoxButtons.OK, MessageBoxIcon.Hand);
             }
         }
 

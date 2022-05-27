@@ -38,6 +38,7 @@
             this.Txb_CargaHoraria = new System.Windows.Forms.TextBox();
             this.Lbl_IdCurso = new System.Windows.Forms.Label();
             this.Txb_IdCurso = new System.Windows.Forms.TextBox();
+            this.Btn_voltar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -55,7 +56,7 @@
             // 
             this.Btn_Salvar.BackColor = System.Drawing.SystemColors.ControlLight;
             this.Btn_Salvar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_Salvar.Location = new System.Drawing.Point(708, 403);
+            this.Btn_Salvar.Location = new System.Drawing.Point(708, 369);
             this.Btn_Salvar.Name = "Btn_Salvar";
             this.Btn_Salvar.Size = new System.Drawing.Size(112, 34);
             this.Btn_Salvar.TabIndex = 12;
@@ -125,11 +126,24 @@
             this.Txb_IdCurso.Size = new System.Drawing.Size(69, 20);
             this.Txb_IdCurso.TabIndex = 19;
             // 
+            // Btn_voltar
+            // 
+            this.Btn_voltar.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.Btn_voltar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_voltar.Location = new System.Drawing.Point(708, 409);
+            this.Btn_voltar.Name = "Btn_voltar";
+            this.Btn_voltar.Size = new System.Drawing.Size(112, 34);
+            this.Btn_voltar.TabIndex = 20;
+            this.Btn_voltar.Text = "Voltar";
+            this.Btn_voltar.UseVisualStyleBackColor = false;
+            this.Btn_voltar.Click += new System.EventHandler(this.Btn_voltar_Click);
+            // 
             // Frm_EditarCurso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(832, 449);
+            this.Controls.Add(this.Btn_voltar);
             this.Controls.Add(this.Txb_IdCurso);
             this.Controls.Add(this.Lbl_IdCurso);
             this.Controls.Add(this.Txb_CargaHoraria);
@@ -159,5 +173,6 @@
         private System.Windows.Forms.TextBox Txb_CargaHoraria;
         private System.Windows.Forms.Label Lbl_IdCurso;
         private System.Windows.Forms.TextBox Txb_IdCurso;
+        private System.Windows.Forms.Button Btn_voltar;
     }
 }
