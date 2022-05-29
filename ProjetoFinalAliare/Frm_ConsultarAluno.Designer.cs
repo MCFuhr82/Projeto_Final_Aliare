@@ -41,6 +41,7 @@
             this.Txb_Nome = new System.Windows.Forms.TextBox();
             this.Btn_Cadastrar = new System.Windows.Forms.Button();
             this.Btn_Matricular = new System.Windows.Forms.Button();
+            this.Btn_ConsultaEspecial = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -173,11 +174,24 @@
             this.Btn_Matricular.UseVisualStyleBackColor = false;
             this.Btn_Matricular.Click += new System.EventHandler(this.Frm_Matricular_Click);
             // 
+            // Btn_ConsultaEspecial
+            // 
+            this.Btn_ConsultaEspecial.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.Btn_ConsultaEspecial.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_ConsultaEspecial.Location = new System.Drawing.Point(201, 28);
+            this.Btn_ConsultaEspecial.Name = "Btn_ConsultaEspecial";
+            this.Btn_ConsultaEspecial.Size = new System.Drawing.Size(139, 50);
+            this.Btn_ConsultaEspecial.TabIndex = 16;
+            this.Btn_ConsultaEspecial.Text = "Consulta por nome";
+            this.Btn_ConsultaEspecial.UseVisualStyleBackColor = false;
+            this.Btn_ConsultaEspecial.Click += new System.EventHandler(this.Btn_ConsultaEspecial_Click);
+            // 
             // Frm_ConsultarAluno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(832, 449);
+            this.Controls.Add(this.Btn_ConsultaEspecial);
             this.Controls.Add(this.Btn_Matricular);
             this.Controls.Add(this.Btn_Cadastrar);
             this.Controls.Add(this.Txb_Nome);
@@ -212,5 +226,6 @@
         private System.Windows.Forms.TextBox Txb_Nome;
         private System.Windows.Forms.Button Btn_Cadastrar;
         private System.Windows.Forms.Button Btn_Matricular;
+        private System.Windows.Forms.Button Btn_ConsultaEspecial;
     }
 }

@@ -41,6 +41,7 @@
             // 
             this.Btn_Aluno.BackColor = System.Drawing.SystemColors.ControlLight;
             this.Btn_Aluno.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Aluno.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Btn_Aluno.Location = new System.Drawing.Point(71, 350);
             this.Btn_Aluno.Name = "Btn_Aluno";
             this.Btn_Aluno.Size = new System.Drawing.Size(146, 55);
@@ -70,7 +71,6 @@
             this.button3.Size = new System.Drawing.Size(146, 55);
             this.button3.TabIndex = 2;
             this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 

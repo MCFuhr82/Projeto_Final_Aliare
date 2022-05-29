@@ -85,5 +85,16 @@ namespace ProjetoFinalAliare
             }
         }
 
+        //Lista de Alunos por Curso
+        public static List<Aluno> ListaAlunos(string nomeCurso)
+        {
+            using (var context = new Context())
+            {
+                var curso = context.Curso.Where(x => x.Nome == nomeCurso).FirstOrDefault();
+                var alunos = curso.Alunos.ToList();
+                return alunos;
+            }
+        }
+
     }
 }

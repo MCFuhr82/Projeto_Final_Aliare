@@ -20,7 +20,7 @@ namespace ProjetoFinalAliare
             Btn_Editar.Enabled = false;
             Btn_Deletar.Enabled = false;
             Btn_Matricular.Enabled = false;
-            
+            SetBorderAndGridlineStyles();
         }
 
         private void Btn_Voltar_Click(object sender, EventArgs e)
@@ -78,6 +78,12 @@ namespace ProjetoFinalAliare
             }
         }
 
+        private void Btn_ConsultaEspecial_Click(object sender, EventArgs e)
+        {
+            var form = new Frm_ConsultarPorNome();
+            form.ShowDialog();
+        }
+
         private void Frm_Matricular_Click(object sender, EventArgs e)
         {
             if (Txb_Matricula.Text == "")
@@ -95,11 +101,12 @@ namespace ProjetoFinalAliare
         {
             try
             {
-                var alunos = new List<Aluno>();
+                //var alunos = AlunoController.ReadAlunos();
                 var selectedAluno = dataGridView1.SelectedRows[0].DataBoundItem as Aluno;
                 Txb_Matricula.Text = selectedAluno.Matricula.ToString();
                 Txb_Nome.Text = selectedAluno.Nome.ToString();
                 dataGridView1.Columns["Curso"].Visible = false;
+                
             }
             catch (Exception ex)
             {
@@ -111,7 +118,20 @@ namespace ProjetoFinalAliare
         {
             MessageBox.Show("Por favor, selecione um aluno.", "Selecionar aluno", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
-        
+
+        private void SetBorderAndGridlineStyles()
+        {
+            this.dataGridView1.GridColor = Color.BlueViolet;
+            this.dataGridView1.BorderStyle = BorderStyle.Fixed3D;
+            this.dataGridView1.CellBorderStyle =
+                DataGridViewCellBorderStyle.None;
+            this.dataGridView1.RowHeadersBorderStyle =
+                DataGridViewHeaderBorderStyle.Single;
+            this.dataGridView1.ColumnHeadersBorderStyle =
+                DataGridViewHeaderBorderStyle.Single;
+        }
+
+
         //Selecionar Alunos
         //public List<Aluno> ConsultarListaAluno()
         //{
@@ -129,7 +149,7 @@ namespace ProjetoFinalAliare
         //    }
         //    return null;
         //}
-        
+
         //Deletar Alunos
         //private void DeletarAluno(int matricula)
         //{

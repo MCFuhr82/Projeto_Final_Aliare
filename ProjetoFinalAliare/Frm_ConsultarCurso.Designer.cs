@@ -40,6 +40,7 @@
             this.Txb_IdCurso = new System.Windows.Forms.TextBox();
             this.Txb_NomeCurso = new System.Windows.Forms.TextBox();
             this.Btn_Cadastrar = new System.Windows.Forms.Button();
+            this.Btn_ConsultaPorCurso = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -159,11 +160,24 @@
             this.Btn_Cadastrar.UseVisualStyleBackColor = false;
             this.Btn_Cadastrar.Click += new System.EventHandler(this.Btn_Cadastrar_Click);
             // 
+            // Btn_ConsultaPorCurso
+            // 
+            this.Btn_ConsultaPorCurso.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.Btn_ConsultaPorCurso.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_ConsultaPorCurso.Location = new System.Drawing.Point(201, 28);
+            this.Btn_ConsultaPorCurso.Name = "Btn_ConsultaPorCurso";
+            this.Btn_ConsultaPorCurso.Size = new System.Drawing.Size(139, 50);
+            this.Btn_ConsultaPorCurso.TabIndex = 15;
+            this.Btn_ConsultaPorCurso.Text = " Consulta Curso";
+            this.Btn_ConsultaPorCurso.UseVisualStyleBackColor = false;
+            this.Btn_ConsultaPorCurso.Click += new System.EventHandler(this.Btn_ConsultaPorCurso_Click);
+            // 
             // Frm_ConsultarCurso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(832, 449);
+            this.Controls.Add(this.Btn_ConsultaPorCurso);
             this.Controls.Add(this.Btn_Cadastrar);
             this.Controls.Add(this.Txb_NomeCurso);
             this.Controls.Add(this.Txb_IdCurso);
@@ -196,5 +210,6 @@
         private System.Windows.Forms.TextBox Txb_IdCurso;
         private System.Windows.Forms.TextBox Txb_NomeCurso;
         private System.Windows.Forms.Button Btn_Cadastrar;
+        private System.Windows.Forms.Button Btn_ConsultaPorCurso;
     }
 }

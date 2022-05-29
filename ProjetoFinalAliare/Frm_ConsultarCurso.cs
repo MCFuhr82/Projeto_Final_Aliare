@@ -38,6 +38,7 @@ namespace ProjetoFinalAliare
             dataGridView1.DataSource = CursoController.SelecionarCursos();
             Btn_Editar.Enabled = true;
             Btn_Deletar.Enabled = true;
+            dataGridView1.Columns["Alunos"].Visible = false;
 
         }
 
@@ -109,6 +110,19 @@ namespace ProjetoFinalAliare
         private void MensagemDeSelecao()
         {
             MessageBox.Show("Por favor, selecione um aluno.", "Selecionar aluno", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        }
+
+        private void Btn_ConsultaEspecial_Click(object sender, EventArgs e)
+        {
+            var form = new Frm_ConsultarPorNome();
+            form.ShowDialog();
+        }
+
+        private void Btn_ConsultaPorCurso_Click(object sender, EventArgs e)
+        {
+            var form = new Frm_ConsultaCursoAlunos();
+            form.ShowDialog();
+            
         }
     }
 }

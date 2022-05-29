@@ -29,19 +29,5 @@ namespace ProjetoFinalAliare
             var form = new Frm_ConsultarCurso();
             form.ShowDialog();
         }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            var context = new Context();
-
-            var curso = context.Curso.Where(c => c.Id == 8).FirstOrDefault();
-
-            var alunosCurso = curso.Alunos;
-
-            foreach (var item in alunosCurso)
-            {
-                Console.WriteLine(item.Nome);
-            }
-        }
     }
 }

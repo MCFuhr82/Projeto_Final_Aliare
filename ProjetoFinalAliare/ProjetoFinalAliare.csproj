@@ -133,12 +133,24 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="ConsultarAlunoPorNome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultarAlunoPorNome.Designer.cs">
+      <DependentUpon>ConsultarAlunoPorNome.cs</DependentUpon>
+    </Compile>
     <Compile Include="Context.cs" />
     <Compile Include="Frm_CadastrarCurso.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Frm_CadastrarCurso.Designer.cs">
       <DependentUpon>Frm_CadastrarCurso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_ConsultaCursoAlunos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_ConsultaCursoAlunos.Designer.cs">
+      <DependentUpon>Frm_ConsultaCursoAlunos.cs</DependentUpon>
     </Compile>
     <Compile Include="Frm_ConsultarCurso.cs">
       <SubType>Form</SubType>
@@ -209,8 +221,14 @@
     <Compile Include="CursoController.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
     <Compile Include="ValidacaoCPF.cs" />
+    <EmbeddedResource Include="ConsultarAlunoPorNome.resx">
+      <DependentUpon>ConsultarAlunoPorNome.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Frm_CadastrarCurso.resx">
       <DependentUpon>Frm_CadastrarCurso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_ConsultaCursoAlunos.resx">
+      <DependentUpon>Frm_ConsultaCursoAlunos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_ConsultarCurso.resx">
       <DependentUpon>Frm_ConsultarCurso.cs</DependentUpon>

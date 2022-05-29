@@ -19,7 +19,7 @@ namespace ProjetoFinalAliare
             InitializeComponent();
         }
         
-        public Frm_Matricular(String matricula, String nome)
+        public Frm_Matricular(string matricula, string nome)
         {
             InitializeComponent();
             Txb_Matricula.Text = matricula;
