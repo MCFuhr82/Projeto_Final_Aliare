@@ -24,7 +24,7 @@ namespace ProjetoFinalAliare
         }
 
         //Select Curso por Id
-        public static Curso SelectAlunoPorId(int id)
+        public static Curso SelectCursoPorId(int id)
         {
             using (var context = new Context())
             {
@@ -35,7 +35,7 @@ namespace ProjetoFinalAliare
         }
 
         //Select Curso por Nome
-        public static Curso SelectAlunoPorNome(string nome)
+        public static Curso SelectCursoPorNome(string nome)
         {
             using (var context = new Context())
             {

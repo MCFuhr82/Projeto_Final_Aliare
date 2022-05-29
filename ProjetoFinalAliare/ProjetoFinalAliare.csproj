@@ -173,6 +173,10 @@
     <Compile Include="Migrations\202205252213002_BD_Inicio1.designer.cs">
       <DependentUpon>202205252213002_BD_Inicio1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202205282221081_Curso.cs" />
+    <Compile Include="Migrations\202205282221081_Curso.designer.cs">
+      <DependentUpon>202205282221081_Curso.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Aluno.cs" />
     <Compile Include="Models\Curso.cs" />
@@ -225,6 +229,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202205252213002_BD_Inicio1.resx">
       <DependentUpon>202205252213002_BD_Inicio1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202205282221081_Curso.resx">
+      <DependentUpon>202205282221081_Curso.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

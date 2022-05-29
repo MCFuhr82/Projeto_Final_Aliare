@@ -53,13 +53,17 @@ namespace ProjetoFinalAliare
                               
                 var curso = context.Curso.Where(x => x.Nome == nomeCurso).FirstOrDefault();
 
-                               
-                aluno.IdCurso = curso;
-                context.Entry(aluno).State = EntityState.Modified;
-                context.SaveChanges();
-                MessageBox.Show("Dados inseridos com sucesso!");
-                 
-                
+                if (aluno.Curso != null)
+                {
+                    MessageBox.Show("Aluno já possui matrícula ativa em outro curso!", "Aliare", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    aluno.Curso = curso;
+                    context.Entry(aluno).State = EntityState.Modified;
+                    context.SaveChanges();
+                    MessageBox.Show("Dados inseridos com sucesso!");
+                }
             }
         }
     }

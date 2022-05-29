@@ -41,7 +41,7 @@ namespace ProjetoFinalAliare
                 var nome = Txb_Nome.Text;
                 var cargaHoraria = int.Parse(Txb_CargaHoraria.Text);
                     
-                var curso = CursoController.SelectAlunoPorId(idCurso);
+                var curso = CursoController.SelectCursoPorId(idCurso);
                 curso.SetNome(nome);
                 curso.SetCargaHoraria(cargaHoraria);
 

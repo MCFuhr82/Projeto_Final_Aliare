@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProjetoFinalAliare.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -27,6 +28,11 @@ namespace ProjetoFinalAliare
         {
             var form = new Frm_ConsultarCurso();
             form.ShowDialog();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

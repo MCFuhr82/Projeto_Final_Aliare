@@ -31,7 +31,7 @@ namespace ProjetoFinalAliare
         private void Btn_Consulta_Click(object sender, EventArgs e)
         {
             dataGridView1.DataSource = AlunoController.ReadAlunos();
-            dataGridView1.Columns["IdCurso"].Visible = false;
+            dataGridView1.Columns["Curso"].Visible = false;
             Btn_Editar.Enabled = true;
             Btn_Deletar.Enabled = true;
             Btn_Matricular.Enabled = true;
@@ -99,7 +99,7 @@ namespace ProjetoFinalAliare
                 var selectedAluno = dataGridView1.SelectedRows[0].DataBoundItem as Aluno;
                 Txb_Matricula.Text = selectedAluno.Matricula.ToString();
                 Txb_Nome.Text = selectedAluno.Nome.ToString();
-                dataGridView1.Columns["IdCurso"].Visible = false;
+                dataGridView1.Columns["Curso"].Visible = false;
             }
             catch (Exception ex)
             {
