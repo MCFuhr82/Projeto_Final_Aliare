@@ -29,7 +29,7 @@ namespace ProjetoFinalAliare
 
             if (string.IsNullOrEmpty(nomeAluno))
             {
-                MessageBox.Show("Preencha o nome do aluno");
+                MessageBox.Show("Preencha o nome do aluno!");
             }
             else
             {

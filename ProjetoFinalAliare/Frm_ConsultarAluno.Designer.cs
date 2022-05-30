@@ -42,6 +42,7 @@
             this.Btn_Cadastrar = new System.Windows.Forms.Button();
             this.Btn_Matricular = new System.Windows.Forms.Button();
             this.Btn_ConsultaEspecial = new System.Windows.Forms.Button();
+            this.Btn_Imprimir = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -186,11 +187,24 @@
             this.Btn_ConsultaEspecial.UseVisualStyleBackColor = false;
             this.Btn_ConsultaEspecial.Click += new System.EventHandler(this.Btn_ConsultaEspecial_Click);
             // 
+            // Btn_Imprimir
+            // 
+            this.Btn_Imprimir.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.Btn_Imprimir.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Imprimir.Location = new System.Drawing.Point(706, 283);
+            this.Btn_Imprimir.Name = "Btn_Imprimir";
+            this.Btn_Imprimir.Size = new System.Drawing.Size(114, 34);
+            this.Btn_Imprimir.TabIndex = 17;
+            this.Btn_Imprimir.Text = "Imprimir";
+            this.Btn_Imprimir.UseVisualStyleBackColor = false;
+            this.Btn_Imprimir.Click += new System.EventHandler(this.Btn_Imprimir_Click);
+            // 
             // Frm_ConsultarAluno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(832, 449);
+            this.Controls.Add(this.Btn_Imprimir);
             this.Controls.Add(this.Btn_ConsultaEspecial);
             this.Controls.Add(this.Btn_Matricular);
             this.Controls.Add(this.Btn_Cadastrar);
@@ -227,5 +241,6 @@
         private System.Windows.Forms.Button Btn_Cadastrar;
         private System.Windows.Forms.Button Btn_Matricular;
         private System.Windows.Forms.Button Btn_ConsultaEspecial;
+        private System.Windows.Forms.Button Btn_Imprimir;
     }
 }

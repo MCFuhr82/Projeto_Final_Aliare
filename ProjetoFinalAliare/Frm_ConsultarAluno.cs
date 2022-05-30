@@ -131,6 +131,37 @@ namespace ProjetoFinalAliare
                 DataGridViewHeaderBorderStyle.Single;
         }
 
+        private void Btn_Imprimir_Click(object sender, EventArgs e)
+        {
+            var dt = GerarDadosRelatorio();
+            var form = new Frm_RelatorioAlunos(dt);
+            form.ShowDialog();
+        }
+
+        private DataTable GerarDadosRelatorio()
+        {
+            var dt = new DataTable();
+            dt.Columns.Add("Matricula");
+            dt.Columns.Add("Nome");
+            dt.Columns.Add("CPF");
+            dt.Columns.Add("Email");
+            dt.Columns.Add("Celular");
+            dt.Columns.Add("Cidade");
+            dt.Columns.Add("Estado");
+
+            foreach (DataGridViewRow item in dataGridView1.Rows)
+            {
+                dt.Rows.Add(item.Cells["Matricula"].Value.ToString(),
+                            item.Cells["Nome"].Value.ToString(),
+                            item.Cells["CPF"].Value.ToString(),
+                            item.Cells["Email"].Value.ToString(),
+                            item.Cells["Celular"].Value.ToString(),
+                            item.Cells["Cidade"].Value.ToString(),
+                            item.Cells["Estado"].Value.ToString());
+            }
+            return dt;
+        }
+
 
         //Selecionar Alunos
         //public List<Aluno> ConsultarListaAluno()

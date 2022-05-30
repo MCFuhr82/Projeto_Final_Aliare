@@ -176,6 +176,12 @@
     <Compile Include="Frm_Matricular.Designer.cs">
       <DependentUpon>Frm_Matricular.cs</DependentUpon>
     </Compile>
+    <Compile Include="Frm_RelatorioAlunos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_RelatorioAlunos.Designer.cs">
+      <DependentUpon>Frm_RelatorioAlunos.cs</DependentUpon>
+    </Compile>
     <Compile Include="LocalizarCEP.cs" />
     <Compile Include="Migrations\202205201828409_BD_Inicio.cs" />
     <Compile Include="Migrations\202205201828409_BD_Inicio.designer.cs">
@@ -242,6 +248,9 @@
     <EmbeddedResource Include="Frm_Matricular.resx">
       <DependentUpon>Frm_Matricular.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Frm_RelatorioAlunos.resx">
+      <DependentUpon>Frm_RelatorioAlunos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202205201828409_BD_Inicio.resx">
       <DependentUpon>202205201828409_BD_Inicio.cs</DependentUpon>
     </EmbeddedResource>
@@ -272,7 +281,7 @@
     <EmbeddedResource Include="Frm_Menu.resx">
       <DependentUpon>Frm_Menu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Report1.rdlc" />
+    <EmbeddedResource Include="Relatorios\RelatorioAlunos.rdlc" />
     <None Include="Connected Services\WSCorreios\AtendeClienteService.wsdl" />
     <None Include="Connected Services\WSCorreios\ProjetoFinalAliare.WSCorreios.atualizaPagamentoNaEntregaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -440,6 +449,7 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\ProjetoFinalAliare.Models.Aluno.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
