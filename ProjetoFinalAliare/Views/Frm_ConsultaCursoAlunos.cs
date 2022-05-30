@@ -66,5 +66,32 @@ namespace ProjetoFinalAliare
             dataGridView1.DataSource = dt;
             
         }
+
+        private void Btn_Imprimir_Click(object sender, EventArgs e)
+        {
+            var dt = GerarDadosRelatorio();
+            var form = new Frm_RelatorioCursoAlunos(dt);
+            form.ShowDialog();
+        }
+
+        private DataTable GerarDadosRelatorio()
+        {
+            var dt = new DataTable();
+            dt.Columns.Add("Nome");
+            dt.Columns.Add("Email");
+            dt.Columns.Add("Telefone");
+            dt.Columns.Add("Cidade");
+            dt.Columns.Add("Estado");
+
+            foreach (DataGridViewRow item in dataGridView1.Rows)
+            {
+                dt.Rows.Add(item.Cells["Nome"].Value.ToString(),
+                            item.Cells["Email"].Value.ToString(),
+                            item.Cells["Telefone"].Value.ToString(),
+                            item.Cells["Cidade"].Value.ToString(),
+                            item.Cells["Estado"].Value.ToString());
+            }
+            return dt;
+        }
     }
 }

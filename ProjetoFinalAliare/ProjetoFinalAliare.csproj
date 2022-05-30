@@ -127,62 +127,74 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AlunoController.cs" />
+    <Compile Include="Controller\AlunoController.cs" />
     <Compile Include="Connected Services\WSCorreios\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
-    <Compile Include="ConsultarAlunoPorNome.cs">
+    <Compile Include="Frm_RelatorioAlunoCurso.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ConsultarAlunoPorNome.Designer.cs">
-      <DependentUpon>ConsultarAlunoPorNome.cs</DependentUpon>
+    <Compile Include="Frm_RelatorioAlunoCurso.Designer.cs">
+      <DependentUpon>Frm_RelatorioAlunoCurso.cs</DependentUpon>
     </Compile>
-    <Compile Include="Context.cs" />
-    <Compile Include="Frm_CadastrarCurso.cs">
+    <Compile Include="Frm_RelatorioCursoAlunos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frm_CadastrarCurso.Designer.cs">
+    <Compile Include="Frm_RelatorioCursoAlunos.Designer.cs">
+      <DependentUpon>Frm_RelatorioCursoAlunos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Frm_ ConsultarAlunoPorNome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Frm_ ConsultarAlunoPorNome.Designer.cs">
+      <DependentUpon>Frm_ ConsultarAlunoPorNome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Context\Context.cs" />
+    <Compile Include="Views\Frm_CadastrarCurso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Frm_CadastrarCurso.Designer.cs">
       <DependentUpon>Frm_CadastrarCurso.cs</DependentUpon>
     </Compile>
-    <Compile Include="Frm_ConsultaCursoAlunos.cs">
+    <Compile Include="Views\Frm_ConsultaCursoAlunos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frm_ConsultaCursoAlunos.Designer.cs">
+    <Compile Include="Views\Frm_ConsultaCursoAlunos.Designer.cs">
       <DependentUpon>Frm_ConsultaCursoAlunos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Frm_ConsultarCurso.cs">
+    <Compile Include="Views\Frm_ConsultarCurso.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frm_ConsultarCurso.Designer.cs">
+    <Compile Include="Views\Frm_ConsultarCurso.Designer.cs">
       <DependentUpon>Frm_ConsultarCurso.cs</DependentUpon>
     </Compile>
-    <Compile Include="Frm_EditarAluno.cs">
+    <Compile Include="Views\Frm_EditarAluno.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frm_EditarAluno.Designer.cs">
+    <Compile Include="Views\Frm_EditarAluno.Designer.cs">
       <DependentUpon>Frm_EditarAluno.cs</DependentUpon>
     </Compile>
-    <Compile Include="Frm_EditarCurso.cs">
+    <Compile Include="Views\Frm_EditarCurso.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frm_EditarCurso.Designer.cs">
+    <Compile Include="Views\Frm_EditarCurso.Designer.cs">
       <DependentUpon>Frm_EditarCurso.cs</DependentUpon>
     </Compile>
-    <Compile Include="Frm_Matricular.cs">
+    <Compile Include="Views\Frm_Matricular.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frm_Matricular.Designer.cs">
+    <Compile Include="Views\Frm_Matricular.Designer.cs">
       <DependentUpon>Frm_Matricular.cs</DependentUpon>
     </Compile>
-    <Compile Include="Frm_RelatorioAlunos.cs">
+    <Compile Include="Views\Frm_RelatorioAlunos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frm_RelatorioAlunos.Designer.cs">
+    <Compile Include="Views\Frm_RelatorioAlunos.Designer.cs">
       <DependentUpon>Frm_RelatorioAlunos.cs</DependentUpon>
     </Compile>
-    <Compile Include="LocalizarCEP.cs" />
+    <Compile Include="Services\LocalizarCEP.cs" />
     <Compile Include="Migrations\202205201828409_BD_Inicio.cs" />
     <Compile Include="Migrations\202205201828409_BD_Inicio.designer.cs">
       <DependentUpon>202205201828409_BD_Inicio.cs</DependentUpon>
@@ -198,16 +210,16 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Aluno.cs" />
     <Compile Include="Models\Curso.cs" />
-    <Compile Include="Frm_ConsultarAluno.cs">
+    <Compile Include="Views\Frm_ConsultarAluno.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frm_ConsultarAluno.Designer.cs">
+    <Compile Include="Views\Frm_ConsultarAluno.Designer.cs">
       <DependentUpon>Frm_ConsultarAluno.cs</DependentUpon>
     </Compile>
-    <Compile Include="Frm_CadastrarAluno.cs">
+    <Compile Include="Views\Frm_CadastrarAluno.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frm_CadastrarAluno.Designer.cs">
+    <Compile Include="Views\Frm_CadastrarAluno.Designer.cs">
       <DependentUpon>Frm_CadastrarAluno.cs</DependentUpon>
     </Compile>
     <Compile Include="Frm_Login.cs">
@@ -224,31 +236,39 @@
     <Compile Include="Frm_Menu.Designer.cs">
       <DependentUpon>Frm_Menu.cs</DependentUpon>
     </Compile>
-    <Compile Include="CursoController.cs" />
+    <Compile Include="Controller\CursoController.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
-    <Compile Include="ValidacaoCPF.cs" />
-    <EmbeddedResource Include="ConsultarAlunoPorNome.resx">
-      <DependentUpon>ConsultarAlunoPorNome.cs</DependentUpon>
+    <Compile Include="Services\ValidacaoCPF.cs" />
+    <EmbeddedResource Include="Frm_RelatorioAlunoCurso.resx">
+      <DependentUpon>Frm_RelatorioAlunoCurso.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Frm_CadastrarCurso.resx">
+    <EmbeddedResource Include="Frm_RelatorioCursoAlunos.resx">
+      <DependentUpon>Frm_RelatorioCursoAlunos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RelatorioAlunoCurso.rdlc" />
+    <EmbeddedResource Include="RelatorioCursoAlunos.rdlc" />
+    <EmbeddedResource Include="Views\Frm_ ConsultarAlunoPorNome.resx">
+      <DependentUpon>Frm_ ConsultarAlunoPorNome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Frm_CadastrarCurso.resx">
       <DependentUpon>Frm_CadastrarCurso.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Frm_ConsultaCursoAlunos.resx">
+    <EmbeddedResource Include="Views\Frm_ConsultaCursoAlunos.resx">
       <DependentUpon>Frm_ConsultaCursoAlunos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Frm_ConsultarCurso.resx">
+    <EmbeddedResource Include="Views\Frm_ConsultarCurso.resx">
       <DependentUpon>Frm_ConsultarCurso.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Frm_EditarAluno.resx">
+    <EmbeddedResource Include="Views\Frm_EditarAluno.resx">
       <DependentUpon>Frm_EditarAluno.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Frm_EditarCurso.resx">
+    <EmbeddedResource Include="Views\Frm_EditarCurso.resx">
       <DependentUpon>Frm_EditarCurso.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Frm_Matricular.resx">
+    <EmbeddedResource Include="Views\Frm_Matricular.resx">
       <DependentUpon>Frm_Matricular.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Frm_RelatorioAlunos.resx">
+    <EmbeddedResource Include="Views\Frm_RelatorioAlunos.resx">
       <DependentUpon>Frm_RelatorioAlunos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202205201828409_BD_Inicio.resx">
@@ -269,10 +289,10 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Frm_ConsultarAluno.resx">
+    <EmbeddedResource Include="Views\Frm_ConsultarAluno.resx">
       <DependentUpon>Frm_ConsultarAluno.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Frm_CadastrarAluno.resx">
+    <EmbeddedResource Include="Views\Frm_CadastrarAluno.resx">
       <DependentUpon>Frm_CadastrarAluno.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_Login.resx">
@@ -450,6 +470,7 @@
     </None>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\ProjetoFinalAliare.Models.Aluno.datasource" />
+    <None Include="Properties\DataSources\ProjetoFinalAliare.Models.Curso.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -463,9 +484,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Views\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Connected Services\WSCorreios\configuration91.svcinfo" />
     <None Include="Connected Services\WSCorreios\configuration.svcinfo" />

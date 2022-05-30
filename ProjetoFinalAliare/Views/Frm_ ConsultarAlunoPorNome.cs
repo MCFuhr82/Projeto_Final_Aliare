@@ -51,24 +51,53 @@ namespace ProjetoFinalAliare
         private void TabelaDeSelecao(List<Aluno> alunos)
         {
             var dt = new DataTable();
-            dt.Columns.Add("Nome", typeof(string));
-            dt.Columns.Add("Email", typeof(string));
-            dt.Columns.Add("Cidade", typeof(string));
-            dt.Columns.Add("Curso", typeof(string));
+            dt.Columns.Add("Nome");
+            dt.Columns.Add("Email");
+            dt.Columns.Add("Cidade");
+            dt.Columns.Add("Estado");
+            dt.Columns.Add("Curso");
 
             foreach (var aluno in alunos)
             {
                 if (aluno.Curso == null)
                 {
-                    dt.Rows.Add(aluno.Nome, aluno.Email, aluno.Cidade, "");
+                    dt.Rows.Add(aluno.Nome, aluno.Email, aluno.Cidade, aluno.Estado, "");
                 }
                 else
                 {
-                    dt.Rows.Add(aluno.Nome, aluno.Email, aluno.Cidade, aluno.Curso.Nome);
+                    dt.Rows.Add(aluno.Nome, aluno.Email, aluno.Cidade, aluno.Estado, aluno.Curso.Nome);
                 }
             }
 
             dataGridView1.DataSource = dt;
+        }
+
+        private void Btn_Imprimir_Click(object sender, EventArgs e)
+        {
+            var dt = GerarDadosRelatorio();
+            var form = new Frm_RelatorioAlunoCurso(dt);
+            form.ShowDialog();
+        }
+
+        private DataTable GerarDadosRelatorio()
+        {
+            var dt = new DataTable();
+
+            dt.Columns.Add("Nome");
+            dt.Columns.Add("Email");
+            dt.Columns.Add("Cidade");
+            dt.Columns.Add("Estado");
+            dt.Columns.Add("Curso");
+
+            foreach (DataGridViewRow item in dataGridView1.Rows)
+            {
+                dt.Rows.Add(item.Cells["Nome"].Value.ToString(),
+                            item.Cells["Email"].Value.ToString(),
+                            item.Cells["Cidade"].Value.ToString(),
+                            item.Cells["Estado"].Value.ToString(),
+                            item.Cells["Curso"].Value.ToString());
+            }
+            return dt;
         }
     }
 }

@@ -107,6 +107,7 @@
             this.Btn_Imprimir.TabIndex = 15;
             this.Btn_Imprimir.Text = "Imprimir";
             this.Btn_Imprimir.UseVisualStyleBackColor = false;
+            this.Btn_Imprimir.Click += new System.EventHandler(this.Btn_Imprimir_Click);
             // 
             // Cbox_SelecionaCurso
             // 
