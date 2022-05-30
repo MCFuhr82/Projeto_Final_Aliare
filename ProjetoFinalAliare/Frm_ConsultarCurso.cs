@@ -77,10 +77,12 @@ namespace ProjetoFinalAliare
                         MessageBox.Show("Registro apagado com sucesso", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
+                Txb_IdCurso.Text = "";
+                Txb_NomeCurso.Text = "";
             }
             catch (DbUpdateException)
             {
-                MessageBox.Show("O curso não pode ser excluído. Favor verificar sem existe algum aluno matriculado no curso.", "Aliare", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("O curso não pode ser excluído. Existe pelo menos algum aluno matriculado no curso.", "Aliare", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 
             }
             
@@ -109,7 +111,7 @@ namespace ProjetoFinalAliare
 
         private void MensagemDeSelecao()
         {
-            MessageBox.Show("Por favor, selecione um aluno.", "Selecionar aluno", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            MessageBox.Show("Por favor, selecione um curso.", "Selecionar curso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 
         private void Btn_ConsultaEspecial_Click(object sender, EventArgs e)

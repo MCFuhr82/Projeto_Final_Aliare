@@ -58,6 +58,7 @@ namespace ProjetoFinalAliare
                     MessageBox.Show("Registro apagado com sucesso", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
+            
         }
         private void Btn_Cadastrar_Click(object sender, EventArgs e)
         {
