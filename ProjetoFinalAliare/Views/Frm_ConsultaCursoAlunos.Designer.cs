@@ -44,6 +44,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(708, 12);
             this.pictureBox1.Name = "pictureBox1";
@@ -54,6 +55,7 @@
             // 
             // Btn_Consulta
             // 
+            this.Btn_Consulta.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Btn_Consulta.BackColor = System.Drawing.SystemColors.ControlLight;
             this.Btn_Consulta.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Consulta.Location = new System.Drawing.Point(706, 88);
@@ -68,6 +70,9 @@
             // 
             this.dataGridView1.AllowUserToOrderColumns = true;
             this.dataGridView1.AllowUserToResizeRows = false;
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(12, 88);
             this.dataGridView1.MultiSelect = false;
@@ -78,6 +83,7 @@
             // 
             // Btn_Voltar
             // 
+            this.Btn_Voltar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.Btn_Voltar.BackColor = System.Drawing.SystemColors.ControlLight;
             this.Btn_Voltar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Voltar.Location = new System.Drawing.Point(708, 403);
@@ -99,6 +105,7 @@
             // 
             // Btn_Imprimir
             // 
+            this.Btn_Imprimir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Btn_Imprimir.BackColor = System.Drawing.SystemColors.ControlLight;
             this.Btn_Imprimir.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Imprimir.Location = new System.Drawing.Point(706, 123);
@@ -150,6 +157,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.Btn_Consulta);
             this.Controls.Add(this.pictureBox1);
+            this.MinimumSize = new System.Drawing.Size(848, 488);
             this.Name = "Frm_ConsultaCursoAlunos";
             this.Text = "Frm_Aluno";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

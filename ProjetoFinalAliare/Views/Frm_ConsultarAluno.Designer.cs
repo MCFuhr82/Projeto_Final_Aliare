@@ -49,6 +49,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(708, 12);
             this.pictureBox1.Name = "pictureBox1";
@@ -73,6 +74,9 @@
             // 
             this.dataGridView1.AllowUserToOrderColumns = true;
             this.dataGridView1.AllowUserToResizeRows = false;
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(12, 123);
             this.dataGridView1.MultiSelect = false;
@@ -84,6 +88,7 @@
             // 
             // Btn_Editar
             // 
+            this.Btn_Editar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Btn_Editar.BackColor = System.Drawing.SystemColors.ControlLight;
             this.Btn_Editar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Editar.Location = new System.Drawing.Point(706, 123);
@@ -96,6 +101,7 @@
             // 
             // Btn_Deletar
             // 
+            this.Btn_Deletar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Btn_Deletar.BackColor = System.Drawing.SystemColors.ControlLight;
             this.Btn_Deletar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Deletar.Location = new System.Drawing.Point(706, 163);
@@ -108,6 +114,7 @@
             // 
             // Btn_Voltar
             // 
+            this.Btn_Voltar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.Btn_Voltar.BackColor = System.Drawing.SystemColors.ControlLight;
             this.Btn_Voltar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Voltar.Location = new System.Drawing.Point(708, 403);
@@ -153,6 +160,7 @@
             // 
             // Btn_Cadastrar
             // 
+            this.Btn_Cadastrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Btn_Cadastrar.BackColor = System.Drawing.SystemColors.ControlLight;
             this.Btn_Cadastrar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Cadastrar.Location = new System.Drawing.Point(706, 203);
@@ -165,6 +173,7 @@
             // 
             // Btn_Matricular
             // 
+            this.Btn_Matricular.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Btn_Matricular.BackColor = System.Drawing.SystemColors.ControlLight;
             this.Btn_Matricular.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Matricular.Location = new System.Drawing.Point(706, 243);
@@ -189,6 +198,7 @@
             // 
             // Btn_Imprimir
             // 
+            this.Btn_Imprimir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Btn_Imprimir.BackColor = System.Drawing.SystemColors.ControlLight;
             this.Btn_Imprimir.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Imprimir.Location = new System.Drawing.Point(706, 283);
@@ -218,6 +228,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.Btn_Consulta);
             this.Controls.Add(this.pictureBox1);
+            this.MinimumSize = new System.Drawing.Size(848, 488);
             this.Name = "Frm_ConsultarAluno";
             this.Text = "Frm_Aluno";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

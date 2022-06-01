@@ -128,6 +128,7 @@ namespace ProjetoFinalAliare
             this.Controls.Add(this.Btn_Matricular);
             this.Controls.Add(this.Lbl_Matricula);
             this.Controls.Add(this.pictureBox1);
+            this.MinimumSize = new System.Drawing.Size(816, 489);
             this.Name = "Frm_Matricular";
             this.Text = "Frm_Matricular";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

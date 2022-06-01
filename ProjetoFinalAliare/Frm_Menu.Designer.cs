@@ -78,6 +78,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.Btn_Curso);
             this.Controls.Add(this.Btn_Aluno);
+            this.MaximizeBox = false;
             this.Name = "Frm_Menu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Aliare";

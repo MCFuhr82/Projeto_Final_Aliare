@@ -354,6 +354,9 @@ namespace ProjetoFinalAliare
             this.Controls.Add(this.Btn_Voltar);
             this.Controls.Add(this.Btn_Cadastrar);
             this.Controls.Add(this.pictureBox1);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(848, 488);
+            this.MinimumSize = new System.Drawing.Size(848, 488);
             this.Name = "Frm_CadastrarAluno";
             this.Text = "Cadastrar";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

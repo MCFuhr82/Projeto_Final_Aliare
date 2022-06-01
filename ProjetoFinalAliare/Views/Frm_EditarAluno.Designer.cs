@@ -357,6 +357,9 @@ namespace ProjetoFinalAliare
             this.Controls.Add(this.Lbl_Cadastro);
             this.Controls.Add(this.Btn_Salvar);
             this.Controls.Add(this.pictureBox1);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(848, 488);
+            this.MinimumSize = new System.Drawing.Size(848, 488);
             this.Name = "Frm_EditarAluno";
             this.Text = "Editar";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
