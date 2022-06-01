@@ -79,6 +79,8 @@
             this.Controls.Add(this.Btn_Curso);
             this.Controls.Add(this.Btn_Aluno);
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(816, 489);
+            this.MinimumSize = new System.Drawing.Size(816, 489);
             this.Name = "Frm_Menu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Aliare";

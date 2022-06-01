@@ -119,6 +119,8 @@
             this.Controls.Add(this.Lbl_Password);
             this.Controls.Add(this.Lbl_Login);
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(474, 365);
+            this.MinimumSize = new System.Drawing.Size(474, 365);
             this.Name = "Frm_Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tela de Login";
