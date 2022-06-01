@@ -126,5 +126,28 @@ namespace ProjetoFinalAliare
             form.ShowDialog();
             
         }
+
+        private void Btn_Imprimir_Click(object sender, EventArgs e)
+        {
+            var dt = GerarDadosRelatorio();
+            var form = new Frm_RelatorioCursos(dt);
+            form.ShowDialog();
+        }
+
+        private DataTable GerarDadosRelatorio()
+        {
+            var dt = new DataTable();
+            dt.Columns.Add("Id");
+            dt.Columns.Add("Nome");
+            dt.Columns.Add("CargaHoraria");
+            
+            foreach (DataGridViewRow item in dataGridView1.Rows)
+            {
+                dt.Rows.Add(item.Cells["Id"].Value.ToString(),
+                            item.Cells["Nome"].Value.ToString(),
+                            item.Cells["CargaHoraria"].Value.ToString());
+            }
+            return dt;
+        }
     }
 }

@@ -1,7 +1,6 @@
-﻿
-namespace ProjetoFinalAliare
+﻿namespace ProjetoFinalAliare
 {
-    partial class Frm_RelatorioAlunoCurso
+    partial class Frm_RelatorioCursos
     {
         /// <summary>
         /// Required designer variable.
@@ -35,22 +34,22 @@ namespace ProjetoFinalAliare
             // reportViewer1
             // 
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "ProjetoFinalAliare.RelatorioAlunoCurso.rdlc";
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "ProjetoFinalAliare.Relatorios.RelatorioCursos.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
             this.reportViewer1.Size = new System.Drawing.Size(800, 450);
             this.reportViewer1.TabIndex = 0;
             // 
-            // Frm_RelatorioAlunoCurso
+            // Frm_RelatorioCursos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.reportViewer1);
-            this.Name = "Frm_RelatorioAlunoCurso";
-            this.Text = "Frm_RelatorioAlunoCurso";
-            this.Load += new System.EventHandler(this.Frm_RelatorioAlunoCurso_Load);
+            this.Name = "Frm_RelatorioCursos";
+            this.Text = "Frm_RelatorioCursos";
+            this.Load += new System.EventHandler(this.Frm_RelatorioCursos_Load);
             this.ResumeLayout(false);
 
         }

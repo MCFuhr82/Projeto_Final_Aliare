@@ -133,10 +133,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
-    <Compile Include="Frm_RelatorioAlunoCurso.cs">
+    <Compile Include="Views\Frm_RelatorioAlunoCurso.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frm_RelatorioAlunoCurso.Designer.cs">
+    <Compile Include="Views\Frm_RelatorioAlunoCurso.Designer.cs">
       <DependentUpon>Frm_RelatorioAlunoCurso.cs</DependentUpon>
     </Compile>
     <Compile Include="Frm_RelatorioCursoAlunos.cs">
@@ -144,6 +144,12 @@
     </Compile>
     <Compile Include="Frm_RelatorioCursoAlunos.Designer.cs">
       <DependentUpon>Frm_RelatorioCursoAlunos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Frm_RelatorioCursos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Frm_RelatorioCursos.Designer.cs">
+      <DependentUpon>Frm_RelatorioCursos.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\202206010116064_Faculdade.cs" />
     <Compile Include="Migrations\202206010116064_Faculdade.designer.cs">
@@ -169,10 +175,10 @@
     <Compile Include="Views\Frm_ConsultaCursoAlunos.Designer.cs">
       <DependentUpon>Frm_ConsultaCursoAlunos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Frm_ConsultarCurso.cs">
+    <Compile Include="Views\Frm_ConsultarCurso.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frm_ConsultarCurso.Designer.cs">
+    <Compile Include="Views\Frm_ConsultarCurso.Designer.cs">
       <DependentUpon>Frm_ConsultarCurso.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Frm_EditarAluno.cs">
@@ -231,17 +237,21 @@
     <Compile Include="Controller\CursoController.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
     <Compile Include="Services\ValidacaoCPF.cs" />
-    <EmbeddedResource Include="Frm_RelatorioAlunoCurso.resx">
+    <EmbeddedResource Include="Views\Frm_RelatorioAlunoCurso.resx">
       <DependentUpon>Frm_RelatorioAlunoCurso.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_RelatorioCursoAlunos.resx">
       <DependentUpon>Frm_RelatorioCursoAlunos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\Frm_RelatorioCursos.resx">
+      <DependentUpon>Frm_RelatorioCursos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202206010116064_Faculdade.resx">
       <DependentUpon>202206010116064_Faculdade.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="RelatorioAlunoCurso.rdlc" />
+    <EmbeddedResource Include="Relatorios\RelatorioAlunoCurso.rdlc" />
     <EmbeddedResource Include="RelatorioCursoAlunos.rdlc" />
+    <EmbeddedResource Include="Relatorios\RelatorioCursos.rdlc" />
     <EmbeddedResource Include="Views\Frm_ConsultarAlunoCurso.resx">
       <DependentUpon>Frm_ConsultarAlunoCurso.cs</DependentUpon>
     </EmbeddedResource>
@@ -251,7 +261,7 @@
     <EmbeddedResource Include="Views\Frm_ConsultaCursoAlunos.resx">
       <DependentUpon>Frm_ConsultaCursoAlunos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Frm_ConsultarCurso.resx">
+    <EmbeddedResource Include="Views\Frm_ConsultarCurso.resx">
       <DependentUpon>Frm_ConsultarCurso.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Frm_EditarAluno.resx">
