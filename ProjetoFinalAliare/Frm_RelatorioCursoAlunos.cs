@@ -22,7 +22,7 @@ namespace ProjetoFinalAliare
         private void Frm_RelatorioCursoAlunos_Load(object sender, EventArgs e)
         {
             reportViewer1.LocalReport.DataSources.Clear();
-            reportViewer1.LocalReport.DataSources.Add(new Microsoft.Reporting.WinForms.ReportDataSource("DataSet3", dt));
+            reportViewer1.LocalReport.DataSources.Add(new Microsoft.Reporting.WinForms.ReportDataSource("DataSet_Aluno", dt));
             this.reportViewer1.RefreshReport();
         }
     }

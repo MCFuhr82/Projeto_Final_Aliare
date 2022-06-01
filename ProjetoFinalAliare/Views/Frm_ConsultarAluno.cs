@@ -20,7 +20,6 @@ namespace ProjetoFinalAliare
             Btn_Editar.Enabled = false;
             Btn_Deletar.Enabled = false;
             Btn_Matricular.Enabled = false;
-            SetBorderAndGridlineStyles();
         }
 
         private void Btn_Voltar_Click(object sender, EventArgs e)
@@ -102,7 +101,6 @@ namespace ProjetoFinalAliare
         {
             try
             {
-                //var alunos = AlunoController.ReadAlunos();
                 var selectedAluno = dataGridView1.SelectedRows[0].DataBoundItem as Aluno;
                 Txb_Matricula.Text = selectedAluno.Matricula.ToString();
                 Txb_Nome.Text = selectedAluno.Nome.ToString();
@@ -120,18 +118,7 @@ namespace ProjetoFinalAliare
             MessageBox.Show("Por favor, selecione um aluno.", "Selecionar aluno", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 
-        private void SetBorderAndGridlineStyles()
-        {
-            this.dataGridView1.GridColor = Color.BlueViolet;
-            this.dataGridView1.BorderStyle = BorderStyle.Fixed3D;
-            this.dataGridView1.CellBorderStyle =
-                DataGridViewCellBorderStyle.None;
-            this.dataGridView1.RowHeadersBorderStyle =
-                DataGridViewHeaderBorderStyle.Single;
-            this.dataGridView1.ColumnHeadersBorderStyle =
-                DataGridViewHeaderBorderStyle.Single;
-        }
-
+        
         private void Btn_Imprimir_Click(object sender, EventArgs e)
         {
             var dt = GerarDadosRelatorio();
@@ -142,6 +129,7 @@ namespace ProjetoFinalAliare
         private DataTable GerarDadosRelatorio()
         {
             var dt = new DataTable();
+
             dt.Columns.Add("Matricula");
             dt.Columns.Add("Nome");
             dt.Columns.Add("CPF");

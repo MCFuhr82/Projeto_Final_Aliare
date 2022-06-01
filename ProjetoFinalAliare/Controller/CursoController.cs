@@ -85,7 +85,7 @@ namespace ProjetoFinalAliare
             }
         }
 
-        //Lista de Alunos por Curso
+        //Retorna uma lista de Alunos por Curso
         public static List<Aluno> ListaAlunos(string nomeCurso)
         {
             using (var context = new Context())

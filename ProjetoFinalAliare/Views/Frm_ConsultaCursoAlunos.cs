@@ -44,27 +44,32 @@ namespace ProjetoFinalAliare
             } 
             else
             {
+                //retorna uma lista de alunos por curso
                 var alunos = CursoController.ListaAlunos(nomeCurso);
+                //Exibe a lista de alunos no DataGrid
                 TabelaDeAlunos(alunos);
+                //Somatório de alunos por curso
                 Txb_TotalAlunos.Text = alunos.Count().ToString();
             }
             
         }
-        private void TabelaDeAlunos(List<Aluno> alunos)
+        //Método para gerar o Datagridviewer
+        private DataTable TabelaDeAlunos(List<Aluno> alunos)
         {
             var dt = new DataTable();
-            dt.Columns.Add("Nome", typeof(string));
-            dt.Columns.Add("Email", typeof(string));
-            dt.Columns.Add("Telefone", typeof(string));
-            dt.Columns.Add("Cidade", typeof(string));
-            dt.Columns.Add("Estado", typeof(string));
+            dt.Columns.Add("Nome");
+            dt.Columns.Add("Email");
+            dt.Columns.Add("Celular");
+            dt.Columns.Add("Cidade");
+            dt.Columns.Add("Estado");
 
             foreach (var aluno in alunos)
             {
                 dt.Rows.Add(aluno.Nome, aluno.Email, aluno.Celular, aluno.Cidade, aluno.Estado);
             }
+
             dataGridView1.DataSource = dt;
-            
+            return dt;
         }
 
         private void Btn_Imprimir_Click(object sender, EventArgs e)
@@ -76,21 +81,22 @@ namespace ProjetoFinalAliare
 
         private DataTable GerarDadosRelatorio()
         {
+            var nomeCurso = Cbox_SelecionaCurso.Text;
+            var curso = CursoController.ListaAlunos(nomeCurso);
+            var table = TabelaDeAlunos(curso);
+
             var dt = new DataTable();
             dt.Columns.Add("Nome");
             dt.Columns.Add("Email");
-            dt.Columns.Add("Telefone");
+            dt.Columns.Add("Celular");
             dt.Columns.Add("Cidade");
             dt.Columns.Add("Estado");
 
-            foreach (DataGridViewRow item in dataGridView1.Rows)
+            foreach (DataRow row in table.Rows)
             {
-                dt.Rows.Add(item.Cells["Nome"].Value.ToString(),
-                            item.Cells["Email"].Value.ToString(),
-                            item.Cells["Telefone"].Value.ToString(),
-                            item.Cells["Cidade"].Value.ToString(),
-                            item.Cells["Estado"].Value.ToString());
+                dt.Rows.Add(row.ItemArray[0], row.ItemArray[1], row.ItemArray[2], row.ItemArray[3], row.ItemArray[4]);
             }
+
             return dt;
         }
     }

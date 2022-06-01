@@ -208,7 +208,6 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
-                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
                 <TablixCell>
@@ -354,11 +353,11 @@
             </TablixMember>
           </TablixMembers>
         </TablixRowHierarchy>
-        <DataSetName>DataSet3</DataSetName>
+        <DataSetName>DataSet_Aluno</DataSetName>
         <Top>1.3462cm</Top>
         <Left>0.55245cm</Left>
         <Height>1.2cm</Height>
-        <Width>15.56917cm</Width>
+        <Width>15.56915cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -411,7 +410,7 @@
     </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="DataSet3">
+    <DataSet Name="DataSet_Aluno">
       <Query>
         <DataSourceName>ProjetoFinalAliareModels</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
@@ -468,9 +467,8 @@
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>ProjetoFinalAliare.Models</rd:DataSetName>
-        <rd:TableName>Curso</rd:TableName>
-        <rd:ObjectDataSourceSelectMethod>Alunos</rd:ObjectDataSourceSelectMethod>
-        <rd:ObjectDataSourceType>ProjetoFinalAliare.Models.Curso, ProjetoFinalAliare, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
+        <rd:TableName>Aluno</rd:TableName>
+        <rd:ObjectDataSourceType>ProjetoFinalAliare.Models.Aluno, ProjetoFinalAliare, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>
