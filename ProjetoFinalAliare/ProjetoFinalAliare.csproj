@@ -235,7 +235,6 @@
       <DependentUpon>Frm_Menu.cs</DependentUpon>
     </Compile>
     <Compile Include="Controller\CursoController.cs" />
-    <Compile Include="SqlServerTypes\Loader.cs" />
     <Compile Include="Services\ValidacaoCPF.cs" />
     <EmbeddedResource Include="Views\Frm_RelatorioAlunoCurso.resx">
       <DependentUpon>Frm_RelatorioAlunoCurso.cs</DependentUpon>
@@ -488,19 +487,6 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
-    <Content Include="SqlServerTypes\readme.htm" />
-    <Content Include="SqlServerTypes\x64\msvcr120.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="SqlServerTypes\x86\msvcr120.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />

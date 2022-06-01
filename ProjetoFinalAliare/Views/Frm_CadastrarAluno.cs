@@ -2,6 +2,7 @@
 using System.Windows.Forms;
 using ProjetoFinalAliare.Models;
 using Correios.Net;
+using System.Data.Entity.Validation;
 
 namespace ProjetoFinalAliare
 {
@@ -46,33 +47,35 @@ namespace ProjetoFinalAliare
 
                 var cpfValido = ValidacaoCPF.ValidaCPF(cpf);
 
-                if (!Mtxb_CEP.MaskCompleted || !Mtxb_Telefone.MaskCompleted)
-                {
-                    MessageBox.Show("Verificar telefone ou CEP");
-                } 
-                else
-                {
-                    if (cpfValido == true)
-                    {
-                        var aluno = new Aluno(nome, cpf, endereco, numero, cidade, estado, cep, complemento, telefone, email);
+                VerificaCamposObrigatorios();
 
-                        AlunoController.InserirAluno(aluno);
-                        MessageBox.Show("Dados inseridos com sucesso!");
-                        LimparTextBoxes();
-                        Lbl_CpfInválido.Text = null;
-                    } 
+                if (!Mtxb_Telefone.MaskCompleted)
+                    MessageBox.Show("Verificar telefone!");
+                if (!Mtxb_CEP.MaskCompleted)
+                {
+                    MessageBox.Show("Informe um CEP válido!");
                 }
+                else (cpfValido == true)
+                {
+                    var aluno = new Aluno(nome, cpf, endereco, numero, cidade, estado, cep, complemento, telefone, email);
+
+                    AlunoController.InserirAluno(aluno);
+                    MessageBox.Show("Dados inseridos com sucesso!");
+                    LimparTextBoxes();
+                    Lbl_CpfInválido.Text = null;
+                } 
+                
             }
-            catch (Exception ex)
+            catch (DbEntityValidationException ex)
             {
-                MessageBox.Show(ex.Message);
+                Console.WriteLine(ex.Message);
             }
         }
 
         //método para aceitar apenas números
         private void Txb_Numero_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if(!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8)
+            if(!char.IsDigit(e.KeyChar) && e.KeyChar != (char)8)
             {
                 e.Handled = true;
             }
@@ -96,7 +99,9 @@ namespace ProjetoFinalAliare
         {
             var cepInvalido = LocalizarCEP.LocalizaCEP(Mtxb_CEP.Text);
             if (cepInvalido == false)
+            {
                 MessageBox.Show("Informe um CEP válido!");
+            }
             var endereco = LocalizarCEP.rua;
             Txb_Endereco.Text = endereco;
             var cidade = LocalizarCEP.cidade;
@@ -113,6 +118,30 @@ namespace ProjetoFinalAliare
                 Lbl_CpfInválido.Text = "CPF Inválido";
             else
                 Lbl_CpfInválido.Text = "";
+        }
+
+        private void VerificaCamposObrigatorios()
+        {
+            try
+            {
+                if (string.IsNullOrEmpty(Txb_Nome.Text))
+                    MessageBox.Show("Campo nome deve ser preenchido");
+                if (string.IsNullOrEmpty(Txb_Email.Text))
+                    MessageBox.Show("Campo email deve ser preenchido");
+                if (string.IsNullOrEmpty(Txb_Endereco.Text))
+                    MessageBox.Show("Campo endereco deve ser preenchido");
+                if (string.IsNullOrEmpty(Txb_Cidade.Text))
+                    MessageBox.Show("Campo cidade deve ser preenchido");
+            }
+            catch (FormatException ex)
+            {
+                MessageBox.Show("Verificar campo numero!");
+                Console.WriteLine(ex.Message);
+            }
+            catch (DbEntityValidationException)
+            {
+                throw;
+            }
         }
     }
 }
