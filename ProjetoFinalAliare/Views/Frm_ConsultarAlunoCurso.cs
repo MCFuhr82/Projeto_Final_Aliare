@@ -62,7 +62,7 @@ namespace ProjetoFinalAliare
             {
                 if (aluno.Curso == null)
                 {
-                    dt.Rows.Add(aluno.Nome, aluno.Email, aluno.Cidade, aluno.Estado, "");
+                    dt.Rows.Add(aluno.Nome, aluno.Email, aluno.Cidade, aluno.Estado, "Não matriculado");
                 }
                 else
                 {

@@ -31,28 +31,34 @@ namespace ProjetoFinalAliare
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.CursoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.AlunoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.CursoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AlunoBindingSource)).BeginInit();
             this.SuspendLayout();
+            // 
+            // CursoBindingSource
+            // 
+            this.CursoBindingSource.DataMember = "Alunos";
+            this.CursoBindingSource.DataSource = typeof(ProjetoFinalAliare.Models.Curso);
             // 
             // reportViewer1
             // 
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource1.Name = "DataSet1";
-            reportDataSource1.Value = this.CursoBindingSource;
+            reportDataSource1.Name = "DataSet_Aluno";
+            reportDataSource1.Value = this.AlunoBindingSource;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "ProjetoFinalAliare.RelatorioCursoAlunos.rdlc";
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "ProjetoFinalAliare.Relatorios.RelatorioCursoAlunos.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
             this.reportViewer1.Size = new System.Drawing.Size(800, 450);
             this.reportViewer1.TabIndex = 0;
             // 
-            // CursoBindingSource
+            // AlunoBindingSource
             // 
-            this.CursoBindingSource.DataMember = "Alunos";
-            this.CursoBindingSource.DataSource = typeof(ProjetoFinalAliare.Models.Curso);
+            this.AlunoBindingSource.DataSource = typeof(ProjetoFinalAliare.Models.Aluno);
             // 
             // Frm_RelatorioCursoAlunos
             // 
@@ -64,6 +70,7 @@ namespace ProjetoFinalAliare
             this.Text = "Frm_RelatorioCursoAlunos";
             this.Load += new System.EventHandler(this.Frm_RelatorioCursoAlunos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.CursoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AlunoBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -72,5 +79,6 @@ namespace ProjetoFinalAliare
 
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
         private System.Windows.Forms.BindingSource CursoBindingSource;
+        private System.Windows.Forms.BindingSource AlunoBindingSource;
     }
 }

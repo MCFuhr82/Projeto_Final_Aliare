@@ -139,10 +139,10 @@
     <Compile Include="Views\Frm_RelatorioAlunoCurso.Designer.cs">
       <DependentUpon>Frm_RelatorioAlunoCurso.cs</DependentUpon>
     </Compile>
-    <Compile Include="Frm_RelatorioCursoAlunos.cs">
+    <Compile Include="Views\Frm_RelatorioCursoAlunos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frm_RelatorioCursoAlunos.Designer.cs">
+    <Compile Include="Views\Frm_RelatorioCursoAlunos.Designer.cs">
       <DependentUpon>Frm_RelatorioCursoAlunos.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Frm_RelatorioCursos.cs">
@@ -240,7 +240,7 @@
     <EmbeddedResource Include="Views\Frm_RelatorioAlunoCurso.resx">
       <DependentUpon>Frm_RelatorioAlunoCurso.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Frm_RelatorioCursoAlunos.resx">
+    <EmbeddedResource Include="Views\Frm_RelatorioCursoAlunos.resx">
       <DependentUpon>Frm_RelatorioCursoAlunos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Frm_RelatorioCursos.resx">
@@ -250,7 +250,7 @@
       <DependentUpon>202206010116064_Faculdade.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Relatorios\RelatorioAlunoCurso.rdlc" />
-    <EmbeddedResource Include="RelatorioCursoAlunos.rdlc" />
+    <EmbeddedResource Include="Relatorios\RelatorioCursoAlunos.rdlc" />
     <EmbeddedResource Include="Relatorios\RelatorioCursos.rdlc" />
     <EmbeddedResource Include="Views\Frm_ConsultarAlunoCurso.resx">
       <DependentUpon>Frm_ConsultarAlunoCurso.cs</DependentUpon>
