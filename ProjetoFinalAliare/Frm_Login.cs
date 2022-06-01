@@ -26,7 +26,7 @@ namespace ProjetoFinalAliare
             }
             else
             {
-                MessageBox.Show("Login ou senha inválidos!", "Aliare", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                MessageBox.Show("Login ou senha inválidos.", "Aliare", MessageBoxButtons.OK, MessageBoxIcon.Hand);
             }
         }
 
