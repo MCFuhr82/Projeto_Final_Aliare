@@ -7,13 +7,13 @@ namespace ProjetoFinalAliare.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.0")]
-    public sealed partial class BD_Inicio1 : IMigrationMetadata
+    public sealed partial class Faculdade : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(BD_Inicio1));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(Faculdade));
         
         string IMigrationMetadata.Id
         {
-            get { return "202205252213002_BD_Inicio1"; }
+            get { return "202206010116064_Faculdade"; }
         }
         
         string IMigrationMetadata.Source

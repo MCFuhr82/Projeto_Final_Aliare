@@ -3,7 +3,7 @@
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class BD_Inicio : DbMigration
+    public partial class Faculdade : DbMigration
     {
         public override void Up()
         {
@@ -22,11 +22,11 @@
                         Complemento = c.String(),
                         Cidade = c.String(nullable: false),
                         Estado = c.String(nullable: false),
-                        IdCurso_Id = c.Int(),
+                        Curso_Id = c.Int(),
                     })
                 .PrimaryKey(t => t.Matricula)
-                .ForeignKey("public.Curso", t => t.IdCurso_Id)
-                .Index(t => t.IdCurso_Id);
+                .ForeignKey("public.Curso", t => t.Curso_Id)
+                .Index(t => t.Curso_Id);
             
             CreateTable(
                 "public.Curso",
@@ -42,8 +42,8 @@
         
         public override void Down()
         {
-            DropForeignKey("public.Aluno", "IdCurso_Id", "public.Curso");
-            DropIndex("public.Aluno", new[] { "IdCurso_Id" });
+            DropForeignKey("public.Aluno", "Curso_Id", "public.Curso");
+            DropIndex("public.Aluno", new[] { "Curso_Id" });
             DropTable("public.Curso");
             DropTable("public.Aluno");
         }

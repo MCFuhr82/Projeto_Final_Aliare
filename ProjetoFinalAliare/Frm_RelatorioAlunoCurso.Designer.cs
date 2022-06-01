@@ -50,6 +50,7 @@ namespace ProjetoFinalAliare
             this.Controls.Add(this.reportViewer1);
             this.Name = "Frm_RelatorioAlunoCurso";
             this.Text = "Frm_RelatorioAlunoCurso";
+            this.Load += new System.EventHandler(this.Frm_RelatorioAlunoCurso_Load);
             this.ResumeLayout(false);
 
         }

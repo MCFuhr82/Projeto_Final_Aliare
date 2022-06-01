@@ -48,7 +48,7 @@ namespace ProjetoFinalAliare
             return aluno;
         }
 
-        private void TabelaDeSelecao(List<Aluno> alunos)
+        private DataTable TabelaDeSelecao(List<Aluno> alunos)
         {
             var dt = new DataTable();
             dt.Columns.Add("Nome");
@@ -57,6 +57,7 @@ namespace ProjetoFinalAliare
             dt.Columns.Add("Estado");
             dt.Columns.Add("Curso");
 
+            
             foreach (var aluno in alunos)
             {
                 if (aluno.Curso == null)
@@ -65,11 +66,13 @@ namespace ProjetoFinalAliare
                 }
                 else
                 {
+                    
                     dt.Rows.Add(aluno.Nome, aluno.Email, aluno.Cidade, aluno.Estado, aluno.Curso.Nome);
                 }
             }
 
             dataGridView1.DataSource = dt;
+            return dt;
         }
 
         private void Btn_Imprimir_Click(object sender, EventArgs e)
@@ -81,6 +84,10 @@ namespace ProjetoFinalAliare
 
         private DataTable GerarDadosRelatorio()
         {
+            var alunos = ListaAlunosPorNome();
+            var table = TabelaDeSelecao(alunos);
+            
+
             var dt = new DataTable();
 
             dt.Columns.Add("Nome");
@@ -89,14 +96,11 @@ namespace ProjetoFinalAliare
             dt.Columns.Add("Estado");
             dt.Columns.Add("Curso");
 
-            foreach (DataGridViewRow item in dataGridView1.Rows)
+            foreach (DataRow row in table.Rows)
             {
-                dt.Rows.Add(item.Cells["Nome"].Value.ToString(),
-                            item.Cells["Email"].Value.ToString(),
-                            item.Cells["Cidade"].Value.ToString(),
-                            item.Cells["Estado"].Value.ToString(),
-                            item.Cells["Curso"].Value.ToString());
+                dt.Rows.Add(row.ItemArray[0], row.ItemArray[1], row.ItemArray[2], row.ItemArray[3], row.ItemArray[4]);
             }
+
             return dt;
         }
     }

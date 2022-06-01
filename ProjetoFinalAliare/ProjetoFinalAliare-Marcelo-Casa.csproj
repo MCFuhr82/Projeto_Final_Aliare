@@ -145,16 +145,11 @@
     <Compile Include="Frm_RelatorioCursoAlunos.Designer.cs">
       <DependentUpon>Frm_RelatorioCursoAlunos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202206010116064_Faculdade.cs" />
-    <Compile Include="Migrations\202206010116064_Faculdade.designer.cs">
-      <DependentUpon>202206010116064_Faculdade.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Views\Frm_ConsultarAlunoCurso.cs">
+    <Compile Include="Views\Frm_ ConsultarAlunoPorNome.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\Frm_ConsultarAlunoCurso.Designer.cs">
-      <DependentUpon>Frm_ConsultarAlunoCurso.cs</DependentUpon>
+    <Compile Include="Views\Frm_ ConsultarAlunoPorNome.Designer.cs">
+      <DependentUpon>Frm_ ConsultarAlunoPorNome.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\Context\Context.cs" />
     <Compile Include="Views\Frm_CadastrarCurso.cs">
@@ -169,10 +164,10 @@
     <Compile Include="Views\Frm_ConsultaCursoAlunos.Designer.cs">
       <DependentUpon>Frm_ConsultaCursoAlunos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Frm_ConsultarCurso.cs">
+    <Compile Include="Views\Frm_ConsultarCurso.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frm_ConsultarCurso.Designer.cs">
+    <Compile Include="Views\Frm_ConsultarCurso.Designer.cs">
       <DependentUpon>Frm_ConsultarCurso.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Frm_EditarAluno.cs">
@@ -200,6 +195,19 @@
       <DependentUpon>Frm_RelatorioAlunos.cs</DependentUpon>
     </Compile>
     <Compile Include="Services\LocalizarCEP.cs" />
+    <Compile Include="Migrations\202205201828409_BD_Inicio.cs" />
+    <Compile Include="Migrations\202205201828409_BD_Inicio.designer.cs">
+      <DependentUpon>202205201828409_BD_Inicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202205252213002_BD_Inicio1.cs" />
+    <Compile Include="Migrations\202205252213002_BD_Inicio1.designer.cs">
+      <DependentUpon>202205252213002_BD_Inicio1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202205282221081_Curso.cs" />
+    <Compile Include="Migrations\202205282221081_Curso.designer.cs">
+      <DependentUpon>202205282221081_Curso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Aluno.cs" />
     <Compile Include="Models\Curso.cs" />
     <Compile Include="Views\Frm_ConsultarAluno.cs">
@@ -237,13 +245,10 @@
     <EmbeddedResource Include="Frm_RelatorioCursoAlunos.resx">
       <DependentUpon>Frm_RelatorioCursoAlunos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202206010116064_Faculdade.resx">
-      <DependentUpon>202206010116064_Faculdade.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="RelatorioAlunoCurso.rdlc" />
     <EmbeddedResource Include="RelatorioCursoAlunos.rdlc" />
-    <EmbeddedResource Include="Views\Frm_ConsultarAlunoCurso.resx">
-      <DependentUpon>Frm_ConsultarAlunoCurso.cs</DependentUpon>
+    <EmbeddedResource Include="Views\Frm_ ConsultarAlunoPorNome.resx">
+      <DependentUpon>Frm_ ConsultarAlunoPorNome.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Frm_CadastrarCurso.resx">
       <DependentUpon>Frm_CadastrarCurso.cs</DependentUpon>
@@ -251,7 +256,7 @@
     <EmbeddedResource Include="Views\Frm_ConsultaCursoAlunos.resx">
       <DependentUpon>Frm_ConsultaCursoAlunos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Frm_ConsultarCurso.resx">
+    <EmbeddedResource Include="Views\Frm_ConsultarCurso.resx">
       <DependentUpon>Frm_ConsultarCurso.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Frm_EditarAluno.resx">
@@ -265,6 +270,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Frm_RelatorioAlunos.resx">
       <DependentUpon>Frm_RelatorioAlunos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202205201828409_BD_Inicio.resx">
+      <DependentUpon>202205201828409_BD_Inicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202205252213002_BD_Inicio1.resx">
+      <DependentUpon>202205252213002_BD_Inicio1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202205282221081_Curso.resx">
+      <DependentUpon>202205282221081_Curso.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
