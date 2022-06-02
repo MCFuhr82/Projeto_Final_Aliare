@@ -17,5 +17,6 @@ namespace ProjetoFinalAliare
 
         public DbSet<Aluno> Aluno { get; set; }
         public DbSet<Curso> Curso { get; set; }
+        public DbSet<Turma> Turma { get; set; }
     }
 }

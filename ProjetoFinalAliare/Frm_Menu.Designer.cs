@@ -32,6 +32,7 @@
             this.Btn_Aluno = new System.Windows.Forms.Button();
             this.Btn_Curso = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.Btn_Turma = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -40,7 +41,7 @@
             this.Btn_Aluno.BackColor = System.Drawing.SystemColors.ControlLight;
             this.Btn_Aluno.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Aluno.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_Aluno.Location = new System.Drawing.Point(205, 290);
+            this.Btn_Aluno.Location = new System.Drawing.Point(71, 290);
             this.Btn_Aluno.Name = "Btn_Aluno";
             this.Btn_Aluno.Size = new System.Drawing.Size(146, 55);
             this.Btn_Aluno.TabIndex = 0;
@@ -52,7 +53,7 @@
             // 
             this.Btn_Curso.BackColor = System.Drawing.SystemColors.ControlLight;
             this.Btn_Curso.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_Curso.Location = new System.Drawing.Point(426, 290);
+            this.Btn_Curso.Location = new System.Drawing.Point(317, 290);
             this.Btn_Curso.Name = "Btn_Curso";
             this.Btn_Curso.Size = new System.Drawing.Size(146, 55);
             this.Btn_Curso.TabIndex = 1;
@@ -70,11 +71,24 @@
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             // 
+            // Btn_Turma
+            // 
+            this.Btn_Turma.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.Btn_Turma.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Turma.Location = new System.Drawing.Point(559, 290);
+            this.Btn_Turma.Name = "Btn_Turma";
+            this.Btn_Turma.Size = new System.Drawing.Size(146, 55);
+            this.Btn_Turma.TabIndex = 5;
+            this.Btn_Turma.Text = "Turma";
+            this.Btn_Turma.UseVisualStyleBackColor = false;
+            this.Btn_Turma.Click += new System.EventHandler(this.Btn_Turma_Click);
+            // 
             // Frm_Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.Btn_Turma);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.Btn_Curso);
             this.Controls.Add(this.Btn_Aluno);
@@ -94,5 +108,6 @@
         private System.Windows.Forms.Button Btn_Aluno;
         private System.Windows.Forms.Button Btn_Curso;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button Btn_Turma;
     }
 }

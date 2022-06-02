@@ -356,3 +356,8 @@ C:\ws-marcelo\ProjetoFinalAliare\ProjetoFinalAliare\ProjetoFinalAliare\obj\Debug
 C:\ws-marcelo\ProjetoFinalAliare\ProjetoFinalAliare\ProjetoFinalAliare\obj\Debug\ProjetoFinalAliare.csproj.CopyComplete
 C:\ws-marcelo\ProjetoFinalAliare\ProjetoFinalAliare\ProjetoFinalAliare\obj\Debug\ProjetoFinalAliare.exe
 C:\ws-marcelo\ProjetoFinalAliare\ProjetoFinalAliare\ProjetoFinalAliare\obj\Debug\ProjetoFinalAliare.pdb
+C:\Users\marce\OneDrive\Marcelo\AliareEstagio\ProjetoFinalAliare\ProjetoFinalAliare\ProjetoFinalAliare\obj\Debug\ProjetoFinalAliare.Migrations.Turma.resources
+C:\Users\marce\OneDrive\Marcelo\AliareEstagio\ProjetoFinalAliare\ProjetoFinalAliare\ProjetoFinalAliare\obj\Debug\ProjetoFinalAliare.Frm_ConsultarTurma.resources
+C:\Users\marce\OneDrive\Marcelo\AliareEstagio\ProjetoFinalAliare\ProjetoFinalAliare\ProjetoFinalAliare\obj\Debug\ProjetoFinalAliare.Migrations.Turma1.resources
+C:\Users\marce\OneDrive\Marcelo\AliareEstagio\ProjetoFinalAliare\ProjetoFinalAliare\ProjetoFinalAliare\obj\Debug\ProjetoFinalAliare.Frm_CadastrarTurma.resources
+C:\Users\marce\OneDrive\Marcelo\AliareEstagio\ProjetoFinalAliare\ProjetoFinalAliare\ProjetoFinalAliare\obj\Debug\ProjetoFinalAliare.Migrations.Turma2.resources

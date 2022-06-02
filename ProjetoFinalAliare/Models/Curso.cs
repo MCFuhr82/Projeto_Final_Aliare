@@ -19,6 +19,7 @@ namespace ProjetoFinalAliare.Models
         public int CargaHoraria { get; private set; }
 
         public virtual ICollection<Aluno> Alunos { get; private set; }
+        public virtual ICollection<Turma> Turmas { get; private set; }
         
         public Curso() { }
 

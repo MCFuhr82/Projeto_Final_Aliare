@@ -33,6 +33,7 @@ namespace ProjetoFinalAliare.Models
         [Required]
         public string Estado { get; private set; }
         public virtual Curso Curso { get; set; }
+        public virtual Turma Turma { get; set; }
 
         public Aluno() { }
 

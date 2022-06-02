@@ -133,6 +133,32 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Controller\TurmaController .cs" />
+    <Compile Include="Frm_CadastrarTurma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_CadastrarTurma.Designer.cs">
+      <DependentUpon>Frm_CadastrarTurma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_ConsultarTurma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_ConsultarTurma.Designer.cs">
+      <DependentUpon>Frm_ConsultarTurma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202206020245361_Turma.cs" />
+    <Compile Include="Migrations\202206020245361_Turma.designer.cs">
+      <DependentUpon>202206020245361_Turma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202206020340381_Turma1.cs" />
+    <Compile Include="Migrations\202206020340381_Turma1.designer.cs">
+      <DependentUpon>202206020340381_Turma1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202206020436261_Turma2.cs" />
+    <Compile Include="Migrations\202206020436261_Turma2.designer.cs">
+      <DependentUpon>202206020436261_Turma2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Turma.cs" />
     <Compile Include="Views\Frm_RelatorioAlunoCurso.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -236,6 +262,21 @@
     </Compile>
     <Compile Include="Controller\CursoController.cs" />
     <Compile Include="Services\ValidacaoCPF.cs" />
+    <EmbeddedResource Include="Frm_CadastrarTurma.resx">
+      <DependentUpon>Frm_CadastrarTurma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_ConsultarTurma.resx">
+      <DependentUpon>Frm_ConsultarTurma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206020245361_Turma.resx">
+      <DependentUpon>202206020245361_Turma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206020340381_Turma1.resx">
+      <DependentUpon>202206020340381_Turma1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206020436261_Turma2.resx">
+      <DependentUpon>202206020436261_Turma2.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Frm_RelatorioAlunoCurso.resx">
       <DependentUpon>Frm_RelatorioAlunoCurso.cs</DependentUpon>
     </EmbeddedResource>
