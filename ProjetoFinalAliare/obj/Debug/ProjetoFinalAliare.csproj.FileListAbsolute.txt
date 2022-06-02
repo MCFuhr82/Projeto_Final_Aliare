@@ -167,10 +167,6 @@ C:\ws-marcelo\ProjetoFinalAliare\Projeto_Final_Aliare\ProjetoFinalAliare\obj\Deb
 C:\ws-marcelo\ProjetoFinalAliare\Projeto_Final_Aliare\ProjetoFinalAliare\bin\Debug\Correios.Net.dll
 C:\ws-marcelo\ProjetoFinalAliare\Projeto_Final_Aliare\ProjetoFinalAliare\bin\Debug\Correios.Net.pdb
 C:\ws-marcelo\ProjetoFinalAliare\Projeto_Final_Aliare\ProjetoFinalAliare\obj\Debug\ProjetoFinalAliare.Frm_Matricular.resources
-C:\Users\marce\OneDrive\Marcelo\AliareEstagio\ProjetoFinalAliare\ProjetoFinalAliare\ProjetoFinalAliare\bin\Debug\SqlServerTypes\x64\msvcr120.dll
-C:\Users\marce\OneDrive\Marcelo\AliareEstagio\ProjetoFinalAliare\ProjetoFinalAliare\ProjetoFinalAliare\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
-C:\Users\marce\OneDrive\Marcelo\AliareEstagio\ProjetoFinalAliare\ProjetoFinalAliare\ProjetoFinalAliare\bin\Debug\SqlServerTypes\x86\msvcr120.dll
-C:\Users\marce\OneDrive\Marcelo\AliareEstagio\ProjetoFinalAliare\ProjetoFinalAliare\ProjetoFinalAliare\bin\Debug\SqlServerTypes\x86\SqlServerSpatial140.dll
 C:\Users\marce\OneDrive\Marcelo\AliareEstagio\ProjetoFinalAliare\ProjetoFinalAliare\ProjetoFinalAliare\bin\Debug\Correios.Net.dll
 C:\Users\marce\OneDrive\Marcelo\AliareEstagio\ProjetoFinalAliare\ProjetoFinalAliare\ProjetoFinalAliare\bin\Debug\Microsoft.ReportViewer.Common.dll
 C:\Users\marce\OneDrive\Marcelo\AliareEstagio\ProjetoFinalAliare\ProjetoFinalAliare\ProjetoFinalAliare\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll

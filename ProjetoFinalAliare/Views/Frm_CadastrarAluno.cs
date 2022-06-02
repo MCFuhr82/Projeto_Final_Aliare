@@ -47,15 +47,9 @@ namespace ProjetoFinalAliare
 
                 var cpfValido = ValidacaoCPF.ValidaCPF(cpf);
 
-                VerificaCamposObrigatorios();
+                var camposObrigatoriosOK = VerificaCamposObrigatorios();
 
-                if (!Mtxb_Telefone.MaskCompleted)
-                    MessageBox.Show("Verificar telefone!");
-                if (!Mtxb_CEP.MaskCompleted)
-                {
-                    MessageBox.Show("Informe um CEP válido!");
-                }
-                else (cpfValido == true)
+                if (cpfValido == true && camposObrigatoriosOK == true)
                 {
                     var aluno = new Aluno(nome, cpf, endereco, numero, cidade, estado, cep, complemento, telefone, email);
 
@@ -64,7 +58,10 @@ namespace ProjetoFinalAliare
                     LimparTextBoxes();
                     Lbl_CpfInválido.Text = null;
                 } 
-                
+            }
+            catch (FormatException)
+            {
+                MessageBox.Show("Verificar campo numero!");
             }
             catch (DbEntityValidationException ex)
             {
@@ -100,7 +97,8 @@ namespace ProjetoFinalAliare
             var cepInvalido = LocalizarCEP.LocalizaCEP(Mtxb_CEP.Text);
             if (cepInvalido == false)
             {
-                MessageBox.Show("Informe um CEP válido!");
+                MessageBox.Show("Campo CEP deve ser preenchido com um CEP válido");
+                Mtxb_CEP.Text = null;
             }
             var endereco = LocalizarCEP.rua;
             Txb_Endereco.Text = endereco;
@@ -120,23 +118,44 @@ namespace ProjetoFinalAliare
                 Lbl_CpfInválido.Text = "";
         }
 
-        private void VerificaCamposObrigatorios()
+        private bool VerificaCamposObrigatorios()
         {
             try
             {
                 if (string.IsNullOrEmpty(Txb_Nome.Text))
+                {
                     MessageBox.Show("Campo nome deve ser preenchido");
-                if (string.IsNullOrEmpty(Txb_Email.Text))
+                    return false;
+                } else if (string.IsNullOrEmpty(Txb_Email.Text))
+                {
                     MessageBox.Show("Campo email deve ser preenchido");
-                if (string.IsNullOrEmpty(Txb_Endereco.Text))
+                    return false;
+                } else if (string.IsNullOrEmpty(Txb_Endereco.Text))
+                {
                     MessageBox.Show("Campo endereco deve ser preenchido");
-                if (string.IsNullOrEmpty(Txb_Cidade.Text))
+                    return false;
+                } else if (string.IsNullOrEmpty(Txb_Cidade.Text))
+                {
                     MessageBox.Show("Campo cidade deve ser preenchido");
-            }
-            catch (FormatException ex)
-            {
-                MessageBox.Show("Verificar campo numero!");
-                Console.WriteLine(ex.Message);
+                    return false;
+                } else if (!Mtxb_CPF.MaskCompleted)
+                {
+                    MessageBox.Show("Campo CPF deve ser preenchido com um CPF válido");
+                    return false;
+                } else if (!Mtxb_CEP.MaskCompleted)
+                {
+                    MessageBox.Show("Campo CEP deve ser preenchido com um CEP válido");
+                    return false;
+                }
+                else if (!Mtxb_Telefone.MaskCompleted)
+                {
+                    MessageBox.Show("Campo telefone deve ser preenchido");
+                    return false;
+                }
+                else
+                {
+                    return true;
+                }
             }
             catch (DbEntityValidationException)
             {
