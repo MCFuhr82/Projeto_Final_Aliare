@@ -78,7 +78,7 @@ namespace ProjetoFinalAliare
             }
         }
 
-        private void Btn_ConsultaEspecial_Click(object sender, EventArgs e)
+        private void Btn_ConsultaPorNome_Click(object sender, EventArgs e)
         {
             var form = new Frm_ConsultarPorNome();
             form.ShowDialog();

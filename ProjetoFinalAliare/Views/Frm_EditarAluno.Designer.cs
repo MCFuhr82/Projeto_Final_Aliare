@@ -361,7 +361,7 @@ namespace ProjetoFinalAliare
             this.MaximumSize = new System.Drawing.Size(848, 488);
             this.MinimumSize = new System.Drawing.Size(848, 488);
             this.Name = "Frm_EditarAluno";
-            this.Text = "Editar";
+            this.Text = "Editar Aluno";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

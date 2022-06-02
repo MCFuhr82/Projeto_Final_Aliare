@@ -123,7 +123,7 @@
             this.MinimumSize = new System.Drawing.Size(474, 365);
             this.Name = "Frm_Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Tela de Login";
+            this.Text = "Login";
             ((System.ComponentModel.ISupportInitialize)(this.Img_Login)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Img_Aliare)).EndInit();
             this.ResumeLayout(false);

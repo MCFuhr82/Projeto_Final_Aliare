@@ -49,7 +49,7 @@ namespace ProjetoFinalAliare
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.reportViewer1);
             this.Name = "Frm_RelatorioAlunoCurso";
-            this.Text = "Frm_RelatorioAlunoCurso";
+            this.Text = "Relatorio Aluno";
             this.Load += new System.EventHandler(this.Frm_RelatorioAlunoCurso_Load);
             this.ResumeLayout(false);
 

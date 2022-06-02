@@ -48,7 +48,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.reportViewer1);
             this.Name = "Frm_RelatorioAlunos";
-            this.Text = "Frm_RelatorioAlunos";
+            this.Text = "Relatorio Aluno";
             this.Load += new System.EventHandler(this.Frm_RelatorioAlunos_Load);
             this.ResumeLayout(false);
 

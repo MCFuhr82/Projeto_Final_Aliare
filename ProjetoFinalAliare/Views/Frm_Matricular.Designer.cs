@@ -130,7 +130,7 @@ namespace ProjetoFinalAliare
             this.Controls.Add(this.pictureBox1);
             this.MinimumSize = new System.Drawing.Size(816, 489);
             this.Name = "Frm_Matricular";
-            this.Text = "Frm_Matricular";
+            this.Text = "Matricular Aluno";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -159,7 +159,7 @@
             this.Controls.Add(this.pictureBox1);
             this.MinimumSize = new System.Drawing.Size(848, 488);
             this.Name = "Frm_ConsultaCursoAlunos";
-            this.Text = "Frm_Aluno";
+            this.Text = "Consultar Curso";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

@@ -31,12 +31,16 @@ namespace ProjetoFinalAliare
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            this.AlunoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.CursoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.AlunoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.CursoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.AlunoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CursoBindingSource)).BeginInit();
             this.SuspendLayout();
+            // 
+            // AlunoBindingSource
+            // 
+            this.AlunoBindingSource.DataSource = typeof(ProjetoFinalAliare.Models.Aluno);
             // 
             // CursoBindingSource
             // 
@@ -56,10 +60,6 @@ namespace ProjetoFinalAliare
             this.reportViewer1.Size = new System.Drawing.Size(800, 450);
             this.reportViewer1.TabIndex = 0;
             // 
-            // AlunoBindingSource
-            // 
-            this.AlunoBindingSource.DataSource = typeof(ProjetoFinalAliare.Models.Aluno);
-            // 
             // Frm_RelatorioCursoAlunos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -67,10 +67,10 @@ namespace ProjetoFinalAliare
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.reportViewer1);
             this.Name = "Frm_RelatorioCursoAlunos";
-            this.Text = "Frm_RelatorioCursoAlunos";
+            this.Text = "Relatorio Curso";
             this.Load += new System.EventHandler(this.Frm_RelatorioCursoAlunos_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.CursoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.AlunoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CursoBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
