@@ -12,7 +12,7 @@ namespace ProjetoFinalAliare.Models
     public class Turma
     {
         [Key]
-        public int Id { get; set; }
+        public int Id { get; private set; }
         [Required]
         public int Semestre { get; private set; }
         [Required]
@@ -22,6 +22,7 @@ namespace ProjetoFinalAliare.Models
         public virtual Curso Curso { get; set; }
         public virtual ICollection<Aluno> Alunos { get; private set; }
 
+        public Turma() {  }
         public Turma(int semestre, string periodo, string nome)
         {
             Semestre = semestre;

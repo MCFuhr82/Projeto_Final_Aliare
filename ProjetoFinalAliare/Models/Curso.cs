@@ -12,7 +12,7 @@ namespace ProjetoFinalAliare.Models
     public class Curso
     {
         [Key]
-        public int Id { get; set; }
+        public int Id { get; private set; }
         [Required]
         public string Nome { get; set; }
         [Required]

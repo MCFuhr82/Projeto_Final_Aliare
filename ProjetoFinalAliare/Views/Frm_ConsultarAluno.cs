@@ -31,6 +31,7 @@ namespace ProjetoFinalAliare
         {
             dataGridView1.DataSource = AlunoController.ReadAlunos();
             dataGridView1.Columns["Curso"].Visible = false;
+            dataGridView1.Columns["Turma"].Visible = false;
             Btn_Editar.Enabled = true;
             Btn_Deletar.Enabled = true;
             Btn_Matricular.Enabled = true;
