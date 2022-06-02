@@ -356,3 +356,5 @@ C:\ws-marcelo\ProjetoFinalAliare\ProjetoFinalAliare\ProjetoFinalAliare\obj\Debug
 C:\ws-marcelo\ProjetoFinalAliare\ProjetoFinalAliare\ProjetoFinalAliare\obj\Debug\ProjetoFinalAliare.csproj.CopyComplete
 C:\ws-marcelo\ProjetoFinalAliare\ProjetoFinalAliare\ProjetoFinalAliare\obj\Debug\ProjetoFinalAliare.exe
 C:\ws-marcelo\ProjetoFinalAliare\ProjetoFinalAliare\ProjetoFinalAliare\obj\Debug\ProjetoFinalAliare.pdb
+C:\ws-marcelo\ProjetoFinalAliare\ProjetoFinalAliare\ProjetoFinalAliare\obj\Debug\ProjetoFinalAliare.Frm_Sobre.resources
+C:\ws-marcelo\ProjetoFinalAliare\ProjetoFinalAliare\ProjetoFinalAliare\obj\Debug\ProjetoFinalAliare.Frm_Contato.resources

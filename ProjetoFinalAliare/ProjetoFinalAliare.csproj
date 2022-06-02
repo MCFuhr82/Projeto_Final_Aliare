@@ -133,6 +133,18 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Frm_Contato.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Contato.Designer.cs">
+      <DependentUpon>Frm_Contato.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Frm_Sobre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Frm_Sobre.Designer.cs">
+      <DependentUpon>Frm_Sobre.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Frm_RelatorioAlunoCurso.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -236,6 +248,12 @@
     </Compile>
     <Compile Include="Controller\CursoController.cs" />
     <Compile Include="Services\ValidacaoCPF.cs" />
+    <EmbeddedResource Include="Frm_Contato.resx">
+      <DependentUpon>Frm_Contato.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Frm_Sobre.resx">
+      <DependentUpon>Frm_Sobre.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Frm_RelatorioAlunoCurso.resx">
       <DependentUpon>Frm_RelatorioAlunoCurso.cs</DependentUpon>
     </EmbeddedResource>
