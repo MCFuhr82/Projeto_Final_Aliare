@@ -133,10 +133,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
-    <Compile Include="Frm_Contato.cs">
+    <Compile Include="Views\Frm_Contato.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frm_Contato.Designer.cs">
+    <Compile Include="Views\Frm_Contato.Designer.cs">
       <DependentUpon>Frm_Contato.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Frm_Sobre.cs">
@@ -248,7 +248,7 @@
     </Compile>
     <Compile Include="Controller\CursoController.cs" />
     <Compile Include="Services\ValidacaoCPF.cs" />
-    <EmbeddedResource Include="Frm_Contato.resx">
+    <EmbeddedResource Include="Views\Frm_Contato.resx">
       <DependentUpon>Frm_Contato.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Frm_Sobre.resx">

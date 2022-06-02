@@ -29,7 +29,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>Id</Value>
-                              <Style />
+                              <Style>
+                                <FontWeight>Medium</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
@@ -61,7 +63,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>Nome</Value>
-                              <Style />
+                              <Style>
+                                <FontWeight>Medium</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -91,7 +95,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>Carga Horaria</Value>
-                              <Style />
+                              <Style>
+                                <FontWeight>Medium</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
@@ -128,7 +134,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!Id.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>9pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
@@ -160,7 +168,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!Nome.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>9pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -190,7 +200,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!CargaHoraria.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>9pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>

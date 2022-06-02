@@ -6,22 +6,22 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>1.86182cm</Width>
+              <Width>2.73495cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>5.49085cm</Width>
+              <Width>6.20522cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.61019cm</Width>
+              <Width>3.58373cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>4.51083cm</Width>
+              <Width>4.66958cm</Width>
             </TablixColumn>
             <TablixColumn>
               <Width>3.26729cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>4.66958cm</Width>
+              <Width>2.94979cm</Width>
             </TablixColumn>
             <TablixColumn>
               <Width>1.52104cm</Width>
@@ -42,7 +42,7 @@
                             <TextRun>
                               <Value>Matricula</Value>
                               <Style>
-                                <FontSize>8pt</FontSize>
+                                <FontWeight>Medium</FontWeight>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -76,7 +76,7 @@
                             <TextRun>
                               <Value>Nome</Value>
                               <Style>
-                                <FontSize>8pt</FontSize>
+                                <FontWeight>Medium</FontWeight>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -108,7 +108,7 @@
                             <TextRun>
                               <Value>CPF</Value>
                               <Style>
-                                <FontSize>8pt</FontSize>
+                                <FontWeight>Medium</FontWeight>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -140,7 +140,7 @@
                             <TextRun>
                               <Value>Email</Value>
                               <Style>
-                                <FontSize>8pt</FontSize>
+                                <FontWeight>Medium</FontWeight>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -172,7 +172,7 @@
                             <TextRun>
                               <Value>Celular</Value>
                               <Style>
-                                <FontSize>8pt</FontSize>
+                                <FontWeight>Medium</FontWeight>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -204,7 +204,7 @@
                             <TextRun>
                               <Value>Cidade</Value>
                               <Style>
-                                <FontSize>8pt</FontSize>
+                                <FontWeight>Medium</FontWeight>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -236,7 +236,7 @@
                             <TextRun>
                               <Value>Estado</Value>
                               <Style>
-                                <FontSize>8pt</FontSize>
+                                <FontWeight>Medium</FontWeight>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -519,11 +519,6 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>DataSet1</DataSetName>
-        <SortExpressions>
-          <SortExpression>
-            <Value>=Fields!Nome.Value</Value>
-          </SortExpression>
-        </SortExpressions>
         <Top>0.17639cm</Top>
         <Left>0.28787cm</Left>
         <Height>1.30584cm</Height>
@@ -589,7 +584,7 @@
           <Value>aliarewp2</Value>
           <Sizing>FitProportional</Sizing>
           <Top>0.73132cm</Top>
-          <Left>22.2378cm</Left>
+          <Left>22.5553cm</Left>
           <Height>1.63229cm</Height>
           <Width>2.98167cm</Width>
           <ZIndex>1</ZIndex>
@@ -616,7 +611,7 @@
           <Source>Embedded</Source>
           <Value>aliare</Value>
           <Sizing>FitProportional</Sizing>
-          <Top>1.43688cm</Top>
+          <Top>1.11938cm</Top>
           <Left>11.87456cm</Left>
           <Height>1.10312cm</Height>
           <Width>2.10854cm</Width>

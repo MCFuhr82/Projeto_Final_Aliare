@@ -6,19 +6,19 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>3.11383cm</Width>
+              <Width>4.25154cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.11383cm</Width>
+              <Width>4.278cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.11383cm</Width>
+              <Width>2.71696cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.11383cm</Width>
+              <Width>2.65556cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.11383cm</Width>
+              <Width>2.0555cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -35,10 +35,14 @@
                           <TextRuns>
                             <TextRun>
                               <Value>Nome</Value>
-                              <Style />
+                              <Style>
+                                <FontWeight>Medium</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox1</rd:DefaultName>
@@ -65,10 +69,14 @@
                           <TextRuns>
                             <TextRun>
                               <Value>Email</Value>
-                              <Style />
+                              <Style>
+                                <FontWeight>Medium</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox3</rd:DefaultName>
@@ -95,10 +103,14 @@
                           <TextRuns>
                             <TextRun>
                               <Value>Celular</Value>
-                              <Style />
+                              <Style>
+                                <FontWeight>Medium</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox5</rd:DefaultName>
@@ -125,10 +137,14 @@
                           <TextRuns>
                             <TextRun>
                               <Value>Cidade</Value>
-                              <Style />
+                              <Style>
+                                <FontWeight>Medium</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox7</rd:DefaultName>
@@ -155,10 +171,14 @@
                           <TextRuns>
                             <TextRun>
                               <Value>Estado</Value>
-                              <Style />
+                              <Style>
+                                <FontWeight>Medium</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox9</rd:DefaultName>
@@ -190,7 +210,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!Nome.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -220,7 +242,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!Email.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -250,7 +274,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!Celular.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -280,7 +306,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!Cidade.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -310,7 +338,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!Estado.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -357,7 +387,7 @@
         <Top>0.17639cm</Top>
         <Left>0.55245cm</Left>
         <Height>1.2cm</Height>
-        <Width>15.56915cm</Width>
+        <Width>15.95755cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
