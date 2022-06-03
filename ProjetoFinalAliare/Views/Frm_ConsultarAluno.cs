@@ -55,6 +55,8 @@ namespace ProjetoFinalAliare
 
                     //Confirmando exclusão para o usuário
                     MessageBox.Show("Registro apagado com sucesso", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Txb_Matricula.Text = "";
+                    Txb_Nome.Text = "";
                 }
             }
             
@@ -81,6 +83,13 @@ namespace ProjetoFinalAliare
         private void Btn_ConsultaPorNome_Click(object sender, EventArgs e)
         {
             var form = new Frm_ConsultarPorNome();
+            form.ShowDialog();
+        }
+
+        private void Btn_Imprimir_Click(object sender, EventArgs e)
+        {
+            var dt = GerarDadosRelatorio();
+            var form = new Frm_RelatorioAlunos(dt);
             form.ShowDialog();
         }
 
@@ -118,14 +127,6 @@ namespace ProjetoFinalAliare
             MessageBox.Show("Por favor, selecione um aluno.", "Selecionar aluno", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 
-        
-        private void Btn_Imprimir_Click(object sender, EventArgs e)
-        {
-            var dt = GerarDadosRelatorio();
-            var form = new Frm_RelatorioAlunos(dt);
-            form.ShowDialog();
-        }
-
         private DataTable GerarDadosRelatorio()
         {
             var dt = new DataTable();
@@ -150,42 +151,6 @@ namespace ProjetoFinalAliare
             }
             return dt;
         }
-
-        
-        //Selecionar Alunos
-        //public List<Aluno> ConsultarListaAluno()
-        //{
-        //    try
-        //    {
-        //        using (var context = new Context())
-        //        {
-        //            var listaAlunos = context.Aluno.ToList();
-        //            return listaAlunos;
-        //        }
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        MessageBox.Show(ex.Message);
-        //    }
-        //    return null;
-        //}
-
-        //Deletar Alunos
-        //private void DeletarAluno(int matricula)
-        //{
-        //    using (var context = new Context())
-        //    {
-        //        var alunos = context.Aluno.ToList();
-        //        foreach (var aluno in alunos)
-        //        {
-        //            if (aluno.Matricula == matricula)
-        //            {
-        //                context.Aluno.Remove(aluno);
-        //                context.SaveChanges();
-        //            }
-        //        }
-        //    }
-        //}
 
     }
 }
