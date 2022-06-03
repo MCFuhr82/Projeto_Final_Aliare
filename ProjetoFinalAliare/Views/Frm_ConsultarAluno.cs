@@ -29,7 +29,12 @@ namespace ProjetoFinalAliare
 
         private void Btn_Consulta_Click(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = AlunoController.ReadAlunos();
+            var alunos = AlunoController.ReadAlunos();
+
+            var alunosParaOrdenar = from x in alunos select x;
+            var alunosOrdenados = alunosParaOrdenar.OrderBy(x => x.Matricula);
+
+            dataGridView1.DataSource = alunosOrdenados.ToList();
             dataGridView1.Columns["Curso"].Visible = false;
             Btn_Editar.Enabled = true;
             Btn_Deletar.Enabled = true;
