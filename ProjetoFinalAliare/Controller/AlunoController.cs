@@ -15,8 +15,8 @@ namespace ProjetoFinalAliare
         {
             using (var context = new Context())
             {
-                IEnumerable<Aluno> alunos = from aluno in context.Aluno select aluno;
-                return alunos.ToList();
+                var alunos = context.Aluno.Include(c => c.Curso).ToList();
+                return alunos;
             } 
         }
 

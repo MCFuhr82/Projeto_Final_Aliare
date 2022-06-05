@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProjetoFinalAliare.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,18 +13,18 @@ namespace ProjetoFinalAliare
 {
     public partial class Frm_RelatorioAlunos : Form
     {
-        DataTable dt = new DataTable();
+        List<Aluno> listaAlunos = new List<Aluno>();
 
-        public Frm_RelatorioAlunos(DataTable dt)
+        public Frm_RelatorioAlunos(List<Aluno> lista)
         {
             InitializeComponent();
-            this.dt = dt;
+            listaAlunos = lista;
         }
 
         private void Frm_RelatorioAlunos_Load(object sender, EventArgs e)
         {
             reportViewer1.LocalReport.DataSources.Clear();
-            reportViewer1.LocalReport.DataSources.Add(new Microsoft.Reporting.WinForms.ReportDataSource("DataSet1", dt));
+            reportViewer1.LocalReport.DataSources.Add(new Microsoft.Reporting.WinForms.ReportDataSource("DataSet1", listaAlunos));
             this.reportViewer1.RefreshReport();
         }
     }

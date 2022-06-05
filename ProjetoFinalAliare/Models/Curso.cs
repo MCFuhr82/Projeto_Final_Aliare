@@ -38,5 +38,10 @@ namespace ProjetoFinalAliare.Models
             CargaHoraria = cargaHoraria;
         }
 
+        public override string ToString()
+        {
+            return Nome;
+        }
+
     }
 }

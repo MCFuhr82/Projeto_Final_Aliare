@@ -29,13 +29,12 @@ namespace ProjetoFinalAliare
 
         private void Btn_Consulta_Click(object sender, EventArgs e)
         {
-            var alunos = AlunoController.ReadAlunos();
+            var listaAlunos = GerarDadosRelatorio();
 
-            var alunosParaOrdenar = from x in alunos select x;
+            var alunosParaOrdenar = from x in listaAlunos select x;
             var alunosOrdenados = alunosParaOrdenar.OrderBy(x => x.Matricula);
 
             dataGridView1.DataSource = alunosOrdenados.ToList();
-            dataGridView1.Columns["Curso"].Visible = false;
             Btn_Editar.Enabled = true;
             Btn_Deletar.Enabled = true;
             Btn_Matricular.Enabled = true;
@@ -93,8 +92,8 @@ namespace ProjetoFinalAliare
 
         private void Btn_Imprimir_Click(object sender, EventArgs e)
         {
-            var dt = GerarDadosRelatorio();
-            var form = new Frm_RelatorioAlunos(dt);
+            var listaAlunos = GerarDadosRelatorio();
+            var form = new Frm_RelatorioAlunos(listaAlunos);
             form.ShowDialog();
         }
 
@@ -118,8 +117,6 @@ namespace ProjetoFinalAliare
                 var selectedAluno = dataGridView1.SelectedRows[0].DataBoundItem as Aluno;
                 Txb_Matricula.Text = selectedAluno.Matricula.ToString();
                 Txb_Nome.Text = selectedAluno.Nome.ToString();
-                dataGridView1.Columns["Curso"].Visible = false;
-                
             }
             catch (Exception ex)
             {
@@ -127,35 +124,22 @@ namespace ProjetoFinalAliare
             }
         }
 
+        private List<Aluno> GerarDadosRelatorio()
+        {
+            var alunos = AlunoController.ReadAlunos();
+
+            var alunosParaOrdenar = from x in alunos select x;
+            var alunosOrdenados = alunosParaOrdenar.OrderBy(x => x.Matricula);
+
+            var listaAlunos = alunosOrdenados.ToList();
+
+
+            return listaAlunos;
+        }
+
         private void MensagemDeSelecao()
         {
             MessageBox.Show("Por favor, selecione um aluno.", "Selecionar aluno", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
-
-        private DataTable GerarDadosRelatorio()
-        {
-            var dt = new DataTable();
-
-            dt.Columns.Add("Matricula");
-            dt.Columns.Add("Nome");
-            dt.Columns.Add("CPF");
-            dt.Columns.Add("Email");
-            dt.Columns.Add("Celular");
-            dt.Columns.Add("Cidade");
-            dt.Columns.Add("Estado");
-
-            foreach (DataGridViewRow item in dataGridView1.Rows)
-            {
-                dt.Rows.Add(item.Cells["Matricula"].Value.ToString(),
-                            item.Cells["Nome"].Value.ToString(),
-                            item.Cells["CPF"].Value.ToString(),
-                            item.Cells["Email"].Value.ToString(),
-                            item.Cells["Celular"].Value.ToString(),
-                            item.Cells["Cidade"].Value.ToString(),
-                            item.Cells["Estado"].Value.ToString());
-            }
-            return dt;
-        }
-
     }
 }
