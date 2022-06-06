@@ -41,7 +41,6 @@
             this.Txb_Nome = new System.Windows.Forms.TextBox();
             this.Btn_Cadastrar = new System.Windows.Forms.Button();
             this.Btn_Matricular = new System.Windows.Forms.Button();
-            this.Btn_ConsultaPorNome = new System.Windows.Forms.Button();
             this.Btn_Imprimir = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -184,18 +183,6 @@
             this.Btn_Matricular.UseVisualStyleBackColor = false;
             this.Btn_Matricular.Click += new System.EventHandler(this.Frm_Matricular_Click);
             // 
-            // Btn_ConsultaPorNome
-            // 
-            this.Btn_ConsultaPorNome.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.Btn_ConsultaPorNome.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_ConsultaPorNome.Location = new System.Drawing.Point(201, 28);
-            this.Btn_ConsultaPorNome.Name = "Btn_ConsultaPorNome";
-            this.Btn_ConsultaPorNome.Size = new System.Drawing.Size(139, 50);
-            this.Btn_ConsultaPorNome.TabIndex = 16;
-            this.Btn_ConsultaPorNome.Text = "Consulta por nome";
-            this.Btn_ConsultaPorNome.UseVisualStyleBackColor = false;
-            this.Btn_ConsultaPorNome.Click += new System.EventHandler(this.Btn_ConsultaPorNome_Click);
-            // 
             // Btn_Imprimir
             // 
             this.Btn_Imprimir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -215,7 +202,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(832, 449);
             this.Controls.Add(this.Btn_Imprimir);
-            this.Controls.Add(this.Btn_ConsultaPorNome);
             this.Controls.Add(this.Btn_Matricular);
             this.Controls.Add(this.Btn_Cadastrar);
             this.Controls.Add(this.Txb_Nome);
@@ -251,7 +237,6 @@
         private System.Windows.Forms.TextBox Txb_Nome;
         private System.Windows.Forms.Button Btn_Cadastrar;
         private System.Windows.Forms.Button Btn_Matricular;
-        private System.Windows.Forms.Button Btn_ConsultaPorNome;
         private System.Windows.Forms.Button Btn_Imprimir;
     }
 }

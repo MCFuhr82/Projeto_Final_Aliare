@@ -113,13 +113,7 @@ namespace ProjetoFinalAliare
         {
             MessageBox.Show("Por favor, selecione um curso.", "Selecionar curso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
-
-        private void Btn_ConsultaEspecial_Click(object sender, EventArgs e)
-        {
-            var form = new Frm_ConsultarPorNome();
-            form.ShowDialog();
-        }
-
+                
         private void Btn_ConsultaPorCurso_Click(object sender, EventArgs e)
         {
             var form = new Frm_ConsultaCursoAlunos();

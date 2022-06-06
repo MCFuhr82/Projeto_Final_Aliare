@@ -168,12 +168,6 @@
       <DependentUpon>202206010116064_Faculdade.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Views\Frm_ConsultarAlunoCurso.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\Frm_ConsultarAlunoCurso.Designer.cs">
-      <DependentUpon>Frm_ConsultarAlunoCurso.cs</DependentUpon>
-    </Compile>
     <Compile Include="Models\Context\Context.cs" />
     <Compile Include="Views\Frm_CadastrarCurso.cs">
       <SubType>Form</SubType>
@@ -269,9 +263,6 @@
     <EmbeddedResource Include="Relatorios\RelatorioAlunoCurso.rdlc" />
     <EmbeddedResource Include="Relatorios\RelatorioCursoAlunos.rdlc" />
     <EmbeddedResource Include="Relatorios\RelatorioCursos.rdlc" />
-    <EmbeddedResource Include="Views\Frm_ConsultarAlunoCurso.resx">
-      <DependentUpon>Frm_ConsultarAlunoCurso.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Views\Frm_CadastrarCurso.resx">
       <DependentUpon>Frm_CadastrarCurso.cs</DependentUpon>
     </EmbeddedResource>

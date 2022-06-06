@@ -29,17 +29,22 @@ namespace ProjetoFinalAliare
 
         private void Btn_Consulta_Click(object sender, EventArgs e)
         {
-            var listaAlunos = GerarDadosRelatorio();
-
-            var alunosParaOrdenar = from x in listaAlunos select x;
-            var alunosOrdenados = alunosParaOrdenar.OrderBy(x => x.Matricula);
-
-            dataGridView1.DataSource = alunosOrdenados.ToList();
+            if (!string.IsNullOrEmpty(Txb_Nome.Text))
+            {
+                var listaAlunoPorNome = ListaAlunosPorNome();
+                var dataGridAlunoPorNome = TabelaDeSelecao(listaAlunoPorNome);
+                dataGridView1.DataSource = dataGridAlunoPorNome;
+            }
+            else
+            {
+                var listaAlunos = GerarDadosRelatorio();
+                dataGridView1.DataSource = listaAlunos;
+            }
             Btn_Editar.Enabled = true;
             Btn_Deletar.Enabled = true;
             Btn_Matricular.Enabled = true;
-
         }
+
         private void Btn_Deletar_Click(object sender, EventArgs e)
         {
             if (Txb_Matricula.Text == "")
@@ -84,17 +89,20 @@ namespace ProjetoFinalAliare
             }
         }
 
-        private void Btn_ConsultaPorNome_Click(object sender, EventArgs e)
-        {
-            var form = new Frm_ConsultarPorNome();
-            form.ShowDialog();
-        }
-
+        
         private void Btn_Imprimir_Click(object sender, EventArgs e)
         {
-            var listaAlunos = GerarDadosRelatorio();
-            var form = new Frm_RelatorioAlunos(listaAlunos);
-            form.ShowDialog();
+            var listaAlunos = dataGridView1.DataSource;
+            if (dataGridView1.ColumnCount < 7)
+            {
+                var form = new Frm_RelatorioAlunoCurso((DataTable)listaAlunos);
+                form.ShowDialog();
+            }
+            else
+            {
+                var form = new Frm_RelatorioAlunos((List<Aluno>)listaAlunos);
+                form.ShowDialog();
+            }
         }
 
         private void Frm_Matricular_Click(object sender, EventArgs e)
@@ -114,9 +122,10 @@ namespace ProjetoFinalAliare
         {
             try
             {
-                var selectedAluno = dataGridView1.SelectedRows[0].DataBoundItem as Aluno;
-                Txb_Matricula.Text = selectedAluno.Matricula.ToString();
-                Txb_Nome.Text = selectedAluno.Nome.ToString();
+                var matriculaAlunoSelecionado = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+                var nomeAlunoSelecionado = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+                Txb_Matricula.Text = matriculaAlunoSelecionado;
+                Txb_Nome.Text = nomeAlunoSelecionado;
             }
             catch (Exception ex)
             {
@@ -135,6 +144,43 @@ namespace ProjetoFinalAliare
 
 
             return listaAlunos;
+        }
+
+        private List<Aluno> ListaAlunosPorNome()
+        {
+            var nomeAluno = Txb_Nome.Text;
+            var context = new Context();
+
+            var aluno = context.Aluno.SqlQuery($"SELECT * FROM public.\"Aluno\" as Aluno WHERE Aluno.\"Nome\" LIKE '%{nomeAluno}%'").ToList();
+
+            return aluno;
+        }
+
+        private DataTable TabelaDeSelecao(List<Aluno> alunos)
+        {
+
+            var dt = new DataTable();
+            dt.Columns.Add("Matricula");
+            dt.Columns.Add("Nome");
+            dt.Columns.Add("Email");
+            dt.Columns.Add("Cidade");
+            dt.Columns.Add("Estado");
+            dt.Columns.Add("Curso");
+
+
+            foreach (var aluno in alunos)
+            {
+                if (aluno.Curso == null)
+                {
+                    dt.Rows.Add(aluno.Matricula, aluno.Nome, aluno.Email, aluno.Cidade, aluno.Estado, "Não matriculado");
+                }
+                else
+                {
+
+                    dt.Rows.Add(aluno.Matricula, aluno.Nome, aluno.Email, aluno.Cidade, aluno.Estado, aluno.Curso.Nome);
+                }
+            }
+            return dt;
         }
 
         private void MensagemDeSelecao()
