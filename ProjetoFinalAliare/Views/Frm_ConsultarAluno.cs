@@ -86,6 +86,8 @@ namespace ProjetoFinalAliare
             {
                 var form = new Frm_EditarAluno(Txb_Matricula.Text);
                 form.ShowDialog();
+                Txb_Matricula.Text = "";
+                Txb_Nome.Text = "";
             }
         }
 

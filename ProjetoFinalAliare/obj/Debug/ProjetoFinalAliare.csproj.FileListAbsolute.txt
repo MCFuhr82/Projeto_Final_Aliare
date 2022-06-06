@@ -336,7 +336,6 @@ C:\ws-marcelo\ProjetoFinalAliare\ProjetoFinalAliare\ProjetoFinalAliare\obj\Debug
 C:\ws-marcelo\ProjetoFinalAliare\ProjetoFinalAliare\ProjetoFinalAliare\obj\Debug\ProjetoFinalAliare.Frm_RelatorioCursoAlunos.resources
 C:\ws-marcelo\ProjetoFinalAliare\ProjetoFinalAliare\ProjetoFinalAliare\obj\Debug\ProjetoFinalAliare.Frm_RelatorioCursos.resources
 C:\ws-marcelo\ProjetoFinalAliare\ProjetoFinalAliare\ProjetoFinalAliare\obj\Debug\ProjetoFinalAliare.Migrations.Faculdade.resources
-C:\ws-marcelo\ProjetoFinalAliare\ProjetoFinalAliare\ProjetoFinalAliare\obj\Debug\ProjetoFinalAliare.Frm_ConsultarPorNome.resources
 C:\ws-marcelo\ProjetoFinalAliare\ProjetoFinalAliare\ProjetoFinalAliare\obj\Debug\ProjetoFinalAliare.Frm_CadastrarCurso.resources
 C:\ws-marcelo\ProjetoFinalAliare\ProjetoFinalAliare\ProjetoFinalAliare\obj\Debug\ProjetoFinalAliare.Frm_ConsultaCursoAlunos.resources
 C:\ws-marcelo\ProjetoFinalAliare\ProjetoFinalAliare\ProjetoFinalAliare\obj\Debug\ProjetoFinalAliare.Frm_ConsultarCurso.resources
